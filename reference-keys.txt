@@ -8,3 +8,5 @@ r-studio
 data-frames
 פונקציות-בסיסיות
 rep
+print
+class

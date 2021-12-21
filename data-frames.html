@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="" xml:lang="">}
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
@@ -24,7 +24,6 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2021-12-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,6 +166,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="פונקציות-בסיסיות.html"><a href="פונקציות-בסיסיות.html"><i class="fa fa-check"></i><b>4</b> פונקציות בסיסיות</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="פונקציות-בסיסיות.html"><a href="פונקציות-בסיסיות.html#rep"><i class="fa fa-check"></i><b>4.1</b> rep</a></li>
+<li class="chapter" data-level="4.2" data-path="פונקציות-בסיסיות.html"><a href="פונקציות-בסיסיות.html#print"><i class="fa fa-check"></i><b>4.2</b> print</a></li>
+<li class="chapter" data-level="4.3" data-path="פונקציות-בסיסיות.html"><a href="פונקציות-בסיסיות.html#class"><i class="fa fa-check"></i><b>4.3</b> class</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -191,17 +192,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-frames" class="section level1" number="3">
 <h1><span class="header-section-number">פרק 3</span> Data Frames</h1>
 <p>Data Frame היא טבלה, מערך דו מימדי</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="data-frames.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
-<span id="cb15-2"><a href="data-frames.html#cb15-2" aria-hidden="true" tabindex="-1"></a>emp.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb15-3"><a href="data-frames.html#cb15-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
-<span id="cb15-4"><a href="data-frames.html#cb15-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Dan&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Ryan&quot;</span>,<span class="st">&quot;Gary&quot;</span>),</span>
-<span id="cb15-5"><a href="data-frames.html#cb15-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="fl">623.3</span>,<span class="fl">515.2</span>,<span class="fl">611.0</span>,<span class="fl">729.0</span>,<span class="fl">843.25</span>), </span>
-<span id="cb15-6"><a href="data-frames.html#cb15-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">start_date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2012-01-01&quot;</span>, <span class="st">&quot;2013-09-23&quot;</span>, <span class="st">&quot;2014-11-15&quot;</span>, <span class="st">&quot;2014-05-11&quot;</span>,</span>
-<span id="cb15-7"><a href="data-frames.html#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;2015-03-27&quot;</span>)),</span>
-<span id="cb15-8"><a href="data-frames.html#cb15-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
-<span id="cb15-9"><a href="data-frames.html#cb15-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-10"><a href="data-frames.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
-<span id="cb15-11"><a href="data-frames.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp.data) </span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="data-frames.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
+<span id="cb13-2"><a href="data-frames.html#cb13-2" aria-hidden="true" tabindex="-1"></a>emp.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb13-3"><a href="data-frames.html#cb13-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
+<span id="cb13-4"><a href="data-frames.html#cb13-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Dan&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Ryan&quot;</span>,<span class="st">&quot;Gary&quot;</span>),</span>
+<span id="cb13-5"><a href="data-frames.html#cb13-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="fl">623.3</span>,<span class="fl">515.2</span>,<span class="fl">611.0</span>,<span class="fl">729.0</span>,<span class="fl">843.25</span>), </span>
+<span id="cb13-6"><a href="data-frames.html#cb13-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">start_date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2012-01-01&quot;</span>, <span class="st">&quot;2013-09-23&quot;</span>, <span class="st">&quot;2014-11-15&quot;</span>, <span class="st">&quot;2014-05-11&quot;</span>,</span>
+<span id="cb13-7"><a href="data-frames.html#cb13-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;2015-03-27&quot;</span>)),</span>
+<span id="cb13-8"><a href="data-frames.html#cb13-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb13-9"><a href="data-frames.html#cb13-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-10"><a href="data-frames.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
+<span id="cb13-11"><a href="data-frames.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp.data) </span></code></pre></div>
 <pre><code>##   emp_id emp_name salary start_date
 ## 1      1     Rick 623.30 2012-01-01
 ## 2      2      Dan 515.20 2013-09-23
