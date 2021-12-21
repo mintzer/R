@@ -5,3 +5,4 @@ r-studio
 לולאות
 לולאת-for
 לולאת-while
+data-frames
