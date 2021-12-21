@@ -6,3 +6,5 @@ r-studio
 לולאת-for
 לולאת-while
 data-frames
+פונקציות-בסיסיות
+rep
