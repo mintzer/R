@@ -162,7 +162,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="לולאות.html"><a href="לולאות.html#לולאת-for"><i class="fa fa-check"></i><b>2.1</b> לולאת for</a></li>
 <li class="chapter" data-level="2.2" data-path="לולאות.html"><a href="לולאות.html#לולאת-while"><i class="fa fa-check"></i><b>2.2</b> לולאת while</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="פונקציות.html"><a href="פונקציות.html"><i class="fa fa-check"></i><b>3</b> פונקציות</a></li>
+<li class="chapter" data-level="3" data-path="פונקציות.html"><a href="פונקציות.html"><i class="fa fa-check"></i><b>3</b> פונקציות</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="פונקציות.html"><a href="פונקציות.html#מה-זאת-פונקציה"><i class="fa fa-check"></i><b>3.1</b> מה זאת פונקציה</a></li>
+<li class="chapter" data-level="3.2" data-path="פונקציות.html"><a href="פונקציות.html#הגדרת-פונקציה"><i class="fa fa-check"></i><b>3.2</b> הגדרת פונקציה</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html"><i class="fa fa-check"></i><b>4</b> עוד פונקציות שימושיות</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#rep"><i class="fa fa-check"></i><b>4.1</b> rep</a></li>
@@ -194,14 +198,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tidyverse" class="section level1" number="6">
 <h1><span class="header-section-number">פרק 6</span> tidyverse</h1>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="tidyverse.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidyverse if it is not already installed</span></span>
-<span id="cb31-2"><a href="tidyverse.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidyverse&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb31-3"><a href="tidyverse.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidyverse</span></span>
-<span id="cb31-4"><a href="tidyverse.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb31-5"><a href="tidyverse.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidylog if it is not already installed</span></span>
-<span id="cb31-6"><a href="tidyverse.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
-<span id="cb31-7"><a href="tidyverse.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
-<span id="cb31-8"><a href="tidyverse.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="tidyverse.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidyverse if it is not already installed</span></span>
+<span id="cb35-2"><a href="tidyverse.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidyverse&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb35-3"><a href="tidyverse.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidyverse</span></span>
+<span id="cb35-4"><a href="tidyverse.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb35-5"><a href="tidyverse.html#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidylog if it is not already installed</span></span>
+<span id="cb35-6"><a href="tidyverse.html#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
+<span id="cb35-7"><a href="tidyverse.html#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
+<span id="cb35-8"><a href="tidyverse.html#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
 
 </div>
             </section>
