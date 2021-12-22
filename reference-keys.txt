@@ -5,8 +5,11 @@ r-studio
 לולאות
 לולאת-for
 לולאת-while
-data-frames
-פונקציות-בסיסיות
+פונקציות
+עוד-פונקציות-שימושיות
 rep
 print
 class
+data.frame
+tidyverse
+ggplot
