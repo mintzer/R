@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="פונקציות.html"><a href="פונקציות.html"><i class="fa fa-check"></i><b>3</b> פונקציות</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="פונקציות.html"><a href="פונקציות.html#מה-זאת-פונקציה"><i class="fa fa-check"></i><b>3.1</b> מה זאת פונקציה</a></li>
+<li class="chapter" data-level="3.2" data-path="פונקציות.html"><a href="פונקציות.html#הגדרת-פונקציה"><i class="fa fa-check"></i><b>3.2</b> הגדרת פונקציה</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html"><i class="fa fa-check"></i><b>4</b> עוד פונקציות שימושיות</a>
 <ul>
@@ -201,10 +202,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.1</span> מה זאת פונקציה</h2>
 <p>פונקציות הן אבן היסוד של R וניתן להגדיר את רובה המוחלט של השפה רק באמצעותן.
 באופן כללי - פונקציה היא כל מניפולציה שמקבלת קלט ומוציאה פלט בהתאם.
-אפשר להסתכל על פונקציה כעל קופסא סגורה: אם נכניס קלט מסוים, יצא פלט מסוים בהתאם. כדי להבין מה פונקציה עושה מספיק לדעת מה היא מקבלת כקלט (input) ומה היא מוציאה כפלט (output).
-<img src="appendix/functions.png" width="30%" style="display: block; margin: auto;" />
-## הגדרת פונקציה
-נגדיר פונקציה פשוטה אשר מקבלת שני מספרים ומחזירה את הגדול מביניהם.</p>
+אפשר להסתכל על פונקציה כעל קופסא סגורה - על כל קלט מסוים שנכניס לפונקציה, יצא פלט מסוים בהתאם. כדי להבין מה פונקציה עושה מספיק לדעת מה היא מקבלת כקלט (input) ומה היא מוציאה כפלט (output).
+<img src="appendix/functions.png" width="30%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="הגדרת-פונקציה" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> הגדרת פונקציה</h2>
+<p>נגדיר פונקציה פשוטה אשר מקבלת שני מספרים ומחזירה את הגדול מביניהם.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="פונקציות.html#cb13-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, num2) {</span>
 <span id="cb13-2"><a href="פונקציות.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
 <span id="cb13-3"><a href="פונקציות.html#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
