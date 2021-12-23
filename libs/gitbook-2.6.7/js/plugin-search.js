@@ -160,7 +160,7 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
             'type': 'search',
             'class': 'form-control',
             'val': value,
-            'placeholder': 'מה תרצי לחפש? (Enter כדי לנווט)',
+            'placeholder': 'מה תרצי לחפש? (Enter כדי לעבור בין התוצאות)',
             'title': 'Use Enter or the <Down> key to navigate to the next match, or the <Up> key to the previous match'
         });
 

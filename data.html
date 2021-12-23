@@ -170,7 +170,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="פונקציות.html"><a href="פונקציות.html"><i class="fa fa-check"></i><b>3</b> פונקציות</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="פונקציות.html"><a href="פונקציות.html#מה-זאת-פונקציה"><i class="fa fa-check"></i><b>3.1</b> מה זאת פונקציה</a></li>
-<li class="chapter" data-level="3.2" data-path="פונקציות.html"><a href="פונקציות.html#הגדרת-פונקציה"><i class="fa fa-check"></i><b>3.2</b> הגדרת פונקציה</a></li>
+<li class="chapter" data-level="3.2" data-path="פונקציות.html"><a href="פונקציות.html#מבנה-כללי"><i class="fa fa-check"></i><b>3.2</b> מבנה כללי</a></li>
+<li class="chapter" data-level="3.3" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא"><i class="fa fa-check"></i><b>3.3</b> דוגמא</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html"><i class="fa fa-check"></i><b>4</b> עוד פונקציות שימושיות</a>
 <ul>
@@ -205,17 +206,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data.frame" class="section level1" number="5">
 <h1><span class="header-section-number">פרק 5 - </span> data.frame</h1>
 <p>Data Frame היא טבלה, מערך דו מימדי</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="data.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
-<span id="cb46-2"><a href="data.html#cb46-2" aria-hidden="true" tabindex="-1"></a>emp.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb46-3"><a href="data.html#cb46-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
-<span id="cb46-4"><a href="data.html#cb46-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Dan&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Ryan&quot;</span>,<span class="st">&quot;Gary&quot;</span>),</span>
-<span id="cb46-5"><a href="data.html#cb46-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="fl">623.3</span>,<span class="fl">515.2</span>,<span class="fl">611.0</span>,<span class="fl">729.0</span>,<span class="fl">843.25</span>), </span>
-<span id="cb46-6"><a href="data.html#cb46-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">start_date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2012-01-01&quot;</span>, <span class="st">&quot;2013-09-23&quot;</span>, <span class="st">&quot;2014-11-15&quot;</span>, <span class="st">&quot;2014-05-11&quot;</span>,</span>
-<span id="cb46-7"><a href="data.html#cb46-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;2015-03-27&quot;</span>)),</span>
-<span id="cb46-8"><a href="data.html#cb46-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
-<span id="cb46-9"><a href="data.html#cb46-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-10"><a href="data.html#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
-<span id="cb46-11"><a href="data.html#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp.data) </span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="data.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
+<span id="cb47-2"><a href="data.html#cb47-2" aria-hidden="true" tabindex="-1"></a>emp.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb47-3"><a href="data.html#cb47-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
+<span id="cb47-4"><a href="data.html#cb47-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Dan&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Ryan&quot;</span>,<span class="st">&quot;Gary&quot;</span>),</span>
+<span id="cb47-5"><a href="data.html#cb47-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="fl">623.3</span>,<span class="fl">515.2</span>,<span class="fl">611.0</span>,<span class="fl">729.0</span>,<span class="fl">843.25</span>), </span>
+<span id="cb47-6"><a href="data.html#cb47-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">start_date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2012-01-01&quot;</span>, <span class="st">&quot;2013-09-23&quot;</span>, <span class="st">&quot;2014-11-15&quot;</span>, <span class="st">&quot;2014-05-11&quot;</span>,</span>
+<span id="cb47-7"><a href="data.html#cb47-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;2015-03-27&quot;</span>)),</span>
+<span id="cb47-8"><a href="data.html#cb47-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb47-9"><a href="data.html#cb47-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb47-10"><a href="data.html#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
+<span id="cb47-11"><a href="data.html#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp.data) </span></code></pre></div>
 <pre><code>##   emp_id emp_name salary start_date
 ## 1      1     Rick 623.30 2012-01-01
 ## 2      2      Dan 515.20 2013-09-23

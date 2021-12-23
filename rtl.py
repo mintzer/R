@@ -13,7 +13,7 @@ for dname, dirs, files in os.walk(r"C:\R\R"):
             with open(fpath, "w") as f:
                 f.write(s)
 
-replacement2 = 'מה תרצי לחפש? (Enter כדי לנווט)'
+replacement2 = 'מה תרצי לחפש? (Enter כדי לעבור בין התוצאות)'
 replacement3 = 'הקלד כדי לחפש'
 for dname, dirs, files in os.walk(r"C:\R\R"):
     for fname in files:
