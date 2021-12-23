@@ -1,7 +1,7 @@
 # coding: utf-8
 
 import os
-replacement = '<html dir="rtl" lang="" xml:lang="">}'
+replacement = '<html dir="rtl" lang="" xml:lang=""><link rel="shortcut icon" href="rstudio.svg" />'
 for dname, dirs, files in os.walk(r"C:\R\R"):
     for fname in files:
         if fname[-5:] == '.html':
