@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 3 - פונקציות | מדריך לשפת R</title>
-  <meta name="description" content="פרק 3 - פונקציות | מדריך לשפת R" />
+  <title>פרק 1 - משתנים | מדריך לשפת R</title>
+  <meta name="description" content="פרק 1 - משתנים | מדריך לשפת R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 3 - פונקציות | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 1 - משתנים | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="פרק 3 - פונקציות | מדריך לשפת R" />
+  <meta property="og:description" content="פרק 1 - משתנים | מדריך לשפת R" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 3 - פונקציות | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 1 - משתנים | מדריך לשפת R" />
   
-  <meta name="twitter:description" content="פרק 3 - פונקציות | מדריך לשפת R" />
+  <meta name="twitter:description" content="פרק 1 - משתנים | מדריך לשפת R" />
   
 
 <meta name="author" content="שי מינצר" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="לולאות.html"/>
-<link rel="next" href="עוד-פונקציות-שימושיות.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="לולאות.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -202,32 +202,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="פונקציות" class="section level1" number="3">
-<h1><span class="header-section-number">פרק 3 - </span> פונקציות</h1>
-<div id="מה-זאת-פונקציה" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> מה זאת פונקציה</h2>
-<p>פונקציות הן אבני היסוד של R וניתן להגדיר את רובה המוחלט של השפה רק באמצעותן.
-באופן כללי - פונקציה היא כל מניפולציה שמקבלת קלט ומוציאה פלט בהתאם.
-אפשר להסתכל על פונקציה כעל קופסא סגורה - על כל קלט <b>מסוים</b> שנכניס לפונקציה, יצא פלט <b>מסוים</b>. כדי להסביר מה פונקציה עושה מספיק לתאר מה היא מקבלת כקלט (input) ומה היא מוציאה כפלט (output).
-<img src="appendix/functions.png" width="30%" style="display: block; margin: auto;" /></p>
+<div id="משתנים" class="section level1" number="1">
+<h1><span class="header-section-number">פרק 1 - </span> משתנים</h1>
+<div id="character" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> character</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="משתנים.html#cb1-1" aria-hidden="true" tabindex="-1"></a>text_var <span class="ot">&lt;-</span> <span class="st">&quot;this is a character!&quot;</span></span>
+<span id="cb1-2"><a href="משתנים.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(text_var)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
-<div id="הגדרת-פונקציה" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> הגדרת פונקציה</h2>
-<p>נגדיר פונקציה פשוטה בשם “bigger” אשר מקבלת שני מספרים ומחזירה את הגדול מביניהם. נריץ את הפונקציה על ידי קריאה לשם שלה, יחד עם המשתנים בתוך סוגריים עגולים.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="פונקציות.html#cb25-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, num2) {</span>
-<span id="cb25-2"><a href="פונקציות.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
-<span id="cb25-3"><a href="פונקציות.html#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
-<span id="cb25-4"><a href="פונקציות.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-5"><a href="פונקציות.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
-<span id="cb25-6"><a href="פונקציות.html#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
-<span id="cb25-7"><a href="פונקציות.html#cb25-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb25-8"><a href="פונקציות.html#cb25-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb25-9"><a href="פונקציות.html#cb25-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>,<span class="dv">29</span>)</span>
-<span id="cb25-10"><a href="פונקציות.html#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
-<pre><code>## [1] &quot;The bigger number is: 29&quot;</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="פונקציות.html#cb27-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">57</span>,<span class="dv">36</span>)</span>
-<span id="cb27-2"><a href="פונקציות.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
-<pre><code>## [1] &quot;The bigger number is: 57&quot;</code></pre>
+<div id="numeric" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> numeric</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="משתנים.html#cb3-1" aria-hidden="true" tabindex="-1"></a>numeric_var <span class="ot">&lt;-</span> <span class="fl">14.6</span></span>
+<span id="cb3-2"><a href="משתנים.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(numeric_var)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+</div>
+<div id="logical" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> logical</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="משתנים.html#cb5-1" aria-hidden="true" tabindex="-1"></a>logical_var <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb5-2"><a href="משתנים.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(logical_var)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="משתנים.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logical_var)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="משתנים.html#cb9-1" aria-hidden="true" tabindex="-1"></a>logical_var2 <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb9-2"><a href="משתנים.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(logical_var2)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="משתנים.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logical_var2)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
 
 </div>
 </div>
@@ -236,8 +236,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="לולאות.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="עוד-פונקציות-שימושיות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="לולאות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -268,7 +268,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-Functions.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-vars.Rmd",
 "text": "Edit"
 },
 "history": {
