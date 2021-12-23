@@ -13,4 +13,18 @@ pre code {
   white-space: inherit;
 }
 
+/*
+.book .book-summary {
+  background: Azure;
+  border-right: none;
+}
+*/
 
+title, h1, h2 {
+	color: DarkSlateBlue;
+}
+/*
+html {
+  background: Azure;
+}
+*/
