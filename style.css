@@ -67,9 +67,13 @@ html {
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-    color: #48cbd1;
+    color: #48cbd1 !important;
 }
 
 ul.summary li.active>a {
-  color:#48cbd1;
+  color:#48cbd1 !important;
+}
+
+ul.summary li>a:hover {
+  color:#48cbd1 !important;
 }
