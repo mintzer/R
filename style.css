@@ -21,7 +21,7 @@ pre code {
 */
 
 title, h1, h2 {
-	color: MediumTurquoise;
+	color: #48cbd1;
 }
 /*
 html {
@@ -64,4 +64,12 @@ html {
 
 .page-inner {
   padding-top: 400px !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+    color: #48cbd1;
+}
+
+ul.summary li.active>a {
+  color:#48cbd1;
 }
