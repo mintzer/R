@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 4 - פונקציות | מדריך לשפת R</title>
-  <meta name="description" content="פרק 4 - פונקציות | מדריך לשפת R" />
+  <title>פרק 3 - אופרטורים | מדריך לשפת R</title>
+  <meta name="description" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 4 - פונקציות | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="פרק 4 - פונקציות | מדריך לשפת R" />
+  <meta property="og:description" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 4 - פונקציות | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   
-  <meta name="twitter:description" content="פרק 4 - פונקציות | מדריך לשפת R" />
+  <meta name="twitter:description" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   
 
 <meta name="author" content="שי מינצר" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="אופרטורים.html"/>
-<link rel="next" href="עוד-פונקציות-שימושיות.html"/>
+<link rel="prev" href="לולאות.html"/>
+<link rel="next" href="פונקציות.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -209,39 +209,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="books.jpg">
 </div>
-<div id="פונקציות" class="section level1" number="4">
-<h1><span class="header-section-number">פרק 4 - </span> פונקציות</h1>
-<div id="מה-זאת-פונקציה" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> מה זאת פונקציה</h2>
-<p>פונקציות הן אבני היסוד של R וניתן להגדיר את רובה המוחלט של השפה רק באמצעותן.
-באופן כללי - פונקציה היא כל מניפולציה שמקבלת קלט ומוציאה פלט בהתאם.
-אפשר להסתכל על פונקציה כעל קופסא סגורה - על כל קלט <b>מסוים</b> שנכניס לפונקציה, יצא פלט <b>מסוים</b>. כדי להסביר מה פונקציה עושה מספיק לתאר מה היא מקבלת כקלט (input) ומה היא מוציאה כפלט (output).
-<img src="appendix/functions.png" width="40%" style="display: block; margin: auto;" /></p>
+<div id="אופרטורים" class="section level1" number="3">
+<h1><span class="header-section-number">פרק 3 - </span> אופרטורים</h1>
+<div id="אופרטורים-אריתמטיים" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> אופרטורים אריתמטיים</h2>
 </div>
-<div id="מבנה-כללי" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> מבנה כללי</h2>
-<pre><code>name_of_function &lt;- function(var1, var2, var3=default_value) {
-  ** some code **
-  return(var4)
-}</code></pre>
+<div id="אופרטורים-של-השוואה" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> אופרטורים של השוואה</h2>
 </div>
-<div id="דוגמא" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> דוגמא</h2>
-<p>נגדיר פונקציה פשוטה בשם “bigger” אשר מקבלת שני מספרים ומחזירה את הגדול מביניהם. נריץ את הפונקציה על ידי קריאה לשם שלה, יחד עם המשתנים בתוך סוגריים עגולים.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="פונקציות.html#cb27-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, num2) {</span>
-<span id="cb27-2"><a href="פונקציות.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
-<span id="cb27-3"><a href="פונקציות.html#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
-<span id="cb27-4"><a href="פונקציות.html#cb27-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb27-5"><a href="פונקציות.html#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
-<span id="cb27-6"><a href="פונקציות.html#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
-<span id="cb27-7"><a href="פונקציות.html#cb27-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb27-8"><a href="פונקציות.html#cb27-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb27-9"><a href="פונקציות.html#cb27-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>,<span class="dv">29</span>)</span>
-<span id="cb27-10"><a href="פונקציות.html#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
-<pre><code>## [1] &quot;The bigger number is: 29&quot;</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="פונקציות.html#cb29-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">57</span>,<span class="dv">36</span>)</span>
-<span id="cb29-2"><a href="פונקציות.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
-<pre><code>## [1] &quot;The bigger number is: 57&quot;</code></pre>
+<div id="אופרטורים-לוגיים" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> אופרטורים לוגיים</h2>
 
 </div>
 </div>
@@ -250,8 +227,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="אופרטורים.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="עוד-פונקציות-שימושיות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="לולאות.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="פונקציות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -282,7 +259,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-Functions.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-Operators.Rmd",
 "text": "Edit"
 },
 "history": {
