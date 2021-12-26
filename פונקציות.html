@@ -179,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="פונקציות.html"><a href="פונקציות.html#מה-זאת-פונקציה"><i class="fa fa-check"></i><b>4.1</b> מה זאת פונקציה</a></li>
 <li class="chapter" data-level="4.2" data-path="פונקציות.html"><a href="פונקציות.html#מבנה-כללי"><i class="fa fa-check"></i><b>4.2</b> מבנה כללי</a></li>
 <li class="chapter" data-level="4.3" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא"><i class="fa fa-check"></i><b>4.3</b> דוגמא</a></li>
+<li class="chapter" data-level="4.4" data-path="פונקציות.html"><a href="פונקציות.html#פרטרים-דיפולטיים"><i class="fa fa-check"></i><b>4.4</b> פרטרים דיפולטיים</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html"><i class="fa fa-check"></i><b>5</b> עוד פונקציות שימושיות</a>
 <ul>
@@ -192,6 +193,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#filter"><i class="fa fa-check"></i><b>8.1</b> filter</a></li>
 <li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>8.2</b> mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="תרגולים.html"><a href="תרגולים.html"><i class="fa fa-check"></i><b>9</b> תרגולים</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="תרגולים.html"><a href="תרגולים.html#פונקציות-1"><i class="fa fa-check"></i><b>9.1</b> פונקציות</a></li>
 </ul></li>
 </ul>
 
@@ -247,6 +252,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="פונקציות.html#cb29-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">57</span>,<span class="dv">36</span>)</span>
 <span id="cb29-2"><a href="פונקציות.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
 <pre><code>## [1] &quot;The bigger number is: 57&quot;</code></pre>
+</div>
+<div id="פרטרים-דיפולטיים" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> פרטרים דיפולטיים</h2>
+<p>פונקציה יכולה לקבל פרמטרים בתור ברירת מחדל (default).
+המשמעות היא שלכל משתנה שמוגדרת לו ברירת מחדל, המשתמש לא נדרש להכניס אותה כקלט לפונקציה. אם הפונקציה לא קיבלה את אותו משתנה כקלט, הוא יקבל את הערך שהוגדר לו כברירת מחדל.
+אם נחזור לפונקציה מהדוגמא הקודמת, נגדיר אותה שוב, אך הפעם num2 יקבל את הערך 6 כברירת מחדל.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="פונקציות.html#cb31-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, <span class="at">num2=</span><span class="dv">6</span>) {</span>
+<span id="cb31-2"><a href="פונקציות.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
+<span id="cb31-3"><a href="פונקציות.html#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
+<span id="cb31-4"><a href="פונקציות.html#cb31-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb31-5"><a href="פונקציות.html#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb31-6"><a href="פונקציות.html#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
+<span id="cb31-7"><a href="פונקציות.html#cb31-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb31-8"><a href="פונקציות.html#cb31-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb31-9"><a href="פונקציות.html#cb31-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>)</span>
+<span id="cb31-10"><a href="פונקציות.html#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<pre><code>## [1] &quot;The bigger number is: 24&quot;</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="פונקציות.html#cb33-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">3</span>)</span>
+<span id="cb33-2"><a href="פונקציות.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<pre><code>## [1] &quot;The bigger number is: 6&quot;</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="פונקציות.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we can still change those two values!</span></span>
+<span id="cb35-2"><a href="פונקציות.html#cb35-2" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="at">num1 =</span> <span class="dv">7</span>, <span class="at">num2 =</span> <span class="dv">8</span>)</span>
+<span id="cb35-3"><a href="פונקציות.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<pre><code>## [1] &quot;The bigger number is: 8&quot;</code></pre>
 
 </div>
 </div>

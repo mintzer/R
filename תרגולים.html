@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 5 - עוד פונקציות שימושיות | מדריך לשפת R</title>
-  <meta name="description" content="פרק 5 - עוד פונקציות שימושיות | מדריך לשפת R" />
+  <title>פרק 9 - תרגולים | מדריך לשפת R</title>
+  <meta name="description" content="פרק 9 - תרגולים | מדריך לשפת R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 5 - עוד פונקציות שימושיות | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 9 - תרגולים | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="פרק 5 - עוד פונקציות שימושיות | מדריך לשפת R" />
+  <meta property="og:description" content="פרק 9 - תרגולים | מדריך לשפת R" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 5 - עוד פונקציות שימושיות | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 9 - תרגולים | מדריך לשפת R" />
   
-  <meta name="twitter:description" content="פרק 5 - עוד פונקציות שימושיות | מדריך לשפת R" />
+  <meta name="twitter:description" content="פרק 9 - תרגולים | מדריך לשפת R" />
   
 
 <meta name="author" content="שי מינצר" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="פונקציות.html"/>
-<link rel="next" href="data.html"/>
+<link rel="prev" href="tidyverse.html"/>
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -219,39 +219,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="books.jpg">
 </div>
-<div id="עוד-פונקציות-שימושיות" class="section level1" number="5">
-<h1><span class="header-section-number">פרק 5 - </span> עוד פונקציות שימושיות</h1>
-<div id="rep" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> rep</h2>
-<p>מחזיר וקטור שמכיל את הערך 0 כפול 50 פעמים</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="עוד-פונקציות-שימושיות.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">50</span>)</span></code></pre></div>
-<pre><code>##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-## [39] 0 0 0 0 0 0 0 0 0 0 0 0</code></pre>
-<p>מחזיר וקטור שמכיל את הערך hey כפול 20 פעמים</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="עוד-פונקציות-שימושיות.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="st">&quot;hey&quot;</span>,<span class="dv">20</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot;
-## [13] &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot;</code></pre>
-</div>
-<div id="print" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> print</h2>
-<p>הפונקציה “מדפיסה” למסך את הערך שהיא מקבלת</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="עוד-פונקציות-שימושיות.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Hi!&#39;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;Hi!&quot;</code></pre>
-</div>
-<div id="class" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> class</h2>
-<p>הפונקציה מחזירה את המחלקה של המשתנה שהיא מקבלת. במילים אחרות - מאיזה <b>סוג</b> הוא.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="עוד-פונקציות-שימושיות.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">14</span>) </span></code></pre></div>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="עוד-פונקציות-שימושיות.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fl">7.2</span>) </span></code></pre></div>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="עוד-פונקציות-שימושיות.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&#39;Ten&#39;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="עוד-פונקציות-שימושיות.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;logical&quot;</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="עוד-פונקציות-שימושיות.html#cb51-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
-<span id="cb51-2"><a href="עוד-פונקציות-שימושיות.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df) </span></code></pre></div>
-<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<div id="תרגולים" class="section level1" number="9">
+<h1><span class="header-section-number">פרק 9 - </span> תרגולים</h1>
+<div id="פונקציות-1" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> פונקציות</h2>
+<p>תרגיל 1:
+צרי פונקציה בשם num_to_txt שמקבלת ספרה מ-0 עד 9 (numeric) ומחזירה אותה בצורה טקסטואלית (character).
+לדוגמא:</p>
+<pre><code>num_to_txt(4) # returns &quot;four&quot;</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="תרגולים.html#cb71-1" aria-hidden="true" tabindex="-1"></a>num_to_txt <span class="ot">&lt;-</span> <span class="cf">function</span>(digit) {</span>
+<span id="cb71-2"><a href="תרגולים.html#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(digit) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span> <span class="sc">&amp;</span> <span class="fu">nchar</span>(digit) <span class="sc">==</span> <span class="dv">1</span>) {</span>
+<span id="cb71-3"><a href="תרגולים.html#cb71-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">0</span>) {<span class="fu">return</span> (<span class="st">&#39;zero&#39;</span>)}</span>
+<span id="cb71-4"><a href="תרגולים.html#cb71-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">1</span>) {<span class="fu">return</span> (<span class="st">&#39;one&#39;</span>)}</span>
+<span id="cb71-5"><a href="תרגולים.html#cb71-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">2</span>) {<span class="fu">return</span> (<span class="st">&#39;two&#39;</span>)}</span>
+<span id="cb71-6"><a href="תרגולים.html#cb71-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">3</span>) {<span class="fu">return</span> (<span class="st">&#39;three&#39;</span>)}</span>
+<span id="cb71-7"><a href="תרגולים.html#cb71-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">4</span>) {<span class="fu">return</span> (<span class="st">&#39;four&#39;</span>)}</span>
+<span id="cb71-8"><a href="תרגולים.html#cb71-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">5</span>) {<span class="fu">return</span> (<span class="st">&#39;five&#39;</span>)}</span>
+<span id="cb71-9"><a href="תרגולים.html#cb71-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">6</span>) {<span class="fu">return</span> (<span class="st">&#39;six&#39;</span>)}</span>
+<span id="cb71-10"><a href="תרגולים.html#cb71-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">7</span>) {<span class="fu">return</span> (<span class="st">&#39;seven&#39;</span>)}</span>
+<span id="cb71-11"><a href="תרגולים.html#cb71-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">8</span>) {<span class="fu">return</span> (<span class="st">&#39;eight&#39;</span>)}</span>
+<span id="cb71-12"><a href="תרגולים.html#cb71-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">9</span>) {<span class="fu">return</span> (<span class="st">&#39;nine&#39;</span>)}</span>
+<span id="cb71-13"><a href="תרגולים.html#cb71-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb71-14"><a href="תרגולים.html#cb71-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid digit. please try again&#39;</span>)}</span>
+<span id="cb71-15"><a href="תרגולים.html#cb71-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb71-16"><a href="תרגולים.html#cb71-16" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">3</span>) <span class="co"># &quot;three&quot;</span></span>
+<span id="cb71-17"><a href="תרגולים.html#cb71-17" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">7</span>) <span class="co"># &quot;seven&quot;</span></span>
+<span id="cb71-18"><a href="תרגולים.html#cb71-18" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">13</span>) <span class="co"># &quot;not a valid digit. please try again&quot;</span></span>
+<span id="cb71-19"><a href="תרגולים.html#cb71-19" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">9</span>) <span class="co"># &quot;nine&quot;</span></span></code></pre></div>
+<!-- This part can be programmatically generated with htmltools. Thus we can control initial state from the YAML front matter-->
+<script id="code-folding-options" type="application/json">
+  {"initial-state": "hide"}
+</script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  const languages = ['r', 'python', 'bash', 'sql', 'cpp', 'stan', 'julia', 'foldable'];
+  const options = JSON.parse(document.getElementById("code-folding-options").text);
+  const show = options["initial-state"] !== "hide";
+  Array.from(document.querySelectorAll("pre.sourceCode")).map(function(pre) {
+    const classList = pre.classList;
+    if (languages.some(x => classList.contains(x))) {
+      const div = pre.parentElement;
+      const state = show || classList.contains("fold-show") && !classList.contains("fold-hide") ? " open" : "";
+      div.outerHTML = `<details${state}><summary></summary>${div.outerHTML}</details>`;
+    }
+  });
+});
+</script>
+<style type="text/css">
+summary {
+  display: list-item;
+  text-align: right;
+}
+summary::after {
+  content: 'הצג פיתרון'
+}
+details[open] > summary::after {
+  content: 'הסתר פיתרון'
+}
+</style>
 
 </div>
 </div>
@@ -260,8 +285,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="פונקציות.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tidyverse.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -292,7 +317,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-basic_functions.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-Exercises.Rmd",
 "text": "Edit"
 },
 "history": {

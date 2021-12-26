@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="ggplot.html"/>
-
+<link rel="next" href="תרגולים.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -179,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="פונקציות.html"><a href="פונקציות.html#מה-זאת-פונקציה"><i class="fa fa-check"></i><b>4.1</b> מה זאת פונקציה</a></li>
 <li class="chapter" data-level="4.2" data-path="פונקציות.html"><a href="פונקציות.html#מבנה-כללי"><i class="fa fa-check"></i><b>4.2</b> מבנה כללי</a></li>
 <li class="chapter" data-level="4.3" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא"><i class="fa fa-check"></i><b>4.3</b> דוגמא</a></li>
+<li class="chapter" data-level="4.4" data-path="פונקציות.html"><a href="פונקציות.html#פרטרים-דיפולטיים"><i class="fa fa-check"></i><b>4.4</b> פרטרים דיפולטיים</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html"><i class="fa fa-check"></i><b>5</b> עוד פונקציות שימושיות</a>
 <ul>
@@ -192,6 +193,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#filter"><i class="fa fa-check"></i><b>8.1</b> filter</a></li>
 <li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>8.2</b> mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="תרגולים.html"><a href="תרגולים.html"><i class="fa fa-check"></i><b>9</b> תרגולים</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="תרגולים.html"><a href="תרגולים.html#פונקציות-1"><i class="fa fa-check"></i><b>9.1</b> פונקציות</a></li>
 </ul></li>
 </ul>
 
@@ -216,16 +221,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="tidyverse" class="section level1" number="8">
 <h1><span class="header-section-number">פרק 8 - </span> tidyverse</h1>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="tidyverse.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidyverse if it is not already installed</span></span>
-<span id="cb52-2"><a href="tidyverse.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidyverse&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb52-3"><a href="tidyverse.html#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidyverse</span></span>
-<span id="cb52-4"><a href="tidyverse.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb52-5"><a href="tidyverse.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidylog if it is not already installed</span></span>
-<span id="cb52-6"><a href="tidyverse.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
-<span id="cb52-7"><a href="tidyverse.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
-<span id="cb52-8"><a href="tidyverse.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tidyverse.html#cb53-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
-<span id="cb53-2"><a href="tidyverse.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="tidyverse.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidyverse if it is not already installed</span></span>
+<span id="cb58-2"><a href="tidyverse.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidyverse&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb58-3"><a href="tidyverse.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidyverse</span></span>
+<span id="cb58-4"><a href="tidyverse.html#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb58-5"><a href="tidyverse.html#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidylog if it is not already installed</span></span>
+<span id="cb58-6"><a href="tidyverse.html#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
+<span id="cb58-7"><a href="tidyverse.html#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
+<span id="cb58-8"><a href="tidyverse.html#cb58-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tidyverse.html#cb59-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
+<span id="cb59-2"><a href="tidyverse.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating
 ## 1                 100% Bran       70    130    280 68.40297
 ## 2         100% Natural Bran      120     15    135 33.98368
@@ -235,9 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6   Apple Cinnamon Cheerios      110    180     70 29.50954</code></pre>
 <div id="filter" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> filter</h2>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tidyverse.html#cb55-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="tidyverse.html#cb61-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
 <pre><code>## filter: removed 74 rows (96%), 3 rows remaining</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="tidyverse.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="tidyverse.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating
 ## 1 All-Bran with Extra Fiber       50    140    330 93.70491
 ## 2    Shredded Wheat &#39;n&#39;Bran       90      0    140 74.47295
@@ -245,17 +250,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="mutate" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> mutate</h2>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tidyverse.html#cb59-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
-<span id="cb59-2"><a href="tidyverse.html#cb59-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
-<span id="cb59-3"><a href="tidyverse.html#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">high_clorie =</span> <span class="fu">case_when</span>(</span>
-<span id="cb59-4"><a href="tidyverse.html#cb59-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&gt;</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
-<span id="cb59-5"><a href="tidyverse.html#cb59-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&lt;=</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
-<span id="cb59-6"><a href="tidyverse.html#cb59-6" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="tidyverse.html#cb65-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
+<span id="cb65-2"><a href="tidyverse.html#cb65-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb65-3"><a href="tidyverse.html#cb65-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">high_clorie =</span> <span class="fu">case_when</span>(</span>
+<span id="cb65-4"><a href="tidyverse.html#cb65-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&gt;</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb65-5"><a href="tidyverse.html#cb65-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&lt;=</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb65-6"><a href="tidyverse.html#cb65-6" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
 <pre><code>## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion
 
 ## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion</code></pre>
 <pre><code>## mutate: new variable &#39;high_clorie&#39; (logical) with 3 unique values and 4% NA</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="tidyverse.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="tidyverse.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating high_clorie
 ## 1                 100% Bran       70    130    280 68.40297       FALSE
 ## 2         100% Natural Bran      120     15    135 33.98368        TRUE
@@ -271,8 +276,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="ggplot.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="ggplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="תרגולים.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
