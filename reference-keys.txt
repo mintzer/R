@@ -20,3 +20,5 @@ class
 data.frame
 ggplot
 tidyverse
+filter
+mutate
