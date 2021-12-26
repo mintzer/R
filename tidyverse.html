@@ -226,33 +226,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb52-8"><a href="tidyverse.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tidyverse.html#cb53-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
 <span id="cb53-2"><a href="tidyverse.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
-<pre><code>##                        name calories protein sodium sugars potass vitamins
-## 1                 100% Bran       70       4    130      6    280       25
-## 2         100% Natural Bran      120       3     15      8    135        0
-## 3                  All-Bran       70       4    260      5    320       25
-## 4 All-Bran with Extra Fiber       50       4    140      0    330       25
-## 5            Almond Delight      110       2    200      8     -1       25
-## 6   Apple Cinnamon Cheerios      110       2    180     10     70       25
-##     rating  X X.1
-## 1 68.40297 NA  NA
-## 2 33.98368 NA  NA
-## 3 59.42551 NA  NA
-## 4 93.70491 NA  NA
-## 5 34.38484 NA  NA
-## 6 29.50954 NA  NA</code></pre>
+<pre><code>##                        name calories sodium potass   rating
+## 1                 100% Bran       70    130    280 68.40297
+## 2         100% Natural Bran      120     15    135 33.98368
+## 3                  All-Bran       70    260    320 59.42551
+## 4 All-Bran with Extra Fiber       50    140    330 93.70491
+## 5            Almond Delight      110    200     -1 34.38484
+## 6   Apple Cinnamon Cheerios      110    180     70 29.50954</code></pre>
 <div id="filter" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> filter</h2>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tidyverse.html#cb55-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
 <pre><code>## filter: removed 74 rows (96%), 3 rows remaining</code></pre>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="tidyverse.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
-<pre><code>##                        name calories protein sodium sugars potass vitamins
-## 1 All-Bran with Extra Fiber       50       4    140      0    330       25
-## 2    Shredded Wheat &#39;n&#39;Bran       90       3      0      0    140        0
-## 3 Shredded Wheat spoon size       90       3      0      0    120        0
-##     rating  X X.1
-## 1 93.70491 NA  NA
-## 2 74.47295 NA  NA
-## 3 72.80179 NA  NA</code></pre>
+<pre><code>##                        name calories sodium potass   rating
+## 1 All-Bran with Extra Fiber       50    140    330 93.70491
+## 2    Shredded Wheat &#39;n&#39;Bran       90      0    140 74.47295
+## 3 Shredded Wheat spoon size       90      0    120 72.80179</code></pre>
 </div>
 <div id="mutate" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> mutate</h2>
@@ -267,20 +256,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion</code></pre>
 <pre><code>## mutate: new variable &#39;high_clorie&#39; (logical) with 3 unique values and 4% NA</code></pre>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="tidyverse.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
-<pre><code>##                        name calories protein sodium sugars potass vitamins
-## 1                 100% Bran       70       4    130      6    280       25
-## 2         100% Natural Bran      120       3     15      8    135        0
-## 3                  All-Bran       70       4    260      5    320       25
-## 4 All-Bran with Extra Fiber       50       4    140      0    330       25
-## 5            Almond Delight      110       2    200      8     -1       25
-## 6   Apple Cinnamon Cheerios      110       2    180     10     70       25
-##     rating  X X.1 high_clorie
-## 1 68.40297 NA  NA       FALSE
-## 2 33.98368 NA  NA        TRUE
-## 3 59.42551 NA  NA       FALSE
-## 4 93.70491 NA  NA       FALSE
-## 5 34.38484 NA  NA        TRUE
-## 6 29.50954 NA  NA        TRUE</code></pre>
+<pre><code>##                        name calories sodium potass   rating high_clorie
+## 1                 100% Bran       70    130    280 68.40297       FALSE
+## 2         100% Natural Bran      120     15    135 33.98368        TRUE
+## 3                  All-Bran       70    260    320 59.42551       FALSE
+## 4 All-Bran with Extra Fiber       50    140    330 93.70491       FALSE
+## 5            Almond Delight      110    200     -1 34.38484        TRUE
+## 6   Apple Cinnamon Cheerios      110    180     70 29.50954        TRUE</code></pre>
 
 </div>
 </div>
