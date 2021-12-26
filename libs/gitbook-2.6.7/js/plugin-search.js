@@ -160,11 +160,11 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
             'type': 'search',
             'class': 'form-control',
             'val': value,
-            'placeholder': 'Type to search (Enter for navigation)',
+            'placeholder': 'מה תרצי לחפש? (Enter כדי לעבור בין התוצאות)',
             'title': 'Use Enter or the <Down> key to navigate to the next match, or the <Up> key to the previous match'
         });
 
-        $searchLabel.append("Type to search");
+        $searchLabel.append("הקלד כדי לחפש");
         $searchLabel.appendTo($searchForm);
         $searchInput.appendTo($searchForm);
         $searchForm.prependTo(gitbook.state.$book.find('.book-summary'));
