@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="" xml:lang=""><link rel="shortcut icon" href="rstudio.svg" />
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
@@ -224,65 +224,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb52-6"><a href="tidyverse.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
 <span id="cb52-7"><a href="tidyverse.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
 <span id="cb52-8"><a href="tidyverse.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tidyverse.html#cb53-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>, <span class="at">sep=</span><span class="st">&#39;;&#39;</span>)</span>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tidyverse.html#cb53-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
 <span id="cb53-2"><a href="tidyverse.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
-<pre><code>##                        name         mfr        type calories protein fat sodium
-## 1                    String Categorical Categorical      Int     Int Int    Int
-## 2                 100% Bran           N           C       70       4   1    130
-## 3         100% Natural Bran           Q           C      120       3   5     15
-## 4                  All-Bran           K           C       70       4   1    260
-## 5 All-Bran with Extra Fiber           K           C       50       4   0    140
-## 6            Almond Delight           R           C      110       2   2    200
-##   fiber carbo sugars potass vitamins shelf weight  cups    rating
-## 1 Float Float    Int    Int      Int   Int  Float Float     Float
-## 2    10     5      6    280       25     3      1  0.33 68.402973
-## 3     2     8      8    135        0     3      1     1 33.983679
-## 4     9     7      5    320       25     3      1  0.33 59.425505
-## 5    14     8      0    330       25     3      1   0.5 93.704912
-## 6     1    14      8     -1       25     3      1  0.75 34.384843</code></pre>
+<pre><code>##                        name calories protein sodium sugars potass vitamins
+## 1                 100% Bran       70       4    130      6    280       25
+## 2         100% Natural Bran      120       3     15      8    135        0
+## 3                  All-Bran       70       4    260      5    320       25
+## 4 All-Bran with Extra Fiber       50       4    140      0    330       25
+## 5            Almond Delight      110       2    200      8     -1       25
+## 6   Apple Cinnamon Cheerios      110       2    180     10     70       25
+##     rating  X X.1
+## 1 68.40297 NA  NA
+## 2 33.98368 NA  NA
+## 3 59.42551 NA  NA
+## 4 93.70491 NA  NA
+## 5 34.38484 NA  NA
+## 6 29.50954 NA  NA</code></pre>
 <div id="filter" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> filter</h2>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tidyverse.html#cb55-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
-<pre><code>## filter: removed 74 rows (95%), 4 rows remaining</code></pre>
+<pre><code>## filter: removed 74 rows (96%), 3 rows remaining</code></pre>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="tidyverse.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
-<pre><code>##                        name         mfr        type calories protein fat sodium
-## 1                    String Categorical Categorical      Int     Int Int    Int
-## 2 All-Bran with Extra Fiber           K           C       50       4   0    140
-## 3    Shredded Wheat &#39;n&#39;Bran           N           C       90       3   0      0
-## 4 Shredded Wheat spoon size           N           C       90       3   0      0
-##   fiber carbo sugars potass vitamins shelf weight  cups    rating
-## 1 Float Float    Int    Int      Int   Int  Float Float     Float
-## 2    14     8      0    330       25     3      1   0.5 93.704912
-## 3     4    19      0    140        0     1      1  0.67 74.472949
-## 4     3    20      0    120        0     1      1  0.67 72.801787</code></pre>
+<pre><code>##                        name calories protein sodium sugars potass vitamins
+## 1 All-Bran with Extra Fiber       50       4    140      0    330       25
+## 2    Shredded Wheat &#39;n&#39;Bran       90       3      0      0    140        0
+## 3 Shredded Wheat spoon size       90       3      0      0    120        0
+##     rating  X X.1
+## 1 93.70491 NA  NA
+## 2 74.47295 NA  NA
+## 3 72.80179 NA  NA</code></pre>
 </div>
 <div id="mutate" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> mutate</h2>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tidyverse.html#cb59-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>, <span class="at">sep=</span><span class="st">&#39;;&#39;</span>)</span>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tidyverse.html#cb59-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
 <span id="cb59-2"><a href="tidyverse.html#cb59-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
-<span id="cb59-3"><a href="tidyverse.html#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">is_fat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb59-3"><a href="tidyverse.html#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">high_clorie =</span> <span class="fu">case_when</span>(</span>
 <span id="cb59-4"><a href="tidyverse.html#cb59-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&gt;</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
 <span id="cb59-5"><a href="tidyverse.html#cb59-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&lt;=</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
 <span id="cb59-6"><a href="tidyverse.html#cb59-6" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
 <pre><code>## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion
 
 ## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion</code></pre>
-<pre><code>## mutate: new variable &#39;is_fat&#39; (logical) with 3 unique values and 1% NA</code></pre>
+<pre><code>## mutate: new variable &#39;high_clorie&#39; (logical) with 3 unique values and 4% NA</code></pre>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="tidyverse.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
-<pre><code>##                        name         mfr        type calories protein fat sodium
-## 1                    String Categorical Categorical      Int     Int Int    Int
-## 2                 100% Bran           N           C       70       4   1    130
-## 3         100% Natural Bran           Q           C      120       3   5     15
-## 4                  All-Bran           K           C       70       4   1    260
-## 5 All-Bran with Extra Fiber           K           C       50       4   0    140
-## 6            Almond Delight           R           C      110       2   2    200
-##   fiber carbo sugars potass vitamins shelf weight  cups    rating is_fat
-## 1 Float Float    Int    Int      Int   Int  Float Float     Float     NA
-## 2    10     5      6    280       25     3      1  0.33 68.402973  FALSE
-## 3     2     8      8    135        0     3      1     1 33.983679   TRUE
-## 4     9     7      5    320       25     3      1  0.33 59.425505  FALSE
-## 5    14     8      0    330       25     3      1   0.5 93.704912  FALSE
-## 6     1    14      8     -1       25     3      1  0.75 34.384843   TRUE</code></pre>
+<pre><code>##                        name calories protein sodium sugars potass vitamins
+## 1                 100% Bran       70       4    130      6    280       25
+## 2         100% Natural Bran      120       3     15      8    135        0
+## 3                  All-Bran       70       4    260      5    320       25
+## 4 All-Bran with Extra Fiber       50       4    140      0    330       25
+## 5            Almond Delight      110       2    200      8     -1       25
+## 6   Apple Cinnamon Cheerios      110       2    180     10     70       25
+##     rating  X X.1 high_clorie
+## 1 68.40297 NA  NA       FALSE
+## 2 33.98368 NA  NA        TRUE
+## 3 59.42551 NA  NA       FALSE
+## 4 93.70491 NA  NA       FALSE
+## 5 34.38484 NA  NA        TRUE
+## 6 29.50954 NA  NA        TRUE</code></pre>
 
 </div>
 </div>
