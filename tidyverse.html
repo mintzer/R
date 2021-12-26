@@ -24,6 +24,7 @@
 <meta name="author" content="שי מינצר" />
 
 
+<meta name="date" content="2021-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -219,6 +220,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb52-6"><a href="tidyverse.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
 <span id="cb52-7"><a href="tidyverse.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
 <span id="cb52-8"><a href="tidyverse.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tidyverse.html#cb53-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>, <span class="at">sep=</span><span class="st">&#39;;&#39;</span>)</span>
+<span id="cb53-2"><a href="tidyverse.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<pre><code>##                        name         mfr        type calories protein fat sodium
+## 1                    String Categorical Categorical      Int     Int Int    Int
+## 2                 100% Bran           N           C       70       4   1    130
+## 3         100% Natural Bran           Q           C      120       3   5     15
+## 4                  All-Bran           K           C       70       4   1    260
+## 5 All-Bran with Extra Fiber           K           C       50       4   0    140
+## 6            Almond Delight           R           C      110       2   2    200
+##   fiber carbo sugars potass vitamins shelf weight  cups    rating
+## 1 Float Float    Int    Int      Int   Int  Float Float     Float
+## 2    10     5      6    280       25     3      1  0.33 68.402973
+## 3     2     8      8    135        0     3      1     1 33.983679
+## 4     9     7      5    320       25     3      1  0.33 59.425505
+## 5    14     8      0    330       25     3      1   0.5 93.704912
+## 6     1    14      8     -1       25     3      1  0.75 34.384843</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tidyverse.html#cb55-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
+<pre><code>## filter: removed 74 rows (95%), 4 rows remaining</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="tidyverse.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<pre><code>##                        name         mfr        type calories protein fat sodium
+## 1                    String Categorical Categorical      Int     Int Int    Int
+## 2 All-Bran with Extra Fiber           K           C       50       4   0    140
+## 3    Shredded Wheat &#39;n&#39;Bran           N           C       90       3   0      0
+## 4 Shredded Wheat spoon size           N           C       90       3   0      0
+##   fiber carbo sugars potass vitamins shelf weight  cups    rating
+## 1 Float Float    Int    Int      Int   Int  Float Float     Float
+## 2    14     8      0    330       25     3      1   0.5 93.704912
+## 3     4    19      0    140        0     1      1  0.67 74.472949
+## 4     3    20      0    120        0     1      1  0.67 72.801787</code></pre>
 
 </div>
             </section>
