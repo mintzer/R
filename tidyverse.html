@@ -182,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="פונקציות.html"><a href="פונקציות.html#מה-זאת-פונקציה"><i class="fa fa-check"></i><b>4.1</b> מה זאת פונקציה</a></li>
 <li class="chapter" data-level="4.2" data-path="פונקציות.html"><a href="פונקציות.html#מבנה-כללי"><i class="fa fa-check"></i><b>4.2</b> מבנה כללי</a></li>
 <li class="chapter" data-level="4.3" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא"><i class="fa fa-check"></i><b>4.3</b> דוגמא</a></li>
-<li class="chapter" data-level="4.4" data-path="פונקציות.html"><a href="פונקציות.html#פרטרים-דיפולטיים"><i class="fa fa-check"></i><b>4.4</b> פרטרים דיפולטיים</a></li>
+<li class="chapter" data-level="4.4" data-path="פונקציות.html"><a href="פונקציות.html#ערכי-ברירת-מחדל"><i class="fa fa-check"></i><b>4.4</b> ערכי ברירת מחדל</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html"><i class="fa fa-check"></i><b>5</b> עוד פונקציות שימושיות</a>
 <ul>
@@ -200,6 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i>תרגילים</a>
 <ul>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-פונקציות"><i class="fa fa-check"></i>תרגילים בנושא פונקציות</a></li>
+<li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-לולאות"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
 </ul></li>
 </ul>
 
@@ -259,11 +260,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb65-4"><a href="tidyverse.html#cb65-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&gt;</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
 <span id="cb65-5"><a href="tidyverse.html#cb65-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&lt;=</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
 <span id="cb65-6"><a href="tidyverse.html#cb65-6" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
-<pre><code>## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion
-
-## Warning in eval_tidy(pair$lhs, env = default_env): NAs introduced by coercion</code></pre>
 <pre><code>## mutate: new variable &#39;high_clorie&#39; (logical) with 3 unique values and 4% NA</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="tidyverse.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="tidyverse.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating high_clorie
 ## 1                 100% Bran       70    130    280 68.40297       FALSE
 ## 2         100% Natural Bran      120     15    135 33.98368        TRUE
