@@ -23,5 +23,3 @@ ggplot
 tidyverse
 filter
 mutate
-תרגילים
-תרגילים-בנושא-פונקציות

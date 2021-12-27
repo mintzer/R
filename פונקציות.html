@@ -197,9 +197,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1" data-path="tidyverse.html"><a href="tidyverse.html#filter"><i class="fa fa-check"></i><b>8.1</b> filter</a></li>
 <li class="chapter" data-level="8.2" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>8.2</b> mutate</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i><b>9</b> תרגילים</a>
+<li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i>תרגילים</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-פונקציות"><i class="fa fa-check"></i><b>9.1</b> תרגילים בנושא פונקציות</a></li>
+<li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-פונקציות"><i class="fa fa-check"></i>תרגילים בנושא פונקציות</a></li>
 </ul></li>
 </ul>
 
@@ -259,8 +259,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="פרטרים-דיפולטיים" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> פרטרים דיפולטיים</h2>
 <p>פונקציה יכולה לקבל פרמטרים בתור ברירת מחדל (default).
-המשמעות היא שלכל משתנה שמוגדרת לו ברירת מחדל, המשתמש לא נדרש להכניס אותה כקלט לפונקציה. אם הפונקציה לא קיבלה את אותו משתנה כקלט, הוא יקבל את הערך שהוגדר לו כברירת מחדל.
-אם נחזור לפונקציה מהדוגמא הקודמת, נגדיר אותה שוב, אך הפעם num2 יקבל את הערך 6 כברירת מחדל.</p>
+המשמעות היא שלכל משתנה שמוגדרת לו ברירת מחדל - אם המשתמש לא הכניס את אותו משתנה כקלט לפונקציה, הפונקציה תקבל אותו עם הערך הדיפולטי.
+נגדיר שוב את הפונקציה מהדוגמא הקודמת, אך הפעם num2 יקבל את הערך 6 כברירת מחדל.</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="פונקציות.html#cb31-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, <span class="at">num2=</span><span class="dv">6</span>) {</span>
 <span id="cb31-2"><a href="פונקציות.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
 <span id="cb31-3"><a href="פונקציות.html#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
