@@ -19,7 +19,7 @@ rep
 print
 class
 data.frame
-ggplot
 tidyverse
 filter
 mutate
+ggplot
