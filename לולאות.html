@@ -24,7 +24,7 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2021-12-31" />
+<meta name="date" content="2022-01-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,37 +296,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="לולאת-while" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> לולאת while</h2>
-<p>לולאה שרצה כל עוד תנאי מסוים מתקיים.
-דוגמא 1: הלולאה הבאה רצה כל עוד המשתנה i קטן מ5. בכל ריצה של הלולאה i יגדל ב-1 כך שהלולאה תרוץ בדיוק 4 פעמים.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="לולאות.html#cb23-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb23-2"><a href="לולאות.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&lt;</span> <span class="dv">5</span>) {</span>
-<span id="cb23-3"><a href="לולאות.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (i)</span>
-<span id="cb23-4"><a href="לולאות.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb23-5"><a href="לולאות.html#cb23-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>לולאה שרצה כל עוד תנאי מסוים מתקיים.</p>
+<p><em>מבנה כללי:</em></p>
+<pre><code>while (condition) {
+
+    loop body #the code here will run every time the loop iterate, 
+              #while the condition returns TRUE
+
+}</code></pre>
+<p>דוגמא 1: הלולאה הבאה רצה כל עוד המשתנה i קטן מ5. בכל ריצה של הלולאה i יגדל ב-1 כך שהלולאה תרוץ בדיוק 4 פעמים.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="לולאות.html#cb24-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb24-2"><a href="לולאות.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&lt;</span> <span class="dv">5</span>) {</span>
+<span id="cb24-3"><a href="לולאות.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (i)</span>
+<span id="cb24-4"><a href="לולאות.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb24-5"><a href="לולאות.html#cb24-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
 ## [1] 4</code></pre>
 <p>דוגמא 2: לולאת while עם שלושה תנאים:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="לולאות.html#cb25-1" aria-hidden="true" tabindex="-1"></a>index <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb25-2"><a href="לולאות.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (index <span class="sc">&lt;</span> <span class="dv">7</span>) {</span>
-<span id="cb25-3"><a href="לולאות.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if the remain of dividing &quot;index&quot; by 2 is 0</span></span>
-<span id="cb25-4"><a href="לולאות.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb25-5"><a href="לולאות.html#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
-<span id="cb25-6"><a href="לולאות.html#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is even&#39;</span>))</span>
-<span id="cb25-7"><a href="לולאות.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-8"><a href="לולאות.html#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if &quot;index&quot; is 5</span></span>
-<span id="cb25-9"><a href="לולאות.html#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">==</span> <span class="dv">5</span>) {</span>
-<span id="cb25-10"><a href="לולאות.html#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
-<span id="cb25-11"><a href="לולאות.html#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&#39;5!&#39;</span>)</span>
-<span id="cb25-12"><a href="לולאות.html#cb25-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-13"><a href="לולאות.html#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if the remain of dividing &quot;index&quot; by 2 is not 0</span></span>
-<span id="cb25-14"><a href="לולאות.html#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">!=</span> <span class="dv">0</span>) {</span>
-<span id="cb25-15"><a href="לולאות.html#cb25-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
-<span id="cb25-16"><a href="לולאות.html#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is not even and not 5&#39;</span>))</span>
-<span id="cb25-17"><a href="לולאות.html#cb25-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-18"><a href="לולאות.html#cb25-18" aria-hidden="true" tabindex="-1"></a>  index <span class="ot">&lt;-</span> index <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb25-19"><a href="לולאות.html#cb25-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="לולאות.html#cb26-1" aria-hidden="true" tabindex="-1"></a>index <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb26-2"><a href="לולאות.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (index <span class="sc">&lt;</span> <span class="dv">7</span>) {</span>
+<span id="cb26-3"><a href="לולאות.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if the remain of dividing &quot;index&quot; by 2 is 0</span></span>
+<span id="cb26-4"><a href="לולאות.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb26-5"><a href="לולאות.html#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
+<span id="cb26-6"><a href="לולאות.html#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is even&#39;</span>))</span>
+<span id="cb26-7"><a href="לולאות.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-8"><a href="לולאות.html#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if &quot;index&quot; is 5</span></span>
+<span id="cb26-9"><a href="לולאות.html#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">==</span> <span class="dv">5</span>) {</span>
+<span id="cb26-10"><a href="לולאות.html#cb26-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
+<span id="cb26-11"><a href="לולאות.html#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&#39;5!&#39;</span>)</span>
+<span id="cb26-12"><a href="לולאות.html#cb26-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-13"><a href="לולאות.html#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if the remain of dividing &quot;index&quot; by 2 is not 0</span></span>
+<span id="cb26-14"><a href="לולאות.html#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">!=</span> <span class="dv">0</span>) {</span>
+<span id="cb26-15"><a href="לולאות.html#cb26-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
+<span id="cb26-16"><a href="לולאות.html#cb26-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is not even and not 5&#39;</span>))</span>
+<span id="cb26-17"><a href="לולאות.html#cb26-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-18"><a href="לולאות.html#cb26-18" aria-hidden="true" tabindex="-1"></a>  index <span class="ot">&lt;-</span> index <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb26-19"><a href="לולאות.html#cb26-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;the number 1 is not even and not 5&quot;
 ## [1] &quot;the number 2 is even&quot;
 ## [1] &quot;the number 3 is not even and not 5&quot;
