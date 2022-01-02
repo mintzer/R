@@ -20,6 +20,8 @@ print
 class
 data.frame
 tidyverse
+pipe
+read.csv
 filter
 mutate
 ggplot
