@@ -27,3 +27,4 @@ filter
 mutate
 ggplot
 הסקה-סטטיסטית
+paste
