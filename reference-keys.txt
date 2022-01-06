@@ -18,6 +18,7 @@ logical
 rep
 print
 class
+ifelse
 data.frame
 tidyverse
 pipe
@@ -25,3 +26,4 @@ read.csv
 filter
 mutate
 ggplot
+הסקה-סטטיסטית

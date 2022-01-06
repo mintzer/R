@@ -24,14 +24,14 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2022-01-04" />
+<meta name="date" content="2022-01-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ggplot.html"/>
+<link rel="prev" href="הסקה-סטטיסטית.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -191,6 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#rep"><i class="fa fa-check"></i><b>5.1</b> rep</a></li>
 <li class="chapter" data-level="5.2" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#print"><i class="fa fa-check"></i><b>5.2</b> print</a></li>
 <li class="chapter" data-level="5.3" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#class"><i class="fa fa-check"></i><b>5.3</b> class</a></li>
+<li class="chapter" data-level="5.4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#ifelse"><i class="fa fa-check"></i><b>5.4</b> ifelse</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> data.frame</a></li>
 <li class="chapter" data-level="7" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>7</b> tidyverse</a>
@@ -201,6 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>7.4</b> mutate</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>8</b> ggplot</a></li>
+<li class="chapter" data-level="9" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html"><i class="fa fa-check"></i><b>9</b> הסקה סטטיסטית</a></li>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i>תרגילים</a>
 <ul>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-לולאות"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
@@ -233,25 +235,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>תרגילים בנושא לולאות</h2>
 <p><em>תרגיל 1:</em>
 צרי לולאה שרצה על כל המספרים מ1 עד 10 ומדפיסה כל מספר בריבוע (1,4,9,16 וכו’).</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="תרגילים.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb80-2"><a href="תרגילים.html#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb80-3"><a href="תרגילים.html#cb80-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="תרגילים.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb95-2"><a href="תרגילים.html#cb95-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb95-3"><a href="תרגילים.html#cb95-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 2:</em>
 צרי לולאה שרצה על כל המספרים מ1 עד 100 ומדפיסה רק את המספרים שהם כפולה של 3 או כפולה של 7.</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="תרגילים.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) {</span>
-<span id="cb81-2"><a href="תרגילים.html#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> ) <span class="sc">|</span> (i <span class="sc">%%</span> <span class="dv">7</span> <span class="sc">==</span> <span class="dv">0</span>)) {</span>
-<span id="cb81-3"><a href="תרגילים.html#cb81-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb81-4"><a href="תרגילים.html#cb81-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb81-5"><a href="תרגילים.html#cb81-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="תרגילים.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) {</span>
+<span id="cb96-2"><a href="תרגילים.html#cb96-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> ) <span class="sc">|</span> (i <span class="sc">%%</span> <span class="dv">7</span> <span class="sc">==</span> <span class="dv">0</span>)) {</span>
+<span id="cb96-3"><a href="תרגילים.html#cb96-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb96-4"><a href="תרגילים.html#cb96-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb96-5"><a href="תרגילים.html#cb96-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 3:</em>
 צרי לולאה שרצה על כל המספרים מ1 עד 25 ומדפיסה את כל המספרים חוץ מ-8 ו23.</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="תרגילים.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">25</span>) {</span>
-<span id="cb82-2"><a href="תרגילים.html#cb82-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">!=</span> <span class="dv">8</span>) <span class="sc">&amp;</span> (i <span class="sc">!=</span> <span class="dv">23</span>)) {</span>
-<span id="cb82-3"><a href="תרגילים.html#cb82-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb82-4"><a href="תרגילים.html#cb82-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb82-5"><a href="תרגילים.html#cb82-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="תרגילים.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">25</span>) {</span>
+<span id="cb97-2"><a href="תרגילים.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">!=</span> <span class="dv">8</span>) <span class="sc">&amp;</span> (i <span class="sc">!=</span> <span class="dv">23</span>)) {</span>
+<span id="cb97-3"><a href="תרגילים.html#cb97-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb97-4"><a href="תרגילים.html#cb97-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb97-5"><a href="תרגילים.html#cb97-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 4:</em>
 צרי וקטור בשם num_to_skip</p>
@@ -259,25 +261,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>צרי לולאה שרצה על כל המספרים מ1 עד 40 ומדפיסה את המספרים שלא נמצאים בוקטור nums_to_skip. רמז - %in% :</p>
 <pre><code>3 %in% nums_to_skip # returns TRUE
 5 %in% nums_to_skip # returns FALSE</code></pre>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="תרגילים.html#cb85-1" aria-hidden="true" tabindex="-1"></a>nums_to_skip <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">22</span>,<span class="dv">32</span>,<span class="dv">33</span>)</span>
-<span id="cb85-2"><a href="תרגילים.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>) {</span>
-<span id="cb85-3"><a href="תרגילים.html#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ( <span class="sc">!</span> (i <span class="sc">%in%</span> nums_to_skip)) {</span>
-<span id="cb85-4"><a href="תרגילים.html#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb85-5"><a href="תרגילים.html#cb85-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb85-6"><a href="תרגילים.html#cb85-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="תרגילים.html#cb100-1" aria-hidden="true" tabindex="-1"></a>nums_to_skip <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">22</span>,<span class="dv">32</span>,<span class="dv">33</span>)</span>
+<span id="cb100-2"><a href="תרגילים.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>) {</span>
+<span id="cb100-3"><a href="תרגילים.html#cb100-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ( <span class="sc">!</span> (i <span class="sc">%in%</span> nums_to_skip)) {</span>
+<span id="cb100-4"><a href="תרגילים.html#cb100-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb100-5"><a href="תרגילים.html#cb100-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb100-6"><a href="תרגילים.html#cb100-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 5:</em>
 צרי לולאה בשם samples שתרוץ 10000 פעמים. בכל ריצה של הלולאה, דגמי דגימה בגודל 70 מתוך התפלגות נורמלית עם תוחלת 80 וסטיית תקן 5 (בעזרת הפונקציה rnorm). הכניסי את הוקטור שחוזר מהדגימה לתוך משתנה בשם sample.
 צרי וקטור ריק בשם sample_means (מחוץ ללולאה)
 בכל ריצה של הלולאה הכניסי אליו את הממוצע של הדגימה, כך שבסוף הלולאה הוא יכיל 10000 ממוצעים.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="תרגילים.html#cb86-1" aria-hidden="true" tabindex="-1"></a>sample_means <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb86-2"><a href="תרגילים.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">32</span>) <span class="co"># to make sure the results </span></span>
-<span id="cb86-3"><a href="תרגילים.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
-<span id="cb86-4"><a href="תרגילים.html#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
-<span id="cb86-5"><a href="תרגילים.html#cb86-5" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">5</span>)</span>
-<span id="cb86-6"><a href="תרגילים.html#cb86-6" aria-hidden="true" tabindex="-1"></a>  sample_means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample)</span>
-<span id="cb86-7"><a href="תרגילים.html#cb86-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb86-8"><a href="תרגילים.html#cb86-8" aria-hidden="true" tabindex="-1"></a><span class="co">#hist(sample_means, breaks = 100)</span></span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="תרגילים.html#cb101-1" aria-hidden="true" tabindex="-1"></a>sample_means <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb101-2"><a href="תרגילים.html#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">32</span>) <span class="co"># to make sure the results </span></span>
+<span id="cb101-3"><a href="תרגילים.html#cb101-3" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
+<span id="cb101-4"><a href="תרגילים.html#cb101-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
+<span id="cb101-5"><a href="תרגילים.html#cb101-5" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">5</span>)</span>
+<span id="cb101-6"><a href="תרגילים.html#cb101-6" aria-hidden="true" tabindex="-1"></a>  sample_means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample)</span>
+<span id="cb101-7"><a href="תרגילים.html#cb101-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb101-8"><a href="תרגילים.html#cb101-8" aria-hidden="true" tabindex="-1"></a><span class="co">#hist(sample_means, breaks = 100)</span></span></code></pre></div>
 <hr>
 <p><em>תרגיל 6:</em>
 בגרף מוצגת היסטוגרפיה של הוקטור sample_means מהשאלה הקודמת, עם נתונים זהים:
@@ -292,19 +294,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 צרי לולאה שעוברת על כל המספרים בוקטור הבא:</p>
 <pre><code>numbers &lt;- c(3,5,6,8,2,44,45,5)</code></pre>
 <p>ומדפיסה האם הם גדולים מ6.</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="תרגילים.html#cb88-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
-<span id="cb88-2"><a href="תרגילים.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
-<span id="cb88-3"><a href="תרגילים.html#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(number <span class="sc">&gt;</span> <span class="dv">6</span>)</span>
-<span id="cb88-4"><a href="תרגילים.html#cb88-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="תרגילים.html#cb89-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
-<span id="cb89-2"><a href="תרגילים.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
-<span id="cb89-3"><a href="תרגילים.html#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (number <span class="sc">&gt;</span> <span class="dv">6</span>) {</span>
-<span id="cb89-4"><a href="תרגילים.html#cb89-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is bigger than 6&#39;</span>))</span>
-<span id="cb89-5"><a href="תרגילים.html#cb89-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb89-6"><a href="תרגילים.html#cb89-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
-<span id="cb89-7"><a href="תרגילים.html#cb89-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is not bigger than 6&#39;</span>))</span>
-<span id="cb89-8"><a href="תרגילים.html#cb89-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb89-9"><a href="תרגילים.html#cb89-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="תרגילים.html#cb103-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
+<span id="cb103-2"><a href="תרגילים.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
+<span id="cb103-3"><a href="תרגילים.html#cb103-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(number <span class="sc">&gt;</span> <span class="dv">6</span>)</span>
+<span id="cb103-4"><a href="תרגילים.html#cb103-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="תרגילים.html#cb104-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
+<span id="cb104-2"><a href="תרגילים.html#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
+<span id="cb104-3"><a href="תרגילים.html#cb104-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (number <span class="sc">&gt;</span> <span class="dv">6</span>) {</span>
+<span id="cb104-4"><a href="תרגילים.html#cb104-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is bigger than 6&#39;</span>))</span>
+<span id="cb104-5"><a href="תרגילים.html#cb104-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb104-6"><a href="תרגילים.html#cb104-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb104-7"><a href="תרגילים.html#cb104-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is not bigger than 6&#39;</span>))</span>
+<span id="cb104-8"><a href="תרגילים.html#cb104-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb104-9"><a href="תרגילים.html#cb104-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="תרגילים-בנושא-פונקציות" class="section level2 unnumbered">
 <h2>תרגילים בנושא פונקציות</h2>
@@ -312,63 +314,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 צרי פונקציה בשם num_to_txt שמקבלת ספרה מ-0 עד 9 (numeric) ומחזירה אותה בצורה טקסטואלית (character).
 לדוגמא:</p>
 <pre><code>num_to_txt(4) # returns &quot;four&quot;</code></pre>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="תרגילים.html#cb91-1" aria-hidden="true" tabindex="-1"></a>num_to_txt <span class="ot">&lt;-</span> <span class="cf">function</span>(digit) {</span>
-<span id="cb91-2"><a href="תרגילים.html#cb91-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(digit) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span> <span class="sc">&amp;</span> <span class="fu">nchar</span>(digit) <span class="sc">==</span> <span class="dv">1</span>) {</span>
-<span id="cb91-3"><a href="תרגילים.html#cb91-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">0</span>) {<span class="fu">return</span> (<span class="st">&#39;zero&#39;</span>)}</span>
-<span id="cb91-4"><a href="תרגילים.html#cb91-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">1</span>) {<span class="fu">return</span> (<span class="st">&#39;one&#39;</span>)}</span>
-<span id="cb91-5"><a href="תרגילים.html#cb91-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">2</span>) {<span class="fu">return</span> (<span class="st">&#39;two&#39;</span>)}</span>
-<span id="cb91-6"><a href="תרגילים.html#cb91-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">3</span>) {<span class="fu">return</span> (<span class="st">&#39;three&#39;</span>)}</span>
-<span id="cb91-7"><a href="תרגילים.html#cb91-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">4</span>) {<span class="fu">return</span> (<span class="st">&#39;four&#39;</span>)}</span>
-<span id="cb91-8"><a href="תרגילים.html#cb91-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">5</span>) {<span class="fu">return</span> (<span class="st">&#39;five&#39;</span>)}</span>
-<span id="cb91-9"><a href="תרגילים.html#cb91-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">6</span>) {<span class="fu">return</span> (<span class="st">&#39;six&#39;</span>)}</span>
-<span id="cb91-10"><a href="תרגילים.html#cb91-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">7</span>) {<span class="fu">return</span> (<span class="st">&#39;seven&#39;</span>)}</span>
-<span id="cb91-11"><a href="תרגילים.html#cb91-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">8</span>) {<span class="fu">return</span> (<span class="st">&#39;eight&#39;</span>)}</span>
-<span id="cb91-12"><a href="תרגילים.html#cb91-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">9</span>) {<span class="fu">return</span> (<span class="st">&#39;nine&#39;</span>)}</span>
-<span id="cb91-13"><a href="תרגילים.html#cb91-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb91-14"><a href="תרגילים.html#cb91-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid digit. please try again&#39;</span>)}</span>
-<span id="cb91-15"><a href="תרגילים.html#cb91-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb91-16"><a href="תרגילים.html#cb91-16" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">3</span>) <span class="co"># &quot;three&quot;</span></span>
-<span id="cb91-17"><a href="תרגילים.html#cb91-17" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">7</span>) <span class="co"># &quot;seven&quot;</span></span>
-<span id="cb91-18"><a href="תרגילים.html#cb91-18" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">13</span>) <span class="co"># &quot;Not a valid digit. please try again&quot;</span></span>
-<span id="cb91-19"><a href="תרגילים.html#cb91-19" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">9</span>) <span class="co"># &quot;nine&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="תרגילים.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># another way, with dyplr: </span></span>
-<span id="cb92-2"><a href="תרגילים.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&#39;tidyverse&#39;</span>)</span>
-<span id="cb92-3"><a href="תרגילים.html#cb92-3" aria-hidden="true" tabindex="-1"></a>num_to_txt <span class="ot">&lt;-</span> <span class="cf">function</span>(digit) {</span>
-<span id="cb92-4"><a href="תרגילים.html#cb92-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(digit) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span> <span class="sc">&amp;</span> <span class="fu">nchar</span>(digit) <span class="sc">==</span> <span class="dv">1</span>) {</span>
-<span id="cb92-5"><a href="תרגילים.html#cb92-5" aria-hidden="true" tabindex="-1"></a>    edited <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(digit) <span class="sc">%&gt;%</span> </span>
-<span id="cb92-6"><a href="תרגילים.html#cb92-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">converted =</span> <span class="fu">case_when</span>(</span>
-<span id="cb92-7"><a href="תרגילים.html#cb92-7" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&#39;zero&#39;</span>,</span>
-<span id="cb92-8"><a href="תרגילים.html#cb92-8" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&#39;one&#39;</span>,</span>
-<span id="cb92-9"><a href="תרגילים.html#cb92-9" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&#39;two&#39;</span>,</span>
-<span id="cb92-10"><a href="תרגילים.html#cb92-10" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">&#39;three&#39;</span>,</span>
-<span id="cb92-11"><a href="תרגילים.html#cb92-11" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">&#39;four&#39;</span>,</span>
-<span id="cb92-12"><a href="תרגילים.html#cb92-12" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">&#39;five&#39;</span>,</span>
-<span id="cb92-13"><a href="תרגילים.html#cb92-13" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">&#39;six&#39;</span>,</span>
-<span id="cb92-14"><a href="תרגילים.html#cb92-14" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">&#39;seven&#39;</span>,</span>
-<span id="cb92-15"><a href="תרגילים.html#cb92-15" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">8</span> <span class="sc">~</span> <span class="st">&#39;eight&#39;</span>,</span>
-<span id="cb92-16"><a href="תרגילים.html#cb92-16" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">9</span> <span class="sc">~</span> <span class="st">&#39;nine&#39;</span>,))</span>
-<span id="cb92-17"><a href="תרגילים.html#cb92-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(edited<span class="sc">$</span>converted)</span>
-<span id="cb92-18"><a href="תרגילים.html#cb92-18" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb92-19"><a href="תרגילים.html#cb92-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid digit. please try again&#39;</span>)}</span>
-<span id="cb92-20"><a href="תרגילים.html#cb92-20" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb92-21"><a href="תרגילים.html#cb92-21" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">5</span>) <span class="co"># &quot;five&quot;</span></span>
-<span id="cb92-22"><a href="תרגילים.html#cb92-22" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">8</span>) <span class="co"># &quot;eight&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="תרגילים.html#cb106-1" aria-hidden="true" tabindex="-1"></a>num_to_txt <span class="ot">&lt;-</span> <span class="cf">function</span>(digit) {</span>
+<span id="cb106-2"><a href="תרגילים.html#cb106-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(digit) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span> <span class="sc">&amp;</span> <span class="fu">nchar</span>(digit) <span class="sc">==</span> <span class="dv">1</span>) {</span>
+<span id="cb106-3"><a href="תרגילים.html#cb106-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">0</span>) {<span class="fu">return</span> (<span class="st">&#39;zero&#39;</span>)}</span>
+<span id="cb106-4"><a href="תרגילים.html#cb106-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">1</span>) {<span class="fu">return</span> (<span class="st">&#39;one&#39;</span>)}</span>
+<span id="cb106-5"><a href="תרגילים.html#cb106-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">2</span>) {<span class="fu">return</span> (<span class="st">&#39;two&#39;</span>)}</span>
+<span id="cb106-6"><a href="תרגילים.html#cb106-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">3</span>) {<span class="fu">return</span> (<span class="st">&#39;three&#39;</span>)}</span>
+<span id="cb106-7"><a href="תרגילים.html#cb106-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">4</span>) {<span class="fu">return</span> (<span class="st">&#39;four&#39;</span>)}</span>
+<span id="cb106-8"><a href="תרגילים.html#cb106-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">5</span>) {<span class="fu">return</span> (<span class="st">&#39;five&#39;</span>)}</span>
+<span id="cb106-9"><a href="תרגילים.html#cb106-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">6</span>) {<span class="fu">return</span> (<span class="st">&#39;six&#39;</span>)}</span>
+<span id="cb106-10"><a href="תרגילים.html#cb106-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">7</span>) {<span class="fu">return</span> (<span class="st">&#39;seven&#39;</span>)}</span>
+<span id="cb106-11"><a href="תרגילים.html#cb106-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">8</span>) {<span class="fu">return</span> (<span class="st">&#39;eight&#39;</span>)}</span>
+<span id="cb106-12"><a href="תרגילים.html#cb106-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (digit <span class="sc">==</span> <span class="dv">9</span>) {<span class="fu">return</span> (<span class="st">&#39;nine&#39;</span>)}</span>
+<span id="cb106-13"><a href="תרגילים.html#cb106-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb106-14"><a href="תרגילים.html#cb106-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid digit. please try again&#39;</span>)}</span>
+<span id="cb106-15"><a href="תרגילים.html#cb106-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb106-16"><a href="תרגילים.html#cb106-16" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">3</span>) <span class="co"># &quot;three&quot;</span></span>
+<span id="cb106-17"><a href="תרגילים.html#cb106-17" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">7</span>) <span class="co"># &quot;seven&quot;</span></span>
+<span id="cb106-18"><a href="תרגילים.html#cb106-18" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">13</span>) <span class="co"># &quot;Not a valid digit. please try again&quot;</span></span>
+<span id="cb106-19"><a href="תרגילים.html#cb106-19" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">9</span>) <span class="co"># &quot;nine&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="תרגילים.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># another way, with dyplr: </span></span>
+<span id="cb107-2"><a href="תרגילים.html#cb107-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&#39;tidyverse&#39;</span>)</span>
+<span id="cb107-3"><a href="תרגילים.html#cb107-3" aria-hidden="true" tabindex="-1"></a>num_to_txt <span class="ot">&lt;-</span> <span class="cf">function</span>(digit) {</span>
+<span id="cb107-4"><a href="תרגילים.html#cb107-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(digit) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span> <span class="sc">&amp;</span> <span class="fu">nchar</span>(digit) <span class="sc">==</span> <span class="dv">1</span>) {</span>
+<span id="cb107-5"><a href="תרגילים.html#cb107-5" aria-hidden="true" tabindex="-1"></a>    edited <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(digit) <span class="sc">%&gt;%</span> </span>
+<span id="cb107-6"><a href="תרגילים.html#cb107-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">converted =</span> <span class="fu">case_when</span>(</span>
+<span id="cb107-7"><a href="תרגילים.html#cb107-7" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&#39;zero&#39;</span>,</span>
+<span id="cb107-8"><a href="תרגילים.html#cb107-8" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&#39;one&#39;</span>,</span>
+<span id="cb107-9"><a href="תרגילים.html#cb107-9" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&#39;two&#39;</span>,</span>
+<span id="cb107-10"><a href="תרגילים.html#cb107-10" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">&#39;three&#39;</span>,</span>
+<span id="cb107-11"><a href="תרגילים.html#cb107-11" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">&#39;four&#39;</span>,</span>
+<span id="cb107-12"><a href="תרגילים.html#cb107-12" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">&#39;five&#39;</span>,</span>
+<span id="cb107-13"><a href="תרגילים.html#cb107-13" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">&#39;six&#39;</span>,</span>
+<span id="cb107-14"><a href="תרגילים.html#cb107-14" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">&#39;seven&#39;</span>,</span>
+<span id="cb107-15"><a href="תרגילים.html#cb107-15" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">8</span> <span class="sc">~</span> <span class="st">&#39;eight&#39;</span>,</span>
+<span id="cb107-16"><a href="תרגילים.html#cb107-16" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">9</span> <span class="sc">~</span> <span class="st">&#39;nine&#39;</span>,))</span>
+<span id="cb107-17"><a href="תרגילים.html#cb107-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(edited<span class="sc">$</span>converted)</span>
+<span id="cb107-18"><a href="תרגילים.html#cb107-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb107-19"><a href="תרגילים.html#cb107-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid digit. please try again&#39;</span>)}</span>
+<span id="cb107-20"><a href="תרגילים.html#cb107-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb107-21"><a href="תרגילים.html#cb107-21" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">5</span>) <span class="co"># &quot;five&quot;</span></span>
+<span id="cb107-22"><a href="תרגילים.html#cb107-22" aria-hidden="true" tabindex="-1"></a><span class="fu">num_to_txt</span>(<span class="dv">8</span>) <span class="co"># &quot;eight&quot;</span></span></code></pre></div>
 <hr>
 <p><em>תרגיל 2:</em>
 צרי פונקציה בשם is_even שמקבלת מספר (numeric) ומחזירה האם הוא זוגי (TRUE או FALSE).
 לדוגמא:</p>
 <pre><code>is_even(456) # returns TRUE</code></pre>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="תרגילים.html#cb94-1" aria-hidden="true" tabindex="-1"></a>is_even <span class="ot">&lt;-</span> <span class="cf">function</span>(num) {</span>
-<span id="cb94-2"><a href="תרגילים.html#cb94-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(num) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span>) {</span>
-<span id="cb94-3"><a href="תרגילים.html#cb94-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (num <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {<span class="fu">return</span> (<span class="cn">TRUE</span>)}</span>
-<span id="cb94-4"><a href="תרגילים.html#cb94-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> {<span class="fu">return</span> (<span class="cn">FALSE</span>)}</span>
-<span id="cb94-5"><a href="תרגילים.html#cb94-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb94-6"><a href="תרגילים.html#cb94-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid number please try again&#39;</span>)}</span>
-<span id="cb94-7"><a href="תרגילים.html#cb94-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb94-8"><a href="תרגילים.html#cb94-8" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="dv">2</span>) <span class="co"># TRUE</span></span>
-<span id="cb94-9"><a href="תרגילים.html#cb94-9" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="dv">67253</span>) <span class="co"># FALSE</span></span>
-<span id="cb94-10"><a href="תרגילים.html#cb94-10" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="dv">3586976</span>) <span class="co"># TRUE</span></span>
-<span id="cb94-11"><a href="תרגילים.html#cb94-11" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="st">&#39;34&#39;</span>) <span class="co"># &#39;Not a valid number please try again&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="תרגילים.html#cb109-1" aria-hidden="true" tabindex="-1"></a>is_even <span class="ot">&lt;-</span> <span class="cf">function</span>(num) {</span>
+<span id="cb109-2"><a href="תרגילים.html#cb109-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">class</span>(num) <span class="sc">==</span> <span class="st">&quot;numeric&quot;</span>) {</span>
+<span id="cb109-3"><a href="תרגילים.html#cb109-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (num <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {<span class="fu">return</span> (<span class="cn">TRUE</span>)}</span>
+<span id="cb109-4"><a href="תרגילים.html#cb109-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> {<span class="fu">return</span> (<span class="cn">FALSE</span>)}</span>
+<span id="cb109-5"><a href="תרגילים.html#cb109-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb109-6"><a href="תרגילים.html#cb109-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {<span class="fu">return</span>(<span class="st">&#39;not a valid number please try again&#39;</span>)}</span>
+<span id="cb109-7"><a href="תרגילים.html#cb109-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb109-8"><a href="תרגילים.html#cb109-8" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="dv">2</span>) <span class="co"># TRUE</span></span>
+<span id="cb109-9"><a href="תרגילים.html#cb109-9" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="dv">67253</span>) <span class="co"># FALSE</span></span>
+<span id="cb109-10"><a href="תרגילים.html#cb109-10" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="dv">3586976</span>) <span class="co"># TRUE</span></span>
+<span id="cb109-11"><a href="תרגילים.html#cb109-11" aria-hidden="true" tabindex="-1"></a><span class="fu">is_even</span>(<span class="st">&#39;34&#39;</span>) <span class="co"># &#39;Not a valid number please try again&#39;</span></span></code></pre></div>
 <hr>
 <!-- This part can be programmatically generated with htmltools. Thus we can control initial state from the YAML front matter-->
 <script id="code-folding-options" type="application/json">
@@ -412,7 +414,7 @@ details[open] > summary::after {
           </div>
         </div>
       </div>
-<a href="ggplot.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="הסקה-סטטיסטית.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

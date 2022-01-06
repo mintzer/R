@@ -24,7 +24,7 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2022-01-04" />
+<meta name="date" content="2022-01-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,6 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#rep"><i class="fa fa-check"></i><b>5.1</b> rep</a></li>
 <li class="chapter" data-level="5.2" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#print"><i class="fa fa-check"></i><b>5.2</b> print</a></li>
 <li class="chapter" data-level="5.3" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#class"><i class="fa fa-check"></i><b>5.3</b> class</a></li>
+<li class="chapter" data-level="5.4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#ifelse"><i class="fa fa-check"></i><b>5.4</b> ifelse</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> data.frame</a></li>
 <li class="chapter" data-level="7" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>7</b> tidyverse</a>
@@ -201,6 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>7.4</b> mutate</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>8</b> ggplot</a></li>
+<li class="chapter" data-level="9" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html"><i class="fa fa-check"></i><b>9</b> הסקה סטטיסטית</a></li>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i>תרגילים</a>
 <ul>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-לולאות"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
@@ -230,17 +232,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data.frame" class="section level1" number="6">
 <h1><span class="header-section-number">פרק 6 - </span> data.frame</h1>
 <p>data.frame היא טבלה, מערך דו מימדי</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
-<span id="cb54-2"><a href="data.html#cb54-2" aria-hidden="true" tabindex="-1"></a>emp.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb54-3"><a href="data.html#cb54-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
-<span id="cb54-4"><a href="data.html#cb54-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Dan&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Ryan&quot;</span>,<span class="st">&quot;Gary&quot;</span>),</span>
-<span id="cb54-5"><a href="data.html#cb54-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="fl">623.3</span>,<span class="fl">515.2</span>,<span class="fl">611.0</span>,<span class="fl">729.0</span>,<span class="fl">843.25</span>), </span>
-<span id="cb54-6"><a href="data.html#cb54-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">start_date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2012-01-01&quot;</span>, <span class="st">&quot;2013-09-23&quot;</span>, <span class="st">&quot;2014-11-15&quot;</span>, <span class="st">&quot;2014-05-11&quot;</span>,</span>
-<span id="cb54-7"><a href="data.html#cb54-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;2015-03-27&quot;</span>)),</span>
-<span id="cb54-8"><a href="data.html#cb54-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
-<span id="cb54-9"><a href="data.html#cb54-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb54-10"><a href="data.html#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
-<span id="cb54-11"><a href="data.html#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp.data) </span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="data.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
+<span id="cb69-2"><a href="data.html#cb69-2" aria-hidden="true" tabindex="-1"></a>emp.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb69-3"><a href="data.html#cb69-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
+<span id="cb69-4"><a href="data.html#cb69-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Dan&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Ryan&quot;</span>,<span class="st">&quot;Gary&quot;</span>),</span>
+<span id="cb69-5"><a href="data.html#cb69-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="fl">623.3</span>,<span class="fl">515.2</span>,<span class="fl">611.0</span>,<span class="fl">729.0</span>,<span class="fl">843.25</span>), </span>
+<span id="cb69-6"><a href="data.html#cb69-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">start_date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2012-01-01&quot;</span>, <span class="st">&quot;2013-09-23&quot;</span>, <span class="st">&quot;2014-11-15&quot;</span>, <span class="st">&quot;2014-05-11&quot;</span>,</span>
+<span id="cb69-7"><a href="data.html#cb69-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;2015-03-27&quot;</span>)),</span>
+<span id="cb69-8"><a href="data.html#cb69-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb69-9"><a href="data.html#cb69-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb69-10"><a href="data.html#cb69-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
+<span id="cb69-11"><a href="data.html#cb69-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp.data) </span></code></pre></div>
 <pre><code>##   emp_id emp_name salary start_date
 ## 1      1     Rick 623.30 2012-01-01
 ## 2      2      Dan 515.20 2013-09-23

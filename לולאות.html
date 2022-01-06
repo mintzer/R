@@ -24,7 +24,7 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2022-01-04" />
+<meta name="date" content="2022-01-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,6 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#rep"><i class="fa fa-check"></i><b>5.1</b> rep</a></li>
 <li class="chapter" data-level="5.2" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#print"><i class="fa fa-check"></i><b>5.2</b> print</a></li>
 <li class="chapter" data-level="5.3" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#class"><i class="fa fa-check"></i><b>5.3</b> class</a></li>
+<li class="chapter" data-level="5.4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#ifelse"><i class="fa fa-check"></i><b>5.4</b> ifelse</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> data.frame</a></li>
 <li class="chapter" data-level="7" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>7</b> tidyverse</a>
@@ -201,6 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>7.4</b> mutate</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>8</b> ggplot</a></li>
+<li class="chapter" data-level="9" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html"><i class="fa fa-check"></i><b>9</b> הסקה סטטיסטית</a></li>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i>תרגילים</a>
 <ul>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-לולאות"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
@@ -243,9 +245,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 }</code></pre>
 <p>בדוגמא הבאה ניתן לראות לולאה שעושה איטרציה על וקטור של מספרים מ1 עד 7 ולכן רצה בדיוק שבע פעמים:
 שימי לב שבכל מחזור ריצה של הלולאה המשתנה i מקבל את הערך הנוכחי שחזר מהוקטור.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="לולאות.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>) {</span>
-<span id="cb14-2"><a href="לולאות.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb14-3"><a href="לולאות.html#cb14-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="לולאות.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>) {</span>
+<span id="cb23-2"><a href="לולאות.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb23-3"><a href="לולאות.html#cb23-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
@@ -254,36 +256,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## [1] 6
 ## [1] 7</code></pre>
 <p>עוד דוגמא: לולאת for שעושה איטרציה על וקטור של משתנה מסוג “character”</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="לולאות.html#cb16-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;lion&#39;</span>,<span class="st">&#39;monkey&#39;</span>,<span class="st">&#39;tiger&#39;</span>)</span>
-<span id="cb16-2"><a href="לולאות.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (a <span class="cf">in</span> animals) {</span>
-<span id="cb16-3"><a href="לולאות.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(a)</span>
-<span id="cb16-4"><a href="לולאות.html#cb16-4" aria-hidden="true" tabindex="-1"></a>}  </span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="לולאות.html#cb25-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;lion&#39;</span>,<span class="st">&#39;monkey&#39;</span>,<span class="st">&#39;tiger&#39;</span>)</span>
+<span id="cb25-2"><a href="לולאות.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (a <span class="cf">in</span> animals) {</span>
+<span id="cb25-3"><a href="לולאות.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(a)</span>
+<span id="cb25-4"><a href="לולאות.html#cb25-4" aria-hidden="true" tabindex="-1"></a>}  </span></code></pre></div>
 <pre><code>## [1] &quot;lion&quot;
 ## [1] &quot;monkey&quot;
 ## [1] &quot;tiger&quot;</code></pre>
 <p>דוגמא 3:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="לולאות.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># using i as index</span></span>
-<span id="cb18-2"><a href="לולאות.html#cb18-2" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;lion&#39;</span>,<span class="st">&#39;monkey&#39;</span>,<span class="st">&#39;tiger&#39;</span>)</span>
-<span id="cb18-3"><a href="לולאות.html#cb18-3" aria-hidden="true" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;apple&#39;</span>,<span class="st">&#39;orange&#39;</span>,<span class="st">&#39;pineapple&#39;</span>)</span>
-<span id="cb18-4"><a href="לולאות.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(animals)) {</span>
-<span id="cb18-5"><a href="לולאות.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(i, animals[i], fruits[i]))</span>
-<span id="cb18-6"><a href="לולאות.html#cb18-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="לולאות.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># using i as index</span></span>
+<span id="cb27-2"><a href="לולאות.html#cb27-2" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;lion&#39;</span>,<span class="st">&#39;monkey&#39;</span>,<span class="st">&#39;tiger&#39;</span>)</span>
+<span id="cb27-3"><a href="לולאות.html#cb27-3" aria-hidden="true" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;apple&#39;</span>,<span class="st">&#39;orange&#39;</span>,<span class="st">&#39;pineapple&#39;</span>)</span>
+<span id="cb27-4"><a href="לולאות.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(animals)) {</span>
+<span id="cb27-5"><a href="לולאות.html#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(i, animals[i], fruits[i]))</span>
+<span id="cb27-6"><a href="לולאות.html#cb27-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;1 lion apple&quot;
 ## [1] &quot;2 monkey orange&quot;
 ## [1] &quot;3 tiger pineapple&quot;</code></pre>
 <p>דוגמא 4: יצירת לוח הכפל בעזרת שתי לולאות for אחת בתוך השנייה</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="לולאות.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># creates a 10X10 matrix contains only NA values</span></span>
-<span id="cb20-2"><a href="לולאות.html#cb20-2" aria-hidden="true" tabindex="-1"></a>mul_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">10</span>)</span>
-<span id="cb20-3"><a href="לולאות.html#cb20-3" aria-hidden="true" tabindex="-1"></a>row_num <span class="ot">&lt;-</span> <span class="fu">nrow</span>(mul_table) <span class="co"># 10 rows</span></span>
-<span id="cb20-4"><a href="לולאות.html#cb20-4" aria-hidden="true" tabindex="-1"></a>col_num <span class="ot">&lt;-</span> <span class="fu">ncol</span>(mul_table) <span class="co"># 10 columns</span></span>
-<span id="cb20-5"><a href="לולאות.html#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-6"><a href="לולאות.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>row_num) {</span>
-<span id="cb20-7"><a href="לולאות.html#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>col_num) {</span>
-<span id="cb20-8"><a href="לולאות.html#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(paste(&#39;i:&#39;,i,&#39;j:&#39;,j))</span></span>
-<span id="cb20-9"><a href="לולאות.html#cb20-9" aria-hidden="true" tabindex="-1"></a>    mul_table[i,j] <span class="ot">&lt;-</span> i<span class="sc">*</span>j <span class="co"># each square will contain the multiplication of the row number with the col number</span></span>
-<span id="cb20-10"><a href="לולאות.html#cb20-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb20-11"><a href="לולאות.html#cb20-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb20-12"><a href="לולאות.html#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mul_table)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="לולאות.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># creates a 10X10 matrix contains only NA values</span></span>
+<span id="cb29-2"><a href="לולאות.html#cb29-2" aria-hidden="true" tabindex="-1"></a>mul_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">10</span>)</span>
+<span id="cb29-3"><a href="לולאות.html#cb29-3" aria-hidden="true" tabindex="-1"></a>row_num <span class="ot">&lt;-</span> <span class="fu">nrow</span>(mul_table) <span class="co"># 10 rows</span></span>
+<span id="cb29-4"><a href="לולאות.html#cb29-4" aria-hidden="true" tabindex="-1"></a>col_num <span class="ot">&lt;-</span> <span class="fu">ncol</span>(mul_table) <span class="co"># 10 columns</span></span>
+<span id="cb29-5"><a href="לולאות.html#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="לולאות.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>row_num) {</span>
+<span id="cb29-7"><a href="לולאות.html#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>col_num) {</span>
+<span id="cb29-8"><a href="לולאות.html#cb29-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(paste(&#39;i:&#39;,i,&#39;j:&#39;,j))</span></span>
+<span id="cb29-9"><a href="לולאות.html#cb29-9" aria-hidden="true" tabindex="-1"></a>    mul_table[i,j] <span class="ot">&lt;-</span> i<span class="sc">*</span>j <span class="co"># each square will contain the multiplication of the row number with the col number</span></span>
+<span id="cb29-10"><a href="לולאות.html#cb29-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb29-11"><a href="לולאות.html#cb29-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb29-12"><a href="לולאות.html#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mul_table)</span></code></pre></div>
 <pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
 ##  [1,]    1    2    3    4    5    6    7    8    9    10
 ##  [2,]    2    4    6    8   10   12   14   16   18    20
@@ -307,35 +309,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 }</code></pre>
 <p>דוגמא 1: הלולאה הבאה רצה כל עוד המשתנה i קטן מ5. בכל ריצה של הלולאה i יגדל ב-1 כך שהלולאה תרוץ בדיוק 4 פעמים.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="לולאות.html#cb23-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb23-2"><a href="לולאות.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&lt;</span> <span class="dv">5</span>) {</span>
-<span id="cb23-3"><a href="לולאות.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (i)</span>
-<span id="cb23-4"><a href="לולאות.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb23-5"><a href="לולאות.html#cb23-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="לולאות.html#cb32-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb32-2"><a href="לולאות.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&lt;</span> <span class="dv">5</span>) {</span>
+<span id="cb32-3"><a href="לולאות.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (i)</span>
+<span id="cb32-4"><a href="לולאות.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb32-5"><a href="לולאות.html#cb32-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
 ## [1] 4</code></pre>
 <p>דוגמא 2: לולאת while עם שלושה תנאים:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="לולאות.html#cb25-1" aria-hidden="true" tabindex="-1"></a>index <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb25-2"><a href="לולאות.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (index <span class="sc">&lt;</span> <span class="dv">7</span>) {</span>
-<span id="cb25-3"><a href="לולאות.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if the remain of dividing &quot;index&quot; by 2 is 0</span></span>
-<span id="cb25-4"><a href="לולאות.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb25-5"><a href="לולאות.html#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
-<span id="cb25-6"><a href="לולאות.html#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is even&#39;</span>))</span>
-<span id="cb25-7"><a href="לולאות.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-8"><a href="לולאות.html#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if &quot;index&quot; is 5</span></span>
-<span id="cb25-9"><a href="לולאות.html#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">==</span> <span class="dv">5</span>) {</span>
-<span id="cb25-10"><a href="לולאות.html#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
-<span id="cb25-11"><a href="לולאות.html#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&#39;5!&#39;</span>)</span>
-<span id="cb25-12"><a href="לולאות.html#cb25-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-13"><a href="לולאות.html#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if the remain of dividing &quot;index&quot; by 2 is not 0</span></span>
-<span id="cb25-14"><a href="לולאות.html#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">!=</span> <span class="dv">0</span>) {</span>
-<span id="cb25-15"><a href="לולאות.html#cb25-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
-<span id="cb25-16"><a href="לולאות.html#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is not even and not 5&#39;</span>))</span>
-<span id="cb25-17"><a href="לולאות.html#cb25-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-18"><a href="לולאות.html#cb25-18" aria-hidden="true" tabindex="-1"></a>  index <span class="ot">&lt;-</span> index <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb25-19"><a href="לולאות.html#cb25-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="לולאות.html#cb34-1" aria-hidden="true" tabindex="-1"></a>index <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb34-2"><a href="לולאות.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (index <span class="sc">&lt;</span> <span class="dv">7</span>) {</span>
+<span id="cb34-3"><a href="לולאות.html#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if the remain of dividing &quot;index&quot; by 2 is 0</span></span>
+<span id="cb34-4"><a href="לולאות.html#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb34-5"><a href="לולאות.html#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
+<span id="cb34-6"><a href="לולאות.html#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is even&#39;</span>))</span>
+<span id="cb34-7"><a href="לולאות.html#cb34-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb34-8"><a href="לולאות.html#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if &quot;index&quot; is 5</span></span>
+<span id="cb34-9"><a href="לולאות.html#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">==</span> <span class="dv">5</span>) {</span>
+<span id="cb34-10"><a href="לולאות.html#cb34-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
+<span id="cb34-11"><a href="לולאות.html#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&#39;5!&#39;</span>)</span>
+<span id="cb34-12"><a href="לולאות.html#cb34-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb34-13"><a href="לולאות.html#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># else, if the remain of dividing &quot;index&quot; by 2 is not 0</span></span>
+<span id="cb34-14"><a href="לולאות.html#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (index <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">!=</span> <span class="dv">0</span>) {</span>
+<span id="cb34-15"><a href="לולאות.html#cb34-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do this:</span></span>
+<span id="cb34-16"><a href="לולאות.html#cb34-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;the number&#39;</span>,index, <span class="st">&#39;is not even and not 5&#39;</span>))</span>
+<span id="cb34-17"><a href="לולאות.html#cb34-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb34-18"><a href="לולאות.html#cb34-18" aria-hidden="true" tabindex="-1"></a>  index <span class="ot">&lt;-</span> index <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb34-19"><a href="לולאות.html#cb34-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;the number 1 is not even and not 5&quot;
 ## [1] &quot;the number 2 is even&quot;
 ## [1] &quot;the number 3 is not even and not 5&quot;

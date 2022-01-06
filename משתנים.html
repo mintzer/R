@@ -24,7 +24,7 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2022-01-04" />
+<meta name="date" content="2022-01-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,6 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#rep"><i class="fa fa-check"></i><b>5.1</b> rep</a></li>
 <li class="chapter" data-level="5.2" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#print"><i class="fa fa-check"></i><b>5.2</b> print</a></li>
 <li class="chapter" data-level="5.3" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#class"><i class="fa fa-check"></i><b>5.3</b> class</a></li>
+<li class="chapter" data-level="5.4" data-path="עוד-פונקציות-שימושיות.html"><a href="עוד-פונקציות-שימושיות.html#ifelse"><i class="fa fa-check"></i><b>5.4</b> ifelse</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> data.frame</a></li>
 <li class="chapter" data-level="7" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>7</b> tidyverse</a>
@@ -201,6 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>7.4</b> mutate</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>8</b> ggplot</a></li>
+<li class="chapter" data-level="9" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html"><i class="fa fa-check"></i><b>9</b> הסקה סטטיסטית</a></li>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html"><i class="fa fa-check"></i>תרגילים</a>
 <ul>
 <li class="chapter" data-level="" data-path="תרגילים.html"><a href="תרגילים.html#תרגילים-בנושא-לולאות"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
@@ -230,30 +232,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="משתנים" class="section level1" number="1">
 <h1><span class="header-section-number">פרק 1 - </span> משתנים</h1>
 <p>משתנה - כשמו כן הוא - אובייקט שיכול להשתנות.
-באופן כללי, ניתן לחשוב על משתנה כעל מיקום בזיכרון עם שם.</p>
+באופן כללי, ניתן לחשוב על משתנה כעל מיקום בזיכרון עם שם. <br>
+ניתן להגדיר משתנים ולשנות אותם בצורה הבאה:
+<em>פעולה זו נקראת השמה (Assignment)</em></p>
+<pre><code>var_name &lt;- value</code></pre>
+<p>כשנכתוב שם <b>לא בתוך גרשיים</b>, R ידע להתייחס אליו כאל משתנה, וינסה לגשת אליו. <br>
+אם המשתנה קיים (כלומר מוגדר ומכיל ערך מסוים), גישה אליו תחזיר את ערכו.
+אם הוא לא קיים, תקפוץ שגיאה.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="משתנים.html#cb2-1" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="co"># initial assignment </span></span>
+<span id="cb2-2"><a href="משתנים.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(var1)</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="משתנים.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we can change the value and the type of a variable</span></span>
+<span id="cb4-2"><a href="משתנים.html#cb4-2" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="st">&#39;different value!&#39;</span> </span>
+<span id="cb4-3"><a href="משתנים.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(var1)</span></code></pre></div>
+<pre><code>## [1] &quot;different value!&quot;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="משתנים.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(var2) <span class="co"># not exist</span></span></code></pre></div>
+<pre><code>## Error in print(var2): object &#39;var2&#39; not found</code></pre>
 <div id="character" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> character</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="משתנים.html#cb1-1" aria-hidden="true" tabindex="-1"></a>text_var <span class="ot">&lt;-</span> <span class="st">&quot;this is a character!&quot;</span></span>
-<span id="cb1-2"><a href="משתנים.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(text_var)</span></code></pre></div>
+<p>אובייקט שמורכב מרצף של תווים (אותיות, מספרים, סמלים). נמצא בתוך גרשיים. <br>
+בדוגמאות הבאות נגדיר משתנים שיכילו ערכים מסוג character:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="משתנים.html#cb8-1" aria-hidden="true" tabindex="-1"></a>text_var <span class="ot">&lt;-</span> <span class="st">&quot;this is a character!&quot;</span></span>
+<span id="cb8-2"><a href="משתנים.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(text_var)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="משתנים.html#cb10-1" aria-hidden="true" tabindex="-1"></a>text_var2 <span class="ot">&lt;-</span> <span class="st">&#39;this is also a character!&#39;</span></span>
+<span id="cb10-2"><a href="משתנים.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mixing single quotes and double quotes to implement </span></span>
+<span id="cb10-3"><a href="משתנים.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># quotes into the character</span></span>
+<span id="cb10-4"><a href="משתנים.html#cb10-4" aria-hidden="true" tabindex="-1"></a>text_var3 <span class="ot">&lt;-</span> <span class="st">&quot;it&#39;s still a character!&quot;</span></span>
+<span id="cb10-5"><a href="משתנים.html#cb10-5" aria-hidden="true" tabindex="-1"></a>text_var4 <span class="ot">&lt;-</span> <span class="st">&#39;Mark Twain said:</span></span>
+<span id="cb10-6"><a href="משתנים.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;I am an old man and have known a great many troubles, </span></span>
+<span id="cb10-7"><a href="משתנים.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="st">but most of them never happened.&quot;&#39;</span></span></code></pre></div>
 </div>
 <div id="numeric" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> numeric</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="משתנים.html#cb3-1" aria-hidden="true" tabindex="-1"></a>numeric_var <span class="ot">&lt;-</span> <span class="fl">14.6</span></span>
-<span id="cb3-2"><a href="משתנים.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(numeric_var)</span></code></pre></div>
+<p>אובייקט שמכיל ערך מספרי, עם או בלי נקודה עשרונית. <br>
+דוגמאות:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="משתנים.html#cb11-1" aria-hidden="true" tabindex="-1"></a>numeric_var <span class="ot">&lt;-</span> <span class="fl">14.6</span></span>
+<span id="cb11-2"><a href="משתנים.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(numeric_var)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="משתנים.html#cb13-1" aria-hidden="true" tabindex="-1"></a>numeric_var2 <span class="ot">&lt;-</span> <span class="dv">13</span></span></code></pre></div>
+<p><b>הערה:</b> שמות של משתנים לא יכולים להתחיל במספר משום ש-R יזהה אותם כ-numeric.</p>
 </div>
 <div id="logical" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> logical</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="משתנים.html#cb5-1" aria-hidden="true" tabindex="-1"></a>logical_var <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb5-2"><a href="משתנים.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(logical_var)</span></code></pre></div>
+<p>אובייקט שמכיל את הערך <b>TRUE</b> או את הערך <b>FALSE</b>. שני שמות אלו הם ערכים שמורים בשפת R ויש להם הגדרה משל עצמם. כלומר, כשנכתוב FALSE בתוך הקוד, R ידע להתייחס לזה כאל הערך הלוגי FALSE. <br>
+לעומת זאת - אם נכתוב False, או false במקום, R יחפש משתנים בשמות האלו. <br>
+אם נכתוב ‘FALSE’ (בתוך גרשיים), R יתייחס לזה כאל character. <br>
+דוגמאות:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="משתנים.html#cb14-1" aria-hidden="true" tabindex="-1"></a>logical_var <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb14-2"><a href="משתנים.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(logical_var)</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="משתנים.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logical_var)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="משתנים.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logical_var)</span></code></pre></div>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="משתנים.html#cb9-1" aria-hidden="true" tabindex="-1"></a>logical_var2 <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb9-2"><a href="משתנים.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(logical_var2)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="משתנים.html#cb18-1" aria-hidden="true" tabindex="-1"></a>logical_var2 <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb18-2"><a href="משתנים.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(logical_var2)</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="משתנים.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logical_var2)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="משתנים.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logical_var2)</span></code></pre></div>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
 
 </div>
