@@ -24,7 +24,7 @@
 <meta name="author" content="שי מינצר" />
 
 
-<meta name="date" content="2022-02-08" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -243,10 +243,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">9.1</span> התפלגות גיאומטרית</h2>
 <p><b>וקטור של ערכים מתוך התפלגות גיאומטרית</b><br></p>
 <pre><code>rgeom(n, prob)</code></pre>
-<p>דוגמה: נדגום 10 פעמים מתוך התפלגות גיאומטרית עם סיכוי 2/3 להצלחה.
+<p>דוגמה: נדגום 10 פעמים מתוך התפלגות גיאומטרית עם סיכוי 1/6 להצלחה.
 כמה כשלונות לפני ההצלחה הראשונה היו בכל אחד מהמקרים?</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="משתנים-מקריים-והתפלגויות.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgeom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)</span></code></pre></div>
-<pre><code>##  [1]  0 15  0  1  0  0  3  0  6  3</code></pre>
+<pre><code>##  [1] 2 0 2 9 4 6 2 1 5 3</code></pre>
 <p><b>מציאת הסתברות ספציפית</b><br></p>
 <pre><code>dgeom(x, prob, log = FALSE)</code></pre>
 <p>דוגמא: ההסתברות למאורע של שלושה כשלונות לפני הצלחה כאשר הסיכוי להצלחה בודדת הוא 1/4</p>
@@ -274,7 +274,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="משתנים-מקריים-והתפלגויות.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qgeom</span>(<span class="at">p =</span> <span class="fl">0.8</span>, <span class="at">prob =</span> .<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 7</code></pre>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
-<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Geometric.html" target="_blank">התיעוד הרשמי של הפונקציות</a> <br></p>
+<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Geometric.html" target="_blank">התיעוד הרשמי של הפונקציות dgeom, rgeom, pgeom, qgeom</a> <br></p>
 
 </div>
 </div>
