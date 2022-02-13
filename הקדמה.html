@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 9 - משתנים מקריים והתפלגויות | R לפסיכולוגים</title>
+  <title>R לפסיכולוגים</title>
   <meta name="description" content="שי מינצר" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 9 - משתנים מקריים והתפלגויות | R לפסיכולוגים" />
+  <meta property="og:title" content="R לפסיכולוגים" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 9 - משתנים מקריים והתפלגויות | R לפסיכולוגים" />
+  <meta name="twitter:title" content="R לפסיכולוגים" />
   
   <meta name="twitter:description" content="שי מינצר" />
   <meta name="twitter:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ggplot.html"/>
-<link rel="next" href="תרגילים-כלליים.html"/>
+
+<link rel="next" href="משתנים.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -236,44 +236,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="books.jpg">
 </div>
-<div id="משתנים-מקריים-והתפלגויות" class="section level1" number="9">
-<h1><span class="header-section-number">פרק 9 - </span> משתנים מקריים והתפלגויות</h1>
-<div id="התפלגות-גיאומטרית" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> התפלגות גיאומטרית</h2>
-<p><b>וקטור של ערכים מתוך התפלגות גיאומטרית</b><br></p>
-<pre><code>rgeom(n, prob)</code></pre>
-<p>דוגמה: נדגום 10 פעמים מתוך התפלגות גיאומטרית עם סיכוי 1/6 להצלחה.
-כמה כשלונות לפני ההצלחה הראשונה היו בכל אחד מהמקרים?</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="משתנים-מקריים-והתפלגויות.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgeom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)</span></code></pre></div>
-<pre><code>##  [1] 12  1  6  2 23  0  3  1  1  0</code></pre>
-<p><b>מציאת הסתברות ספציפית</b><br></p>
-<pre><code>dgeom(x, prob, log = FALSE)</code></pre>
-<p>דוגמא: ההסתברות למאורע של שלושה כשלונות לפני הצלחה כאשר הסיכוי להצלחה בודדת הוא 1/4</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="משתנים-מקריים-והתפלגויות.html#cb139-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> (<span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span>
-<span id="cb139-2"><a href="משתנים-מקריים-והתפלגויות.html#cb139-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb139-3"><a href="משתנים-מקריים-והתפלגויות.html#cb139-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dgeom</span>(<span class="at">x =</span> n, <span class="at">prob =</span> p) <span class="co"># 0.1054688</span></span></code></pre></div>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-51-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
-<p><b>הסתברות מצטברת עד לנקודה p</b><br></p>
-<pre><code>pgeom(q, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
-<p>דוגמא: ההסתברות המצטברת של עד ארבעה כישלונות לפני הצלחה. (כלומר, הסיכוי לקבל ארבעה כשלונות לכל היותר לפני ההצלחה הראשונה. סכום ההסתברויות) מתוך התפלגות גיאומטרית עם הסתברות 1/3 להצלחה.</p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="משתנים-מקריים-והתפלגויות.html#cb141-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span></span>
-<span id="cb141-2"><a href="משתנים-מקריים-והתפלגויות.html#cb141-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb141-3"><a href="משתנים-מקריים-והתפלגויות.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>) <span class="co"># 0.8683128</span></span></code></pre></div>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-53-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
-<p><b>הסתברות מצטברת מנקודה p (כל הערכים שגדולים מ-p)</b><br></p>
-<p>דוגמא: ההסתברות המצטברת של לפחות חמישה כישלונות לפני הצלחה. (כלומר, הסיכוי לקבל חמישה כשלונות או יותר לפני ההצלחה הראשונה. סכום ההסתברויות) מתוך התפלגות גיאומטרית עם הסתברות 1/3 להצלחה.</p>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="משתנים-מקריים-והתפלגויות.html#cb142-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span></span>
-<span id="cb142-2"><a href="משתנים-מקריים-והתפלגויות.html#cb142-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb142-3"><a href="משתנים-מקריים-והתפלגויות.html#cb142-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="co"># 0.1316872</span></span></code></pre></div>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-55-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
-<p><b>מציאת מספר הכשלונות לפני הצלחה בהתפלגות גיאומטרית תיאורטית, המתאים להסתברות מצטברת</b><br></p>
-<pre><code>qgeom(p, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
-<p>זאת בעצם הפונקציה ההופכית של pgeom. כלומר - pgeom מקבלת מספר כשלונות ומחזירה את ההסתברות המצטברת. qgeom מקבלת הסתברות מצטברת ומחזירה מספר כשלונות תואם. <br>
-דוגמא: כמה כישלונות ייתקבלו לפני ההצלחה הראשונה בהסתברות מצטברת 0.8 כאשר ההסתברות להצלחה היא 0.2?</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="משתנים-מקריים-והתפלגויות.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qgeom</span>(<span class="at">p =</span> <span class="fl">0.8</span>, <span class="at">prob =</span> .<span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 7</code></pre>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-57-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
-<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Geometric.html" target="_blank">התיעוד הרשמי של הפונקציות dgeom, rgeom, pgeom, qgeom</a> <br></p>
+<div id="header">
+<h1 class="title">R לפסיכולוגים</h1>
+<p class="author"><em>נכתב על ידי שי מינצר</em></p>
+<p class="date"><em>נערך לאחרונה: 2022-02-13</em></p>
+</div>
+<div id="הקדמה" class="section level1 unnumbered">
+<h1>הקדמה</h1>
+<p>מדריך זה נכתב כדי לאגד בצורה נוחה ונגישה מידע בנוגע לשפת התכנות R - בסיס השפה, מונחים, הגדרות, והדגמות קונקרטיות. בסופו מופיעים תרגילים ופתרונות שנכתבו על ידי ונועדו בראש ובראשונה לסייע לתלמידים להפנים וליישם את הידע שהם צברו בשיעור איתי. מעבר לכך, כל מי שיימצא ערך במדריך יכול לעשות בו שימוש חופשי. <br>
+<b>הערה חשובה:</b> המדריך לא מתיימר להקיף את כל המידע שקשור לR, ואפילו לא את חלקו המזערי. יש כמות עצומה של מידע באינטרנט, כמו גם פתרונות פוטנציאלים כמעט לכל בעיה או שאלה שאפשר להעלות על הדעת. <br>
+אם יש לכם הערות, הצעות לשיפור, או שמצאתם שגיאות כל שהן, אשמח לדעת! <br>
+כדי לקבוע שיעור, או לכל דבר אחר: <br>
+<a href="mailto:shaymintzer@gmail.com?subject=היי%20שי!">שלחו לי אימייל</a></p>
+<div id="r" class="section level2 unnumbered">
+<h2>R</h2>
+<p><a href="https://www.r-project.org/" target="_blank">R</a> היא שפת תכנות בקוד פתוח אשר משמשת לסטטיסטיקה ולניתוח נתונים. <br>
+כמו לכל שפה פורמלית לשפת R יש כללי תחביר (syntax) ומוסכמות (conventions).
+<br><br>
+<img src="appendix/R_logo.png" width="10%" style="display: block; margin: auto 0 auto auto;" /></p>
+</div>
+<div id="r-studio" class="section level2 unnumbered">
+<h2>R-studio</h2>
+<p><a href="https://www.rstudio.com" target="_blank">R-Studio</a> היא סביבת עבודה בקוד פתוח אשר מאפשרת לכתוב ולערוך קוד בנוחות.
+<br><br>
+<img src="appendix/rstudio.png" width="20%" style="display: block; margin: auto 0 auto auto;" /></p>
 
 </div>
 </div>
@@ -282,8 +268,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="ggplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="תרגילים-כלליים.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+<a href="משתנים.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
