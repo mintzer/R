@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 7 - tidyverse | מדריך לשפת R</title>
-  <meta name="description" content="פרק 7 - tidyverse | מדריך לשפת R" />
+  <title>פרק 7 - tidyverse | R לפסיכולוגים</title>
+  <meta name="description" content="שי מינצר" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 7 - tidyverse | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 7 - tidyverse | R לפסיכולוגים" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="פרק 7 - tidyverse | מדריך לשפת R" />
+  <meta property="og:description" content="שי מינצר" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 7 - tidyverse | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 7 - tidyverse | R לפסיכולוגים" />
   
-  <meta name="twitter:description" content="פרק 7 - tidyverse | מדריך לשפת R" />
+  <meta name="twitter:description" content="שי מינצר" />
   
 
-<meta name="author" content="שי מינצר" />
+<meta name="author" content="נכתב על ידי שי מינצר" />
 
 
-<meta name="date" content="2022-02-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -154,7 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">מדריך לשפת R</a></li>
+<li><a href="./">R לפסיכולוגים</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>הקדמה</a>
@@ -191,9 +190,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#print"><i class="fa fa-check"></i><b>5.1</b> print</a></li>
 <li class="chapter" data-level="5.2" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#paste"><i class="fa fa-check"></i><b>5.2</b> paste</a></li>
 <li class="chapter" data-level="5.3" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#rep"><i class="fa fa-check"></i><b>5.3</b> rep</a></li>
-<li class="chapter" data-level="5.4" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#class"><i class="fa fa-check"></i><b>5.4</b> class</a></li>
-<li class="chapter" data-level="5.5" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#ifelse"><i class="fa fa-check"></i><b>5.5</b> ifelse</a></li>
-<li class="chapter" data-level="5.6" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#iqr"><i class="fa fa-check"></i><b>5.6</b> IQR</a></li>
+<li class="chapter" data-level="5.4" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#seq"><i class="fa fa-check"></i><b>5.4</b> seq</a></li>
+<li class="chapter" data-level="5.5" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#class"><i class="fa fa-check"></i><b>5.5</b> class</a></li>
+<li class="chapter" data-level="5.6" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#ifelse"><i class="fa fa-check"></i><b>5.6</b> ifelse</a></li>
+<li class="chapter" data-level="5.7" data-path="עוד-פונקציות-בסיסיות.html"><a href="עוד-פונקציות-בסיסיות.html#iqr"><i class="fa fa-check"></i><b>5.7</b> IQR</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> data.frame</a>
 <ul>
@@ -224,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">מדריך לשפת R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R לפסיכולוגים</a>
           </h1>
         </div>
 
@@ -238,14 +238,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="tidyverse" class="section level1" number="7">
 <h1><span class="header-section-number">פרק 7 - </span> tidyverse</h1>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="tidyverse.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidyverse if it is not already installed</span></span>
-<span id="cb102-2"><a href="tidyverse.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidyverse&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb102-3"><a href="tidyverse.html#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidyverse</span></span>
-<span id="cb102-4"><a href="tidyverse.html#cb102-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb102-5"><a href="tidyverse.html#cb102-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidylog if it is not already installed</span></span>
-<span id="cb102-6"><a href="tidyverse.html#cb102-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
-<span id="cb102-7"><a href="tidyverse.html#cb102-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
-<span id="cb102-8"><a href="tidyverse.html#cb102-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="tidyverse.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidyverse if it is not already installed</span></span>
+<span id="cb106-2"><a href="tidyverse.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidyverse&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb106-3"><a href="tidyverse.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidyverse</span></span>
+<span id="cb106-4"><a href="tidyverse.html#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb106-5"><a href="tidyverse.html#cb106-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install the library tidylog if it is not already installed</span></span>
+<span id="cb106-6"><a href="tidyverse.html#cb106-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;tidylog&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;tidylog&quot;</span>)</span>
+<span id="cb106-7"><a href="tidyverse.html#cb106-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library tidylog</span></span>
+<span id="cb106-8"><a href="tidyverse.html#cb106-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidylog&quot;</span>)</span></code></pre></div>
 <div id="pipe" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Pipe</h2>
 <p>הספרייה dplyr, אשר נמצאת תחת tidyverse, מגדירה אופרטור חדש שנקרא - <a href="https://magrittr.tidyverse.org/reference/pipe.html/">Pipe</a>.</p>
@@ -260,32 +260,32 @@ some_function(some_data)</code></pre>
 אשתמש ב-Pipe כדי להדגים פונקציות נוספות תחת tidyverse ולכן חשוב להכיר אותו. <br>
 <em>דוגמא פשוטה:</em>
 ניקח וקטור של המספרים מ1 עד 8, ונעביר אותו בעזרת Pipe לפונקציה sum.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="tidyverse.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
-<span id="cb104-2"><a href="tidyverse.html#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">8</span> <span class="sc">%&gt;%</span> <span class="fu">sum</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="tidyverse.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
+<span id="cb108-2"><a href="tidyverse.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">8</span> <span class="sc">%&gt;%</span> <span class="fu">sum</span>()</span></code></pre></div>
 <pre><code>## [1] 36</code></pre>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="tidyverse.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or:</span></span>
-<span id="cb106-2"><a href="tidyverse.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="co">#              1:8 %&gt;% sum</span></span>
-<span id="cb106-3"><a href="tidyverse.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="co"># both valid</span></span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="tidyverse.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or:</span></span>
+<span id="cb110-2"><a href="tidyverse.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="co">#              1:8 %&gt;% sum</span></span>
+<span id="cb110-3"><a href="tidyverse.html#cb110-3" aria-hidden="true" tabindex="-1"></a><span class="co"># both valid</span></span></code></pre></div>
 <p>במילים פשוטות - הפונקציה sum קיבלה את הוקטור כקלט.
 כלומר, הכתיבה הבאה הייתה מחזירה תוצאה זהה:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="tidyverse.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="tidyverse.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## [1] 36</code></pre>
 <p>ניתן להשתמש באופרטור מספר פעמים כרצוננו</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="tidyverse.html#cb109-1" aria-hidden="true" tabindex="-1"></a>vec1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.3</span>,<span class="fl">2.4</span>,<span class="fl">3.1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb109-2"><a href="tidyverse.html#cb109-2" aria-hidden="true" tabindex="-1"></a>rounded_sum <span class="ot">&lt;-</span> vec1 <span class="sc">%&gt;%</span></span>
-<span id="cb109-3"><a href="tidyverse.html#cb109-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">sum</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb109-4"><a href="tidyverse.html#cb109-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">round</span>()</span>
-<span id="cb109-5"><a href="tidyverse.html#cb109-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb109-6"><a href="tidyverse.html#cb109-6" aria-hidden="true" tabindex="-1"></a><span class="co"># the same as:</span></span>
-<span id="cb109-7"><a href="tidyverse.html#cb109-7" aria-hidden="true" tabindex="-1"></a>rounded_sum_old_way <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">sum</span>(vec1))</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="tidyverse.html#cb113-1" aria-hidden="true" tabindex="-1"></a>vec1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.3</span>,<span class="fl">2.4</span>,<span class="fl">3.1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb113-2"><a href="tidyverse.html#cb113-2" aria-hidden="true" tabindex="-1"></a>rounded_sum <span class="ot">&lt;-</span> vec1 <span class="sc">%&gt;%</span></span>
+<span id="cb113-3"><a href="tidyverse.html#cb113-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">sum</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb113-4"><a href="tidyverse.html#cb113-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">round</span>()</span>
+<span id="cb113-5"><a href="tidyverse.html#cb113-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb113-6"><a href="tidyverse.html#cb113-6" aria-hidden="true" tabindex="-1"></a><span class="co"># the same as:</span></span>
+<span id="cb113-7"><a href="tidyverse.html#cb113-7" aria-hidden="true" tabindex="-1"></a>rounded_sum_old_way <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">sum</span>(vec1))</span></code></pre></div>
 </div>
 <div id="read.csv" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> read.csv</h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/read.table" target="_blank">read.csv</a> מקבלת קובץ csv ומחזירה אובייקט מסוג data.frame <br>
 בדוגמאות הבאות נעבוד עם קובץ הנתונים <em>cereal.csv</em></p>
 <p><a href="data:text/csv;base64,bmFtZSxjYWxvcmllcyxzb2RpdW0scG90YXNzLHJhdGluZw0KMTAwJSBCcmFuLDcwLDEzMCwyODAsNjguNDAyOTczDQoxMDAlIE5hdHVyYWwgQnJhbiwxMjAsMTUsMTM1LDMzLjk4MzY3OQ0KQWxsLUJyYW4sNzAsMjYwLDMyMCw1OS40MjU1MDUNCkFsbC1CcmFuIHdpdGggRXh0cmEgRmliZXIsNTAsMTQwLDMzMCw5My43MDQ5MTINCkFsbW9uZCBEZWxpZ2h0LDExMCwyMDAsLTEsMzQuMzg0ODQzDQpBcHBsZSBDaW5uYW1vbiBDaGVlcmlvcywxMTAsMTgwLDcwLDI5LjUwOTU0MQ0KQXBwbGUgSmFja3MsMTEwLDEyNSwzMCwzMy4xNzQwOTQNCkJhc2ljIDQsMTMwLDIxMCwxMDAsMzcuMDM4NTYyDQpCcmFuIENoZXgsOTAsMjAwLDEyNSw0OS4xMjAyNTMNCkJyYW4gRmxha2VzLDkwLDIxMCwxOTAsNTMuMzEzODEzDQpDYXAnbidDcnVuY2gsMTIwLDIyMCwzNSwxOC4wNDI4NTENCkNoZWVyaW9zLDExMCwyOTAsMTA1LDUwLjc2NDk5OQ0KQ2lubmFtb24gVG9hc3QgQ3J1bmNoLDEyMCwyMTAsNDUsMTkuODIzNTczDQpDbHVzdGVycywxMTAsMTQwLDEwNSw0MC40MDAyMDgNCkNvY29hIFB1ZmZzLDExMCwxODAsNTUsMjIuNzM2NDQ2DQpDb3JuIENoZXgsMTEwLDI4MCwyNSw0MS40NDUwMTkNCkNvcm4gRmxha2VzLDEwMCwyOTAsMzUsNDUuODYzMzI0DQpDb3JuIFBvcHMsMTEwLDkwLDIwLDM1Ljc4Mjc5MQ0KQ291bnQgQ2hvY3VsYSwxMTAsMTgwLDY1LDIyLjM5NjUxMw0KQ3JhY2tsaW4nIE9hdCBCcmFuLDExMCwxNDAsMTYwLDQwLjQ0ODc3Mg0KQ3JlYW0gb2YgV2hlYXQgKFF1aWNrKSwxMDAsODAsLTEsNjQuNTMzODE2DQpDcmlzcGl4LDExMCwyMjAsMzAsNDYuODk1NjQ0DQpDcmlzcHkgV2hlYXQgJiBSYWlzaW5zLDEwMCwxNDAsMTIwLDM2LjE3NjE5Ng0KRG91YmxlIENoZXgsMTAwLDE5MCw4MCw0NC4zMzA4NTYNCkZyb290IExvb3BzLDExMCwxMjUsMzAsMzIuMjA3NTgyDQpGcm9zdGVkIEZsYWtlcywxMTAsMjAwLDI1LDMxLjQzNTk3Mw0KRnJvc3RlZCBNaW5pLVdoZWF0cywxMDAsMCwxMDAsNTguMzQ1MTQxDQpGcnVpdCAmIEZpYnJlIERhdGVzLFAsMywxMiwxLjI1DQpGcnVpdGZ1bCBCcmFuLDEyMCwyNDAsMTkwLDQxLjAxNTQ5Mg0KRnJ1aXR5IFBlYmJsZXMsMTEwLDEzNSwyNSwyOC4wMjU3NjUNCkdvbGRlbiBDcmlzcCwxMDAsNDUsNDAsMzUuMjUyNDQ0DQpHb2xkZW4gR3JhaGFtcywxMTAsMjgwLDQ1LDIzLjgwNDA0Mw0KR3JhcGUgTnV0cyBGbGFrZXMsMTAwLDE0MCw4NSw1Mi4wNzY4OTcNCkdyYXBlLU51dHMsMTEwLDE3MCw5MCw1My4zNzEwMDcNCkdyZWF0IEdyYWlucyBQZWNhbiwxMjAsNzUsMTAwLDQ1LjgxMTcxNg0KSG9uZXkgR3JhaGFtIE9ocywxMjAsMjIwLDQ1LDIxLjg3MTI5Mg0KSG9uZXkgTnV0IENoZWVyaW9zLDExMCwyNTAsOTAsMzEuMDcyMjE3DQpIb25leS1jb21iLDExMCwxODAsMzUsMjguNzQyNDE0DQpKdXN0IFJpZ2h0IENydW5jaHkgIE51Z2dldHMsMTEwLDE3MCw2MCwzNi41MjM2ODMNCkp1c3QgUmlnaHQgRnJ1aXQgJiBOdXQsMTQwLDE3MCw5NSwzNi40NzE1MTINCktpeCwxMTAsMjYwLDQwLDM5LjI0MTExNA0KTGlmZSwxMDAsMTUwLDk1LDQ1LjMyODA3NA0KTHVja3kgQ2hhcm1zLDExMCwxODAsNTUsMjYuNzM0NTE1DQpNYXlwbywxMDAsMCw5NSw1NC44NTA5MTcNCk11ZXNsaSBSYWlzaW5zLFIsNCwxNiwxDQpNdWVzbGkgUmFpc2lucyxSLDQsMTYsMQ0KTXVlc2xpeCBDcmlzcHkgQmxlbmQsMTYwLDE1MCwxNjAsMzAuMzEzMzUxDQpNdWx0aS1HcmFpbiBDaGVlcmlvcywxMDAsMjIwLDkwLDQwLjEwNTk2NQ0KTnV0JkhvbmV5IENydW5jaCwxMjAsMTkwLDQwLDI5LjkyNDI4NQ0KTnV0cmktR3JhaW4gQWxtb25kLVJhaXNpbiwxNDAsMjIwLDEzMCw0MC42OTIzMg0KTnV0cmktZ3JhaW4gV2hlYXQsOTAsMTcwLDkwLDU5LjY0MjgzNw0KT2F0bWVhbCBSYWlzaW4gQ3Jpc3AsMTMwLDE3MCwxMjAsMzAuNDUwODQzDQpQb3N0IE5hdC4gUmFpc2luIEJyYW4sMTIwLDIwMCwyNjAsMzcuODQwNTk0DQpQcm9kdWN0IDE5LDEwMCwzMjAsNDUsNDEuNTAzNTQNClB1ZmZlZCBSaWNlLDUwLDAsMTUsNjAuNzU2MTEyDQpQdWZmZWQgV2hlYXQsNTAsMCw1MCw2My4wMDU2NDUNClF1YWtlciBPYXQgU3F1YXJlcywxMDAsMTM1LDExMCw0OS41MTE4NzQNClF1YWtlciBPYXRtZWFsLDEwMCwwLDExMCw1MC44MjgzOTINClJhaXNpbiBCcmFuLDEyMCwyMTAsMjQwLDM5LjI1OTE5Nw0KUmFpc2luIE51dCBCcmFuLDEwMCwxNDAsMTQwLDM5LjcwMzQNClJhaXNpbiBTcXVhcmVzLDkwLDAsMTEwLDU1LjMzMzE0Mg0KUmljZSBDaGV4LDExMCwyNDAsMzAsNDEuOTk4OTMzDQpSaWNlIEtyaXNwaWVzLDExMCwyOTAsMzUsNDAuNTYwMTU5DQpTaHJlZGRlZCBXaGVhdCw4MCwwLDk1LDY4LjIzNTg4NQ0KU2hyZWRkZWQgV2hlYXQgJ24nQnJhbiw5MCwwLDE0MCw3NC40NzI5NDkNClNocmVkZGVkIFdoZWF0IHNwb29uIHNpemUsOTAsMCwxMjAsNzIuODAxNzg3DQpTbWFja3MsMTEwLDcwLDQwLDMxLjIzMDA1NA0KU3BlY2lhbCBLLDExMCwyMzAsNTUsNTMuMTMxMzI0DQpTdHJhd2JlcnJ5IEZydWl0IFdoZWF0cyw5MCwxNSw5MCw1OS4zNjM5OTMNClRvdGFsIENvcm4gRmxha2VzLDExMCwyMDAsMzUsMzguODM5NzQ2DQpUb3RhbCBSYWlzaW4gQnJhbiwxNDAsMTkwLDIzMCwyOC41OTI3ODUNClRvdGFsIFdob2xlIEdyYWluLDEwMCwyMDAsMTEwLDQ2LjY1ODg0NA0KVHJpcGxlcywxMTAsMjUwLDYwLDM5LjEwNjE3NA0KVHJpeCwxMTAsMTQwLDI1LDI3Ljc1MzMwMQ0KV2hlYXQgQ2hleCwxMDAsMjMwLDExNSw0OS43ODc0NDUNCldoZWF0aWVzLDEwMCwyMDAsMTEwLDUxLjU5MjE5Mw0KV2hlYXRpZXMgSG9uZXkgR29sZCwxMTAsMjAwLDYwLDM2LjE4NzU1OQ0K" download="cereal.csv">הורד את הקובץ cereal.csv</a></p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="tidyverse.html#cb110-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
-<span id="cb110-2"><a href="tidyverse.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="tidyverse.html#cb114-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
+<span id="cb114-2"><a href="tidyverse.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating
 ## 1                 100% Bran       70    130    280 68.40297
 ## 2         100% Natural Bran      120     15    135 33.98368
@@ -293,7 +293,7 @@ some_function(some_data)</code></pre>
 ## 4 All-Bran with Extra Fiber       50    140    330 93.70491
 ## 5            Almond Delight      110    200     -1 34.38484
 ## 6   Apple Cinnamon Cheerios      110    180     70 29.50954</code></pre>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="tidyverse.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="tidyverse.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cereal_df)</span></code></pre></div>
 <pre><code>##      name             calories             sodium          potass      
 ##  Length:77          Length:77          Min.   :  0.0   Min.   : -1.00  
 ##  Class :character   Class :character   1st Qu.:125.0   1st Qu.: 35.00  
@@ -313,9 +313,9 @@ some_function(some_data)</code></pre>
 <h2><span class="header-section-number">7.3</span> filter</h2>
 <p>הפונקציה <a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a> מחזירה רק ערכים העומדים בתנאי מסוים. בדוגמא הבאה הפונקציה filter מקבלת כקלט את ה-dataframe <em>cereal_df</em> ותנאי.
 מתוך <em>cereal_df</em> יחזרו רק השורות שבהן המשתנה <em>rating</em> גדול מ-70. את הפלט של הפונקציה נכניס לתוך משתנה חדש: <em>cereal_df_filtered</em></p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="tidyverse.html#cb114-1" aria-hidden="true" tabindex="-1"></a>cereal_df_filtered <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="tidyverse.html#cb118-1" aria-hidden="true" tabindex="-1"></a>cereal_df_filtered <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rating <span class="sc">&gt;</span> <span class="dv">70</span>)</span></code></pre></div>
 <pre><code>## filter: removed 74 rows (96%), 3 rows remaining</code></pre>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="tidyverse.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df_filtered)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="tidyverse.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df_filtered)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating
 ## 1 All-Bran with Extra Fiber       50    140    330 93.70491
 ## 2    Shredded Wheat &#39;n&#39;Bran       90      0    140 74.47295
@@ -324,15 +324,15 @@ some_function(some_data)</code></pre>
 <div id="mutate" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> mutate</h2>
 <p>הפונקציה <a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a> מאפשרת ליצור עמודות חדשות בdf או לערוך עמודות קיימות.</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="tidyverse.html#cb118-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
-<span id="cb118-2"><a href="tidyverse.html#cb118-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
-<span id="cb118-3"><a href="tidyverse.html#cb118-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">high_clorie =</span> <span class="fu">case_when</span>(</span>
-<span id="cb118-4"><a href="tidyverse.html#cb118-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&gt;</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
-<span id="cb118-5"><a href="tidyverse.html#cb118-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&lt;=</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">FALSE</span>,</span>
-<span id="cb118-6"><a href="tidyverse.html#cb118-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
-<span id="cb118-7"><a href="tidyverse.html#cb118-7" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="tidyverse.html#cb122-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
+<span id="cb122-2"><a href="tidyverse.html#cb122-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb122-3"><a href="tidyverse.html#cb122-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">high_clorie =</span> <span class="fu">case_when</span>(</span>
+<span id="cb122-4"><a href="tidyverse.html#cb122-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&gt;</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb122-5"><a href="tidyverse.html#cb122-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.numeric</span>(calories) <span class="sc">&lt;=</span> <span class="dv">80</span> <span class="sc">~</span> <span class="cn">FALSE</span>,</span>
+<span id="cb122-6"><a href="tidyverse.html#cb122-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb122-7"><a href="tidyverse.html#cb122-7" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
 <pre><code>## mutate: new variable &#39;high_clorie&#39; (logical) with 3 unique values and 4% NA</code></pre>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="tidyverse.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="tidyverse.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cereal_df)</span></code></pre></div>
 <pre><code>##                        name calories sodium potass   rating high_clorie
 ## 1                 100% Bran       70    130    280 68.40297       FALSE
 ## 2         100% Natural Bran      120     15    135 33.98368        TRUE
@@ -345,10 +345,10 @@ some_function(some_data)</code></pre>
 <h2><span class="header-section-number">7.5</span> select</h2>
 <p>הפונקציה <a href="https://dplyr.tidyverse.org/reference/select.html">select</a> מאפשרת לבחור עמודות מסוימות מתוך data.frame. הפונקציה מקבלת data.frame ורשימה של עמודות (או תנאי הנוגע אליהן) כקלט ומחזירה את אותו data.frame, רק עם אותן עמודות. <br>
 בדוגמא הבאה ניקח מתוך cereal_df את העמודות <b>calories</b> ו- <b>sodium</b> בלבד.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="tidyverse.html#cb122-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
-<span id="cb122-2"><a href="tidyverse.html#cb122-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">c</span>(calories, sodium))</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="tidyverse.html#cb126-1" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&#39;cereal.csv&#39;</span>)</span>
+<span id="cb126-2"><a href="tidyverse.html#cb126-2" aria-hidden="true" tabindex="-1"></a>cereal_df <span class="ot">&lt;-</span> cereal_df <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">c</span>(calories, sodium))</span></code></pre></div>
 <pre><code>## select: dropped 3 variables (name, potass, rating)</code></pre>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="tidyverse.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(cereal_df)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="tidyverse.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(cereal_df)</span></code></pre></div>
 <pre><code>## [1] &quot;calories&quot; &quot;sodium&quot;</code></pre>
 
 </div>
@@ -409,8 +409,7 @@ gitbook.start({
 "toc": {
 "collapse": "subsection"
 },
-"info": true,
-"toc_depth": 3
+"info": true
 });
 });
 </script>
