@@ -30,6 +30,7 @@ read.csv
 filter
 mutate
 select
+sample_frac
 ggplot
 משתנים-מקריים-והתפלגויות
 התפלגות-גיאומטרית

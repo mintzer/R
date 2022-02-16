@@ -206,6 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="tidyverse.html"><a href="tidyverse.html#filter"><i class="fa fa-check"></i><b>7.3</b> filter</a></li>
 <li class="chapter" data-level="7.4" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>7.4</b> mutate</a></li>
 <li class="chapter" data-level="7.5" data-path="tidyverse.html"><a href="tidyverse.html#select"><i class="fa fa-check"></i><b>7.5</b> select</a></li>
+<li class="chapter" data-level="7.6" data-path="tidyverse.html"><a href="tidyverse.html#sample_frac"><i class="fa fa-check"></i><b>7.6</b> sample_frac</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>8</b> ggplot</a></li>
 <li class="chapter" data-level="9" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html"><i class="fa fa-check"></i><b>9</b> משתנים מקריים והתפלגויות</a>
@@ -243,9 +244,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 צרו וקטור בשם jumps - המכיל את הערכים שבין 0-10, בקפיצות של 0.02. <br>
 מה אורך הווקטור jumps? <br>
 מהו הערך במקום ה-20 בווקטור jumps?</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="תרגילים-כלליים.html#cb157-1" aria-hidden="true" tabindex="-1"></a>jumps <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="fl">0.02</span>) </span>
-<span id="cb157-2"><a href="תרגילים-כלליים.html#cb157-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(jumps) <span class="co"># 501</span></span>
-<span id="cb157-3"><a href="תרגילים-כלליים.html#cb157-3" aria-hidden="true" tabindex="-1"></a>jumps[<span class="dv">20</span>] <span class="co"># 0.38</span></span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="תרגילים-כלליים.html#cb159-1" aria-hidden="true" tabindex="-1"></a>jumps <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="fl">0.02</span>) </span>
+<span id="cb159-2"><a href="תרגילים-כלליים.html#cb159-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(jumps) <span class="co"># 501</span></span>
+<span id="cb159-3"><a href="תרגילים-כלליים.html#cb159-3" aria-hidden="true" tabindex="-1"></a>jumps[<span class="dv">20</span>] <span class="co"># 0.38</span></span></code></pre></div>
 <hr>
 <!-- This part can be programmatically generated with htmltools. Thus we can control initial state from the YAML front matter-->
 <script id="code-folding-options" type="application/json">

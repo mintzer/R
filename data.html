@@ -206,6 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="tidyverse.html"><a href="tidyverse.html#filter"><i class="fa fa-check"></i><b>7.3</b> filter</a></li>
 <li class="chapter" data-level="7.4" data-path="tidyverse.html"><a href="tidyverse.html#mutate"><i class="fa fa-check"></i><b>7.4</b> mutate</a></li>
 <li class="chapter" data-level="7.5" data-path="tidyverse.html"><a href="tidyverse.html#select"><i class="fa fa-check"></i><b>7.5</b> select</a></li>
+<li class="chapter" data-level="7.6" data-path="tidyverse.html"><a href="tidyverse.html#sample_frac"><i class="fa fa-check"></i><b>7.6</b> sample_frac</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>8</b> ggplot</a></li>
 <li class="chapter" data-level="9" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html"><i class="fa fa-check"></i><b>9</b> משתנים מקריים והתפלגויות</a>
@@ -241,7 +242,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">פרק 6 - </span> data.frame</h1>
 <p>data.frame היא טבלה בה כל עמודה מיוצגת על ידי וקטור של ערכים.
 לכל עמודה יש שם ייחודי והוקטורים צריכים להיות באותו אורך (להכיל את אותה כמות ערכים)<br>
-נגדיר משתנה בשם emp_data שמכיל אובייקט מסוג data.frame</p>
+לצורך הדוגמא: נגדיר משתנה בשם emp_data המכיל אובייקט מסוג data.frame</p>
 <div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="data.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
 <span id="cb87-2"><a href="data.html#cb87-2" aria-hidden="true" tabindex="-1"></a>emp_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb87-3"><a href="data.html#cb87-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
