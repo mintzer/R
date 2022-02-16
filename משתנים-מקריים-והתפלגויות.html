@@ -211,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html"><i class="fa fa-check"></i><b>9</b> משתנים מקריים והתפלגויות</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-גיאומטרית"><i class="fa fa-check"></i><b>9.1</b> התפלגות גיאומטרית</a></li>
+<li class="chapter" data-level="9.2" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-בינומית"><i class="fa fa-check"></i><b>9.2</b> התפלגות בינומית</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="תרגילים-כלליים.html"><a href="תרגילים-כלליים.html"><i class="fa fa-check"></i>תרגילים כלליים</a></li>
 <li class="chapter" data-level="" data-path="תרגילים-בנושא-לולאות.html"><a href="תרגילים-בנושא-לולאות.html"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
@@ -243,37 +244,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><b>וקטור של ערכים מתוך התפלגות גיאומטרית</b><br></p>
 <pre><code>rgeom(n, prob)</code></pre>
 <p>דוגמה: נדגום 10 פעמים מתוך התפלגות גיאומטרית עם סיכוי 1/6 להצלחה.
-כמה כשלונות לפני ההצלחה הראשונה היו בכל אחד מהמקרים?</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="משתנים-מקריים-והתפלגויות.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgeom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)</span></code></pre></div>
-<pre><code>##  [1] 12  1  6  2 23  0  3  1  1  0</code></pre>
+כמה כשלונות לפני ההצלחה הראשונה יהיו בכל אחד מהמקרים?</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="משתנים-מקריים-והתפלגויות.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgeom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>##  [1]  8  7 18 19  0  6  2  3  2  4</code></pre>
 <p><b>מציאת הסתברות ספציפית</b><br></p>
 <pre><code>dgeom(x, prob, log = FALSE)</code></pre>
 <p>דוגמא: ההסתברות למאורע של שלושה כשלונות לפני הצלחה כאשר הסיכוי להצלחה בודדת הוא 1/4</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="משתנים-מקריים-והתפלגויות.html#cb139-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> (<span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span>
-<span id="cb139-2"><a href="משתנים-מקריים-והתפלגויות.html#cb139-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb139-3"><a href="משתנים-מקריים-והתפלגויות.html#cb139-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dgeom</span>(<span class="at">x =</span> n, <span class="at">prob =</span> p) <span class="co"># 0.1054688</span></span></code></pre></div>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-51-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="משתנים-מקריים-והתפלגויות.html#cb5-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> (<span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb5-2"><a href="משתנים-מקריים-והתפלגויות.html#cb5-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb5-3"><a href="משתנים-מקריים-והתפלגויות.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dgeom</span>(<span class="at">x =</span> n, <span class="at">prob =</span> p) <span class="co"># 0.1054688</span></span></code></pre></div>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p><b>הסתברות מצטברת עד לנקודה p</b><br></p>
 <pre><code>pgeom(q, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
 <p>דוגמא: ההסתברות המצטברת של עד ארבעה כישלונות לפני הצלחה. (כלומר, הסיכוי לקבל ארבעה כשלונות לכל היותר לפני ההצלחה הראשונה. סכום ההסתברויות) מתוך התפלגות גיאומטרית עם הסתברות 1/3 להצלחה.</p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="משתנים-מקריים-והתפלגויות.html#cb141-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span></span>
-<span id="cb141-2"><a href="משתנים-מקריים-והתפלגויות.html#cb141-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb141-3"><a href="משתנים-מקריים-והתפלגויות.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>) <span class="co"># 0.8683128</span></span></code></pre></div>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-53-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="משתנים-מקריים-והתפלגויות.html#cb7-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span></span>
+<span id="cb7-2"><a href="משתנים-מקריים-והתפלגויות.html#cb7-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb7-3"><a href="משתנים-מקריים-והתפלגויות.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>) <span class="co"># 0.8683128</span></span></code></pre></div>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p><b>הסתברות מצטברת מנקודה p (כל הערכים שגדולים מ-p)</b><br></p>
 <p>דוגמא: ההסתברות המצטברת של לפחות חמישה כישלונות לפני הצלחה. (כלומר, הסיכוי לקבל חמישה כשלונות או יותר לפני ההצלחה הראשונה. סכום ההסתברויות) מתוך התפלגות גיאומטרית עם הסתברות 1/3 להצלחה.</p>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="משתנים-מקריים-והתפלגויות.html#cb142-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span></span>
-<span id="cb142-2"><a href="משתנים-מקריים-והתפלגויות.html#cb142-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb142-3"><a href="משתנים-מקריים-והתפלגויות.html#cb142-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="co"># 0.1316872</span></span></code></pre></div>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-55-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="משתנים-מקריים-והתפלגויות.html#cb8-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span></span>
+<span id="cb8-2"><a href="משתנים-מקריים-והתפלגויות.html#cb8-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb8-3"><a href="משתנים-מקריים-והתפלגויות.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pgeom</span>(<span class="at">q =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="co"># 0.1316872</span></span></code></pre></div>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p><b>מציאת מספר הכשלונות לפני הצלחה בהתפלגות גיאומטרית תיאורטית, המתאים להסתברות מצטברת</b><br></p>
 <pre><code>qgeom(p, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
 <p>זאת בעצם הפונקציה ההופכית של pgeom. כלומר - pgeom מקבלת מספר כשלונות ומחזירה את ההסתברות המצטברת. qgeom מקבלת הסתברות מצטברת ומחזירה מספר כשלונות תואם. <br>
 דוגמא: כמה כישלונות ייתקבלו לפני ההצלחה הראשונה בהסתברות מצטברת 0.8 כאשר ההסתברות להצלחה היא 0.2?</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="משתנים-מקריים-והתפלגויות.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qgeom</span>(<span class="at">p =</span> <span class="fl">0.8</span>, <span class="at">prob =</span> .<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="משתנים-מקריים-והתפלגויות.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qgeom</span>(<span class="at">p =</span> <span class="fl">0.8</span>, <span class="at">prob =</span> .<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 7</code></pre>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-57-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Geometric.html" target="_blank">התיעוד הרשמי של הפונקציות dgeom, rgeom, pgeom, qgeom</a> <br></p>
+<hr>
+</div>
+<div id="התפלגות-בינומית" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> התפלגות בינומית</h2>
+<p><b>וקטור של ערכים מתוך התפלגות בינומית</b><br></p>
+<pre><code>rbinom(n, size, prob)</code></pre>
+<p>דוגמה: נדגום 5 פעמים מתוך התפלגות בינומית הכוללת 10 ניסויי ברנולי עם הסתברות 1/3 להצלחה.
+כמה הצלחות יהיו בכל אחד מהמקרים?</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="משתנים-מקריים-והתפלגויות.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">5</span>, <span class="at">size=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 3 1 1 4</code></pre>
+<p><b>מציאת הסתברות ספציפית</b><br></p>
+<pre><code>dbinom(x, size, prob, log = FALSE)</code></pre>
+<p>דוגמא: ההסתברות למאורע של בדיוק 3 הצלחות מתוך 7 ניסויי ברנולי עם הסתברות 3/5 להצלחה</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="משתנים-מקריים-והתפלגויות.html#cb16-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> (<span class="dv">3</span><span class="sc">/</span><span class="dv">5</span>)</span>
+<span id="cb16-2"><a href="משתנים-מקריים-והתפלגויות.html#cb16-2" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">7</span></span>
+<span id="cb16-3"><a href="משתנים-מקריים-והתפלגויות.html#cb16-3" aria-hidden="true" tabindex="-1"></a>successes <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb16-4"><a href="משתנים-מקריים-והתפלגויות.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> successes, <span class="at">size =</span> size, <span class="at">prob =</span> p) <span class="co"># 0.193536</span></span></code></pre></div>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><b>הסתברות מצטברת עד לנקודה p</b><br></p>
+<pre><code>pbinom(q, size, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
+<p>דוגמא: ההסתברות המצטברת של עד 3 הצלחות. (כלומר, הסיכוי לקבל שלוש הצלחות לכל היותר. סכום ההסתברויות) מתוך התפלגות בינומית הכוללת 6 ניסויי ברנולי עם הסתברות 2/3 להצלחה.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="משתנים-מקריים-והתפלגויות.html#cb18-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">3</span></span>
+<span id="cb18-2"><a href="משתנים-מקריים-והתפלגויות.html#cb18-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb18-3"><a href="משתנים-מקריים-והתפלגויות.html#cb18-3" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">6</span></span>
+<span id="cb18-4"><a href="משתנים-מקריים-והתפלגויות.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> n, <span class="at">size =</span> size, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>) <span class="co"># 0.3196159</span></span></code></pre></div>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><b>הסתברות מצטברת מנקודה p (כל הערכים שגדולים מ-p)</b><br></p>
+<p>דוגמא: ההסתברות המצטברת של לפחות 4 הצלחות. (כלומר, הסיכוי לקבל יותר מ-3 הצלחות) מתוך התפלגות בינומית הכוללת 7 ניסויי ברנולי עם הסתברות 1/2 להצלחה.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="משתנים-מקריים-והתפלגויות.html#cb19-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb19-2"><a href="משתנים-מקריים-והתפלגויות.html#cb19-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb19-3"><a href="משתנים-מקריים-והתפלגויות.html#cb19-3" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">7</span></span>
+<span id="cb19-4"><a href="משתנים-מקריים-והתפלגויות.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> n, <span class="at">size =</span> size, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="co"># 0.5</span></span></code></pre></div>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><b>מציאת מספר ההצלחות בהתפלגות בינומית תיאורטית, המתאים להסתברות מצטברת</b><br></p>
+<pre><code>qbinom(p, size, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
+<p>זאת בעצם הפונקציה ההופכית של pbinom. כלומר - pbinom מקבלת מספר הצלחות ומחזירה את ההסתברות המצטברת. qbinom מקבלת הסתברות מצטברת ומחזירה מספר הצלחות תואם. <br>
+דוגמא: כמה הצלחות ייתקבלו בהסתברות מצטברת 0.7 מתוך התפלגות בינומית הכוללת 7 ניסויי ברנולי עם הסתברות 1/3 להצלחה. (או - מה הוא מספר ההצלחות שמעליו נמצאים 30% מהערכים האפשריים)</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="משתנים-מקריים-והתפלגויות.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qbinom</span>(<span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">size=</span><span class="dv">7</span>, <span class="at">prob =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Binomial.html" target="_blank">התיעוד הרשמי של הפונקציות dbinom, rbinom, pbinom, qbinom</a> <br></p>
 
 </div>
 </div>
