@@ -250,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>דוגמה: נדגום 10 פעמים מתוך התפלגות גיאומטרית עם סיכוי 1/6 להצלחה.
 כמה כשלונות לפני ההצלחה הראשונה יהיו בכל אחד מהמקרים?</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="משתנים-מקריים-והתפלגויות.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgeom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)</span></code></pre></div>
-<pre><code>##  [1] 10  0  2  1  8  9  0  0  6  2</code></pre>
+<pre><code>##  [1]  2  5  0  0 16  3  1  5  7  3</code></pre>
 <h3>
 מציאת הסתברות ספציפית
 </h3>
@@ -298,7 +298,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>דוגמה: נדגום 5 פעמים מתוך התפלגות בינומית הכוללת 10 ניסויי ברנולי עם הסתברות 1/3 להצלחה.
 כמה הצלחות יהיו בכל אחד מהמקרים?</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="משתנים-מקריים-והתפלגויות.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">5</span>, <span class="at">size=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## [1] 4 4 2 1 3</code></pre>
+<pre><code>## [1] 1 2 5 3 3</code></pre>
 <h3>
 מציאת הסתברות ספציפית
 </h3>
@@ -354,9 +354,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-5"><a href="משתנים-מקריים-והתפלגויות.html#cb24-5" aria-hidden="true" tabindex="-1"></a>norm_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span>n, <span class="at">mean=</span>mean, <span class="at">sd=</span>sd)</span>
 <span id="cb24-6"><a href="משתנים-מקריים-והתפלגויות.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 20 items</span></span>
 <span id="cb24-7"><a href="משתנים-מקריים-והתפלגויות.html#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(norm_sample[<span class="dv">0</span><span class="sc">:</span><span class="dv">20</span>])</span></code></pre></div>
-<pre><code>##  [1] 59.58317 72.08263 61.91140 62.49219 61.90877 67.92312 58.87077 57.58277
-##  [9] 54.69432 54.27112 57.53327 71.99994 56.08422 63.43165 71.29535 54.25122
-## [17] 62.04219 58.55096 51.57001 53.65915</code></pre>
+<pre><code>##  [1] 55.89810 60.15726 61.02818 56.38433 52.84563 57.93421 56.19803 61.23402
+##  [9] 68.79106 59.08618 63.42566 64.48377 64.86938 57.02037 61.36271 63.98880
+## [17] 61.44136 59.74373 60.49202 67.99401</code></pre>
 <p><em>שימו לב שממוצע ההתפלגות לא יהיה 60, אלא רק קרוב ל60, התוחלת הנורמלית התיאורטית מייצגת אין סוף ערכים, בעוד שאנחנו דגמנו דגימה מקרית עם מספר סופי של ערכים.</em> <br>
 <em>גם סטיית התקן של המדגם תהיה קרובה ל-6 ולא זהה ל-6. בדיוק מאותה סיבה.</em></p>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
@@ -388,7 +388,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>qnorm(p, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></pre>
 <p>דוגמא: עבור איזה ערך מתוך התפלגות נורמלית עם תוחלת 200 וסטיית תקן 30, ההתסתברות המצטברת היא 50%? (כלומר, עד אליו יתקבלו 50% מהערכים). <br>
 במילים אחרות - מה הוא הערך במאון ה-50 (החציון) עבור התפלגות נורמלית זו. <br>
-<em>הערה - זאת הפונקציה ההופכית של pnorm. qnorm מקבלת מאון ומחזירה את הערך התואם לו. pnorm מקבלת ערך ומחזירה את המאון התואם לו.</em></p>
+<em>הערה - זאת הפונקציה ההופכית של pnorm. qnorm מקבלת ערך ומחזירה את הההסתברות המצבטרת עד אליו. qnorm מקבלת הסתברות מצטברת ומחזירה את הערך התואם לה.</em></p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="משתנים-מקריים-והתפלגויות.html#cb35-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">=</span><span class="fl">0.5</span></span>
 <span id="cb35-2"><a href="משתנים-מקריים-והתפלגויות.html#cb35-2" aria-hidden="true" tabindex="-1"></a>mean<span class="ot">=</span><span class="dv">200</span></span>
 <span id="cb35-3"><a href="משתנים-מקריים-והתפלגויות.html#cb35-3" aria-hidden="true" tabindex="-1"></a>sd<span class="ot">=</span><span class="dv">30</span></span>
