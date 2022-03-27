@@ -213,6 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="9.1" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-גיאומטרית"><i class="fa fa-check"></i><b>9.1</b> התפלגות גיאומטרית</a></li>
 <li class="chapter" data-level="9.2" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-בינומית"><i class="fa fa-check"></i><b>9.2</b> התפלגות בינומית</a></li>
+<li class="chapter" data-level="9.3" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-נורמלית"><i class="fa fa-check"></i><b>9.3</b> התפלגות נורמלית</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="תרגילים-כלליים.html"><a href="תרגילים-כלליים.html"><i class="fa fa-check"></i>תרגילים כלליים</a></li>
 <li class="chapter" data-level="" data-path="תרגילים-בנושא-לולאות.html"><a href="תרגילים-בנושא-לולאות.html"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
@@ -242,25 +243,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>תרגילים בנושא לולאות</h1>
 <p><em>תרגיל 1:</em>
 צרי לולאה שרצה על כל המספרים מ1 עד 10 ומדפיסה כל מספר בריבוע (1,4,9,16 וכו’).</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="תרגילים-בנושא-לולאות.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb160-2"><a href="תרגילים-בנושא-לולאות.html#cb160-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb160-3"><a href="תרגילים-בנושא-לולאות.html#cb160-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="תרגילים-בנושא-לולאות.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb172-2"><a href="תרגילים-בנושא-לולאות.html#cb172-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb172-3"><a href="תרגילים-בנושא-לולאות.html#cb172-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 2:</em>
 צרי לולאה שרצה על כל המספרים מ1 עד 100 ומדפיסה רק את המספרים שהם כפולה של 3 או כפולה של 7.</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="תרגילים-בנושא-לולאות.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) {</span>
-<span id="cb161-2"><a href="תרגילים-בנושא-לולאות.html#cb161-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> ) <span class="sc">|</span> (i <span class="sc">%%</span> <span class="dv">7</span> <span class="sc">==</span> <span class="dv">0</span>)) {</span>
-<span id="cb161-3"><a href="תרגילים-בנושא-לולאות.html#cb161-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb161-4"><a href="תרגילים-בנושא-לולאות.html#cb161-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb161-5"><a href="תרגילים-בנושא-לולאות.html#cb161-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="תרגילים-בנושא-לולאות.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) {</span>
+<span id="cb173-2"><a href="תרגילים-בנושא-לולאות.html#cb173-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> ) <span class="sc">|</span> (i <span class="sc">%%</span> <span class="dv">7</span> <span class="sc">==</span> <span class="dv">0</span>)) {</span>
+<span id="cb173-3"><a href="תרגילים-בנושא-לולאות.html#cb173-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb173-4"><a href="תרגילים-בנושא-לולאות.html#cb173-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb173-5"><a href="תרגילים-בנושא-לולאות.html#cb173-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 3:</em>
 צרי לולאה שרצה על כל המספרים מ1 עד 25 ומדפיסה את כל המספרים חוץ מ-8 ו23.</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="תרגילים-בנושא-לולאות.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">25</span>) {</span>
-<span id="cb162-2"><a href="תרגילים-בנושא-לולאות.html#cb162-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">!=</span> <span class="dv">8</span>) <span class="sc">&amp;</span> (i <span class="sc">!=</span> <span class="dv">23</span>)) {</span>
-<span id="cb162-3"><a href="תרגילים-בנושא-לולאות.html#cb162-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb162-4"><a href="תרגילים-בנושא-לולאות.html#cb162-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb162-5"><a href="תרגילים-בנושא-לולאות.html#cb162-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="תרגילים-בנושא-לולאות.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">25</span>) {</span>
+<span id="cb174-2"><a href="תרגילים-בנושא-לולאות.html#cb174-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((i <span class="sc">!=</span> <span class="dv">8</span>) <span class="sc">&amp;</span> (i <span class="sc">!=</span> <span class="dv">23</span>)) {</span>
+<span id="cb174-3"><a href="תרגילים-בנושא-לולאות.html#cb174-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb174-4"><a href="תרגילים-בנושא-לולאות.html#cb174-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb174-5"><a href="תרגילים-בנושא-לולאות.html#cb174-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 4:</em>
 צרי וקטור בשם num_to_skip</p>
@@ -268,25 +269,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>צרי לולאה שרצה על כל המספרים מ1 עד 40 ומדפיסה את המספרים שלא נמצאים בוקטור nums_to_skip. רמז - %in% :</p>
 <pre><code>3 %in% nums_to_skip # returns TRUE
 5 %in% nums_to_skip # returns FALSE</code></pre>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="תרגילים-בנושא-לולאות.html#cb165-1" aria-hidden="true" tabindex="-1"></a>nums_to_skip <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">22</span>,<span class="dv">32</span>,<span class="dv">33</span>)</span>
-<span id="cb165-2"><a href="תרגילים-בנושא-לולאות.html#cb165-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>) {</span>
-<span id="cb165-3"><a href="תרגילים-בנושא-לולאות.html#cb165-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ( <span class="sc">!</span> (i <span class="sc">%in%</span> nums_to_skip)) {</span>
-<span id="cb165-4"><a href="תרגילים-בנושא-לולאות.html#cb165-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb165-5"><a href="תרגילים-בנושא-לולאות.html#cb165-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb165-6"><a href="תרגילים-בנושא-לולאות.html#cb165-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="תרגילים-בנושא-לולאות.html#cb177-1" aria-hidden="true" tabindex="-1"></a>nums_to_skip <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">22</span>,<span class="dv">32</span>,<span class="dv">33</span>)</span>
+<span id="cb177-2"><a href="תרגילים-בנושא-לולאות.html#cb177-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>) {</span>
+<span id="cb177-3"><a href="תרגילים-בנושא-לולאות.html#cb177-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ( <span class="sc">!</span> (i <span class="sc">%in%</span> nums_to_skip)) {</span>
+<span id="cb177-4"><a href="תרגילים-בנושא-לולאות.html#cb177-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb177-5"><a href="תרגילים-בנושא-לולאות.html#cb177-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb177-6"><a href="תרגילים-בנושא-לולאות.html#cb177-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr>
 <p><em>תרגיל 5:</em>
 צרי לולאה בשם samples שתרוץ 10000 פעמים. בכל ריצה של הלולאה, דגמי דגימה בגודל 70 מתוך התפלגות נורמלית עם תוחלת 80 וסטיית תקן 5 (בעזרת הפונקציה rnorm). הכניסי את הוקטור שחוזר מהדגימה לתוך משתנה בשם sample.
 צרי וקטור ריק בשם sample_means (מחוץ ללולאה)
 בכל ריצה של הלולאה הכניסי אליו את הממוצע של הדגימה, כך שבסוף הלולאה הוא יכיל 10000 ממוצעים.</p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="תרגילים-בנושא-לולאות.html#cb166-1" aria-hidden="true" tabindex="-1"></a>sample_means <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb166-2"><a href="תרגילים-בנושא-לולאות.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">32</span>) <span class="co"># to make sure the results </span></span>
-<span id="cb166-3"><a href="תרגילים-בנושא-לולאות.html#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
-<span id="cb166-4"><a href="תרגילים-בנושא-לולאות.html#cb166-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
-<span id="cb166-5"><a href="תרגילים-בנושא-לולאות.html#cb166-5" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">5</span>)</span>
-<span id="cb166-6"><a href="תרגילים-בנושא-לולאות.html#cb166-6" aria-hidden="true" tabindex="-1"></a>  sample_means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample)</span>
-<span id="cb166-7"><a href="תרגילים-בנושא-לולאות.html#cb166-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb166-8"><a href="תרגילים-בנושא-לולאות.html#cb166-8" aria-hidden="true" tabindex="-1"></a><span class="co">#hist(sample_means, breaks = 100)</span></span></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="תרגילים-בנושא-לולאות.html#cb178-1" aria-hidden="true" tabindex="-1"></a>sample_means <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb178-2"><a href="תרגילים-בנושא-לולאות.html#cb178-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">32</span>) <span class="co"># to make sure the results </span></span>
+<span id="cb178-3"><a href="תרגילים-בנושא-לולאות.html#cb178-3" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
+<span id="cb178-4"><a href="תרגילים-בנושא-לולאות.html#cb178-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
+<span id="cb178-5"><a href="תרגילים-בנושא-לולאות.html#cb178-5" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">5</span>)</span>
+<span id="cb178-6"><a href="תרגילים-בנושא-לולאות.html#cb178-6" aria-hidden="true" tabindex="-1"></a>  sample_means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample)</span>
+<span id="cb178-7"><a href="תרגילים-בנושא-לולאות.html#cb178-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb178-8"><a href="תרגילים-בנושא-לולאות.html#cb178-8" aria-hidden="true" tabindex="-1"></a><span class="co">#hist(sample_means, breaks = 100)</span></span></code></pre></div>
 <hr>
 <p><em>תרגיל 6:</em>
 בגרף מוצגת היסטוגרפיה של הוקטור sample_means מהשאלה הקודמת, עם נתונים זהים:
@@ -301,19 +302,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 צרי לולאה שעוברת על כל המספרים בוקטור הבא:</p>
 <pre><code>numbers &lt;- c(3,5,6,8,2,44,45,5)</code></pre>
 <p>ומדפיסה האם הם גדולים מ6.</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="תרגילים-בנושא-לולאות.html#cb168-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
-<span id="cb168-2"><a href="תרגילים-בנושא-לולאות.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
-<span id="cb168-3"><a href="תרגילים-בנושא-לולאות.html#cb168-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(number <span class="sc">&gt;</span> <span class="dv">6</span>)</span>
-<span id="cb168-4"><a href="תרגילים-בנושא-לולאות.html#cb168-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="תרגילים-בנושא-לולאות.html#cb169-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
-<span id="cb169-2"><a href="תרגילים-בנושא-לולאות.html#cb169-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
-<span id="cb169-3"><a href="תרגילים-בנושא-לולאות.html#cb169-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (number <span class="sc">&gt;</span> <span class="dv">6</span>) {</span>
-<span id="cb169-4"><a href="תרגילים-בנושא-לולאות.html#cb169-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is bigger than 6&#39;</span>))</span>
-<span id="cb169-5"><a href="תרגילים-בנושא-לולאות.html#cb169-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb169-6"><a href="תרגילים-בנושא-לולאות.html#cb169-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
-<span id="cb169-7"><a href="תרגילים-בנושא-לולאות.html#cb169-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is not bigger than 6&#39;</span>))</span>
-<span id="cb169-8"><a href="תרגילים-בנושא-לולאות.html#cb169-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb169-9"><a href="תרגילים-בנושא-לולאות.html#cb169-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="תרגילים-בנושא-לולאות.html#cb180-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
+<span id="cb180-2"><a href="תרגילים-בנושא-לולאות.html#cb180-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
+<span id="cb180-3"><a href="תרגילים-בנושא-לולאות.html#cb180-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(number <span class="sc">&gt;</span> <span class="dv">6</span>)</span>
+<span id="cb180-4"><a href="תרגילים-בנושא-לולאות.html#cb180-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="תרגילים-בנושא-לולאות.html#cb181-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">44</span>,<span class="dv">45</span>,<span class="dv">5</span>)</span>
+<span id="cb181-2"><a href="תרגילים-בנושא-לולאות.html#cb181-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (number <span class="cf">in</span> numbers) {</span>
+<span id="cb181-3"><a href="תרגילים-בנושא-לולאות.html#cb181-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (number <span class="sc">&gt;</span> <span class="dv">6</span>) {</span>
+<span id="cb181-4"><a href="תרגילים-בנושא-לולאות.html#cb181-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is bigger than 6&#39;</span>))</span>
+<span id="cb181-5"><a href="תרגילים-בנושא-לולאות.html#cb181-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb181-6"><a href="תרגילים-בנושא-לולאות.html#cb181-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb181-7"><a href="תרגילים-בנושא-לולאות.html#cb181-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(number, <span class="st">&#39;is not bigger than 6&#39;</span>))</span>
+<span id="cb181-8"><a href="תרגילים-בנושא-לולאות.html#cb181-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb181-9"><a href="תרגילים-בנושא-לולאות.html#cb181-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <!-- This part can be programmatically generated with htmltools. Thus we can control initial state from the YAML front matter-->
 <script id="code-folding-options" type="application/json">
   {"initial-state": "hide"}
