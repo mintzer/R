@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 3 - אופרטורים | שפת R לפסיכולוגים</title>
+  <title>פרק 3 - אופרטורים | מדריך לשפת R</title>
   <meta name="description" content="שי מינצר" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 3 - אופרטורים | שפת R לפסיכולוגים" />
+  <meta property="og:title" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   <meta property="og:type" content="book" />
-  
   <meta property="og:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
   <meta property="og:description" content="שי מינצר" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 3 - אופרטורים | שפת R לפסיכולוגים" />
+  <meta name="twitter:title" content="פרק 3 - אופרטורים | מדריך לשפת R" />
   
   <meta name="twitter:description" content="שי מינצר" />
   <meta name="twitter:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="לולאות.html"/>
 <link rel="next" href="פונקציות.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js" type="text/javascript"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -153,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">שפת R לפסיכולוגים</a></li>
+<li><a href="./">מדריך לשפת R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>הקדמה</a>
@@ -215,6 +214,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-בינומית"><i class="fa fa-check"></i><b>9.2</b> התפלגות בינומית</a></li>
 <li class="chapter" data-level="9.3" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-נורמלית"><i class="fa fa-check"></i><b>9.3</b> התפלגות נורמלית</a></li>
 </ul></li>
+<li class="chapter" data-level="10" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html"><i class="fa fa-check"></i><b>10</b> הסקה סטטיסטית</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מושגים-בסיסיים"><i class="fa fa-check"></i><b>10.1</b> מושגים בסיסיים</a></li>
+<li class="chapter" data-level="10.2" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#ערכים-קריטים"><i class="fa fa-check"></i><b>10.2</b> ערכים קריטים</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="תרגילים-כלליים.html"><a href="תרגילים-כלליים.html"><i class="fa fa-check"></i>תרגילים כלליים</a></li>
 <li class="chapter" data-level="" data-path="תרגילים-בנושא-לולאות.html"><a href="תרגילים-בנושא-לולאות.html"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
 <li class="chapter" data-level="" data-path="תרגילים-בנושא-פונקציות.html"><a href="תרגילים-בנושא-פונקציות.html"><i class="fa fa-check"></i>תרגילים בנושא פונקציות</a></li>
@@ -227,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">שפת R לפסיכולוגים</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">מדריך לשפת R</a>
           </h1>
         </div>
 
@@ -239,10 +243,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="books.jpg">
 </div>
-<div id="אופרטורים" class="section level1" number="3">
-<h1><span class="header-section-number">פרק 3 - </span> אופרטורים</h1>
-<div id="אופרטורים-אריתמטיים" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> אופרטורים אריתמטיים</h2>
+<div id="אופרטורים" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">פרק 3 - </span> אופרטורים<a href="אופרטורים.html#אופרטורים" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="אופרטורים-אריתמטיים" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> אופרטורים אריתמטיים<a href="אופרטורים.html#אופרטורים-אריתמטיים" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <table>
 <thead>
 <tr class="header">
@@ -282,8 +286,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="אופרטורים-לוגיים" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> אופרטורים לוגיים</h2>
+<div id="אופרטורים-לוגיים" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> אופרטורים לוגיים<a href="אופרטורים.html#אופרטורים-לוגיים" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <table>
 <colgroup>
 <col width="8%" />
@@ -321,8 +325,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="אופרטורים-של-השוואה" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> אופרטורים של השוואה</h2>
+<div id="אופרטורים-של-השוואה" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> אופרטורים של השוואה<a href="אופרטורים.html#אופרטורים-של-השוואה" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <table>
 <colgroup>
 <col width="9%" />

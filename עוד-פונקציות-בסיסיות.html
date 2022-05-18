@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 5 - עוד פונקציות בסיסיות | שפת R לפסיכולוגים</title>
+  <title>פרק 5 - עוד פונקציות בסיסיות | מדריך לשפת R</title>
   <meta name="description" content="שי מינצר" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 5 - עוד פונקציות בסיסיות | שפת R לפסיכולוגים" />
+  <meta property="og:title" content="פרק 5 - עוד פונקציות בסיסיות | מדריך לשפת R" />
   <meta property="og:type" content="book" />
-  
   <meta property="og:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
   <meta property="og:description" content="שי מינצר" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 5 - עוד פונקציות בסיסיות | שפת R לפסיכולוגים" />
+  <meta name="twitter:title" content="פרק 5 - עוד פונקציות בסיסיות | מדריך לשפת R" />
   
   <meta name="twitter:description" content="שי מינצר" />
   <meta name="twitter:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="פונקציות.html"/>
 <link rel="next" href="data.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js" type="text/javascript"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -153,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">שפת R לפסיכולוגים</a></li>
+<li><a href="./">מדריך לשפת R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>הקדמה</a>
@@ -215,6 +214,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-בינומית"><i class="fa fa-check"></i><b>9.2</b> התפלגות בינומית</a></li>
 <li class="chapter" data-level="9.3" data-path="משתנים-מקריים-והתפלגויות.html"><a href="משתנים-מקריים-והתפלגויות.html#התפלגות-נורמלית"><i class="fa fa-check"></i><b>9.3</b> התפלגות נורמלית</a></li>
 </ul></li>
+<li class="chapter" data-level="10" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html"><i class="fa fa-check"></i><b>10</b> הסקה סטטיסטית</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מושגים-בסיסיים"><i class="fa fa-check"></i><b>10.1</b> מושגים בסיסיים</a></li>
+<li class="chapter" data-level="10.2" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#ערכים-קריטים"><i class="fa fa-check"></i><b>10.2</b> ערכים קריטים</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="תרגילים-כלליים.html"><a href="תרגילים-כלליים.html"><i class="fa fa-check"></i>תרגילים כלליים</a></li>
 <li class="chapter" data-level="" data-path="תרגילים-בנושא-לולאות.html"><a href="תרגילים-בנושא-לולאות.html"><i class="fa fa-check"></i>תרגילים בנושא לולאות</a></li>
 <li class="chapter" data-level="" data-path="תרגילים-בנושא-פונקציות.html"><a href="תרגילים-בנושא-פונקציות.html"><i class="fa fa-check"></i>תרגילים בנושא פונקציות</a></li>
@@ -227,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">שפת R לפסיכולוגים</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">מדריך לשפת R</a>
           </h1>
         </div>
 
@@ -239,17 +243,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="books.jpg">
 </div>
-<div id="עוד-פונקציות-בסיסיות" class="section level1" number="5">
-<h1><span class="header-section-number">פרק 5 - </span> עוד פונקציות בסיסיות</h1>
+<div id="עוד-פונקציות-בסיסיות" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">פרק 5 - </span> עוד פונקציות בסיסיות<a href="עוד-פונקציות-בסיסיות.html#עוד-פונקציות-בסיסיות" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>הרבה פונקציות שימושיות מגיעות עם החבילה הבסיסית <b>{base}</b></p>
-<div id="print" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> print</h2>
+<div id="print" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> print<a href="עוד-פונקציות-בסיסיות.html#print" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/print" target="_blank">print</a> “מדפיסה” למסך את הערך שהיא מקבלת</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="עוד-פונקציות-בסיסיות.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Hi!&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Hi!&quot;</code></pre>
 </div>
-<div id="paste" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> paste</h2>
+<div id="paste" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> paste<a href="עוד-פונקציות-בסיסיות.html#paste" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/paste" target="_blank">paste</a> מקבלת כמה ערכים ומשרשרת אותם אחד אחרי השני (concatenation). מחזירה אובייקט מסוג character.</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="עוד-פונקציות-בסיסיות.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&#39;how&#39;</span>, <span class="st">&#39;you&#39;</span>, <span class="st">&quot;doin&#39;?&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;how you doin&#39;?&quot;</code></pre>
@@ -262,8 +266,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb55-2"><a href="עוד-פונקציות-בסיסיות.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="st">&quot;3&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;123&quot;</code></pre>
 </div>
-<div id="rep" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> rep</h2>
+<div id="rep" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> rep<a href="עוד-פונקציות-בסיסיות.html#rep" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/rep" target="_blank">rep</a> משכפלת (replicate) איברים של וקטור או רשימה. <br>
 דוגמא: וקטור שמכיל את הערך 0 כפול 30 פעמים <br></p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="עוד-פונקציות-בסיסיות.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">30</span>)</span></code></pre></div>
@@ -276,16 +280,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>##  [1] &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot;
 ## [13] &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot;</code></pre>
 </div>
-<div id="seq" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> seq</h2>
+<div id="seq" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> seq<a href="עוד-פונקציות-בסיסיות.html#seq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/seq" target="_blank">seq</a> מחזירה וקטור של ערכים החל ממספר מסוים ועד מספר אחר, בקפיצות קבועות.</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="עוד-פונקציות-בסיסיות.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">11</span>)</span></code></pre></div>
 <pre><code>##  [1]   1  12  23  34  45  56  67  78  89 100</code></pre>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="עוד-פונקציות-בסיסיות.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">4</span>, <span class="at">to =</span> <span class="dv">6</span>, <span class="at">by =</span> <span class="fl">0.2</span>)</span></code></pre></div>
 <pre><code>##  [1] 4.0 4.2 4.4 4.6 4.8 5.0 5.2 5.4 5.6 5.8 6.0</code></pre>
 </div>
-<div id="class" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> class</h2>
+<div id="class" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> class<a href="עוד-פונקציות-בסיסיות.html#class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/class" target="_blank">class</a> מחזירה את המחלקה של המשתנה שהיא מקבלת. במילים אחרות - מאיזה <b>סוג</b> הוא.</p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="עוד-פונקציות-בסיסיות.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">14</span>) </span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
@@ -299,16 +303,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb75-2"><a href="עוד-פונקציות-בסיסיות.html#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df) </span></code></pre></div>
 <pre><code>## [1] &quot;data.frame&quot;</code></pre>
 </div>
-<div id="ifelse" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> ifelse</h2>
+<div id="ifelse" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> ifelse<a href="עוד-פונקציות-בסיסיות.html#ifelse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/ifelse" target="_blank">ifelse</a> היא דרך נוחה ומקוצרת להגדיר תנאי. הפונקציה מקבלת שלושה פרמטרים: תנאי, מה להחזיר אם התנאי מתקיים, מה להחזיר אם התנאי לא מתקיים.</p>
 <div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="עוד-פונקציות-בסיסיות.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">1</span><span class="sc">==</span><span class="dv">1</span>, <span class="st">&quot;it&#39;s true!&quot;</span>,<span class="st">&quot;it&#39;s false!&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;it&#39;s true!&quot;</code></pre>
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="עוד-פונקציות-בסיסיות.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">5</span>, <span class="st">&quot;it&#39;s true!&quot;</span>,<span class="st">&quot;it&#39;s false!&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;it&#39;s false!&quot;</code></pre>
 </div>
-<div id="iqr" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> IQR</h2>
+<div id="iqr" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> IQR<a href="עוד-פונקציות-בסיסיות.html#iqr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/IQR" target="_blank">IQR</a> מקבלת התפלגות (בתור וקטור) ומחזירה את הטווח הבין רבעוני שלה. <br>
 במילים אחרות - הטווח שבו נמצאים מחצית מהערכים בהתפלגות <br>או: ההפרש בין הערך במאון ה-75 ובין הערך במאון ה-25.</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="עוד-פונקציות-בסיסיות.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>) <span class="co"># to make sure the results </span></span>
