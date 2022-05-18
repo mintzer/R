@@ -276,12 +276,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>לדוגמא: עבור השערה חד זנבית ימנית עם <span class="math inline">\(\alpha = 0.05\)</span>
 נרצה לקבל את ציון התקן אשר ההסתברות המצטברת <em>עד אליו</em> היא <span class="math inline">\(0.95\)</span>. <br>
 זהו ציון ה<span class="math inline">\(Z\)</span> הקריטי</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="הסקה-סטטיסטית.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="הסקה-סטטיסטית.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>## [1] 1.644854</code></pre>
 <p>עבור מבחן דו זנבי ואותה רמת ביטחון - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.025\)</span> מכל צד)
 ולכן ציון ה<span class="math inline">\(Z\)</span>
 הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.975\)</span>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="הסקה-סטטיסטית.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="הסקה-סטטיסטית.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
 <pre><code>## [1] 1.959964</code></pre>
 <h3>
 חישוב <span class="math inline">\(t\)</span> קריטי
@@ -295,12 +295,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>לדוגמא:
 עבור השערה חד זנבית ימנית עם <span class="math inline">\(\alpha = 0.1\)</span>
 ו- <span class="math inline">\(df = 32\)</span></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="הסקה-סטטיסטית.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.9</span>, <span class="dv">32</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="הסקה-סטטיסטית.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.9</span>, <span class="dv">32</span>)</span></code></pre></div>
 <pre><code>## [1] 1.308573</code></pre>
 <p>עבור מבחן דו זנבי, באותה רמת ביטחון
 - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.05\)</span> מכל צד) ולכן ציון ה<span class="math inline">\(t\)</span>
 הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.95\)</span>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="הסקה-סטטיסטית.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>, <span class="dv">32</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="הסקה-סטטיסטית.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>, <span class="dv">32</span>)</span></code></pre></div>
 <pre><code>## [1] 1.693889</code></pre>
 </div>
 <div id="מבחני-מובהקות" class="section level2 hasAnchor" number="10.3">
