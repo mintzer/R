@@ -251,7 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 השערת האפס. ההשערה הבסיסית - השמרנית. כל עוד לא קיבלנו תוצאה קיצונית במבחן הסטטיסטי, נניח שהיא נכונה.
 <br></p>
 <p><b>H1:</b>
-ההשערה האלטרנטיבית, השערת החוקר. רק במקרה שבו נקבל תוצאה קיצונית במבחן הסטטיסטי. - נקבל את ההשערה האלטרנטיבית ונדחה את השערת האפס.
+ההשערה האלטרנטיבית, השערת החוקר. רק במקרה שבו נקבל תוצאה קיצונית במבחן הסטטיסטי - נקבל את ההשערה האלטרנטיבית ונדחה את השערת האפס.
 <br></p>
 <p><b>p-value:</b>
 ההסתברות לקבל את הסטטיסטי שהתקבל במבחן או ערך קיצוני ממנו, בהנחה ש
@@ -260,12 +260,47 @@ H0
 </div>
 <div id="ערכים-קריטים" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> ערכים קריטים<a href="הסקה-סטטיסטית.html#ערכים-קריטים" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>נחלק את השימוש בערכים קריטיים לשני שימושים: <br>
+<p>נחלק את השימוש בערכים קריטיים לשניים: <br>
 <b>בהקשר של מבחני השערות</b>:
 הערך הקריטי מגדיר מה היא תוצאה קיצונית במדגם, במדד של טעויות תקן (סטיית תקן של התפלגות הדגימה).
 כלומר, אם המרחק בין הסטטיסטי שקיבלנו במדגם לבין תוחלת התפלגות הדגימה (בטעויות תקן) גדול או שווה לערך הקריטי - נדחה את השערת האפס ונקבל את ההשערה האלטרנטיבית. <br></p>
 <p><b>בהקשר של אמידה</b>:
 כאשר מחשבים רווח בר סמך, הערך הקריטי מגדיר את שולי הרווח. כלומר, כאשר מסתכלים על התפלגות הדגימה - הסטטיסטי שקיבלנו במדגם יהיה שווה לתוחלת. מרחקם של הגבולות משני הצדדים של ההתוחלת, במדד של טעויות תקן, יהיה שווה לערך הקריטי.</p>
+<h3>
+<span class="math inline">\(Z\)</span> קריטי
+</h3>
+<p>התפלגות <span class="math inline">\(Z\)</span>
+היא למעשה ההתפלגות הנורמלית הסטנדרטית (<span class="math inline">\(\mu = 0,\space \sigma = 1\)</span>)</p>
+<pre><code>qnorm(* confidence level *)</code></pre>
+<p>לדוגמא: עבור השערה חד זנבית ימנית עם <span class="math inline">\(\alpha = 0.05\)</span>
+נרצה לקבל את ציון התקן אשר ההסתברות המצטברת <em>עד אליו</em> היא <span class="math inline">\(0.95\)</span>. <br>
+זהו ציון ה<span class="math inline">\(Z\)</span> הקריטי</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="הסקה-סטטיסטית.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
+<pre><code>## [1] 1.644854</code></pre>
+<p>עבור מבחן דו זנבי ואותה רמת ביטחון - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.025\)</span> מכל צד)
+ולכן ציון ה<span class="math inline">\(Z\)</span>
+הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.975\)</span>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="הסקה-סטטיסטית.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
+<pre><code>## [1] 1.959964</code></pre>
+<h3>
+<span class="math inline">\(t\)</span> קריטי
+</h3>
+<p>השונות של התפלגות <span class="math inline">\(t\)</span>
+תלויה בדרגות החופש ולכן גם הערך הקריטי תלוי בדרגות החופש, בנוסף ל<span class="math inline">\(\alpha\)</span>. <br>
+בלי להיכנס לתיאור המתמטי - דרגות החופש הן מדד שמבטא עד כמה אנחנו בטוחים במדגם / עד כמה הוא מייצג. <br>
+ככל שיש יותר דרגות חופש - כך נוכל “לסמוך” יותר על הסטטיסטי שקיבלנו. <br>
+בניסוח פרקטי: דרגות החופש שוות למספר הנבדקים פחות מספר הפרמטרים עליהם מבוסס חישוב הסטטיסטי.</p>
+<pre><code>qt(*confidence level*, *degrees of freedom*)</code></pre>
+<p>לדוגמא:
+עבור השערה חד זנבית ימנית עם <span class="math inline">\(\alpha = 0.1\)</span>
+ו- <span class="math inline">\(df = 32\)</span></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="הסקה-סטטיסטית.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.9</span>, <span class="dv">32</span>)</span></code></pre></div>
+<pre><code>## [1] 1.308573</code></pre>
+<p>עבור מבחן דו זנבי, באותה רמת ביטחון
+- ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.05\)</span> מכל צד) ולכן ציון ה<span class="math inline">\(t\)</span>
+הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.95\)</span>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="הסקה-סטטיסטית.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>, <span class="dv">32</span>)</span></code></pre></div>
+<pre><code>## [1] 1.693889</code></pre>
 
 </div>
 </div>
@@ -330,6 +365,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
