@@ -292,19 +292,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 זהו ציון ה<span class="math inline">\(Z\)</span> הקריטי</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="הסקה-סטטיסטית.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>## [1] 1.644854</code></pre>
-<pre><code>## * checking for file &#39;C:\Users\shaym\AppData\Local\Temp\RtmpiIWSD2\remotes162b347bef71d0\mintzer-Statistika-75e9121/DESCRIPTION&#39; ... OK
-## * preparing &#39;Statistika&#39;:
-## * checking DESCRIPTION meta-information ... OK
-## * checking for LF line-endings in source and make files and shell scripts
-## * checking for empty or unneeded directories
-## * creating default NAMESPACE file
-## * building &#39;Statistika_0.0.1.2.tar.gz&#39;
-## </code></pre>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p>עבור מבחן דו זנבי ואותה רמת ביטחון - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.025\)</span> מכל צד)
 ולכן ציון ה<span class="math inline">\(Z\)</span>
 הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.975\)</span>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="הסקה-סטטיסטית.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="הסקה-סטטיסטית.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
 <pre><code>## [1] 1.959964</code></pre>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <h3>
@@ -319,13 +311,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>לדוגמא:
 עבור השערה חד זנבית ימנית עם <span class="math inline">\(\alpha = 0.1\)</span>
 ו- <span class="math inline">\(df = 32\)</span></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="הסקה-סטטיסטית.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.9</span>, <span class="dv">32</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="הסקה-סטטיסטית.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.9</span>, <span class="dv">32</span>)</span></code></pre></div>
 <pre><code>## [1] 1.308573</code></pre>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p>עבור מבחן דו זנבי, באותה רמת ביטחון
 - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.05\)</span> מכל צד) ולכן ציון ה<span class="math inline">\(t\)</span>
 הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.95\)</span>.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="הסקה-סטטיסטית.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>, <span class="dv">32</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="הסקה-סטטיסטית.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>, <span class="dv">32</span>)</span></code></pre></div>
 <pre><code>## [1] 1.693889</code></pre>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
