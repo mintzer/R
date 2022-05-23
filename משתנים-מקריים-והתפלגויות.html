@@ -260,7 +260,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>דוגמה: נדגום 10 פעמים מתוך התפלגות גיאומטרית עם סיכוי 1/6 להצלחה.
 כמה כשלונות לפני ההצלחה הראשונה יהיו בכל אחד מהמקרים?</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="משתנים-מקריים-והתפלגויות.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgeom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)</span></code></pre></div>
-<pre><code>##  [1]  2 11  9  2  0  7  0 20  3  0</code></pre>
+<pre><code>##  [1]  2  3  0  0 17  2  7  0  0  8</code></pre>
 <h3>
 מציאת הסתברות ספציפית
 </h3>
@@ -308,26 +308,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>דוגמה: נדגום 5 פעמים מתוך התפלגות בינומית הכוללת 10 ניסויי ברנולי עם הסתברות 1/3 להצלחה.
 כמה הצלחות יהיו בכל אחד מהמקרים?</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="משתנים-מקריים-והתפלגויות.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">5</span>, <span class="at">size=</span><span class="dv">10</span>, <span class="at">prob=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## [1] 4 2 3 3 4</code></pre>
+<pre><code>## [1] 1 2 4 2 3</code></pre>
 <h3>
 מציאת הסתברות ספציפית
 </h3>
 <pre><code>dbinom(x, size, prob, log = FALSE)</code></pre>
-<p>דוגמא: ההסתברות למאורע של בדיוק 3 הצלחות מתוך 7 ניסויי ברנולי עם הסתברות 3/5 להצלחה</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="משתנים-מקריים-והתפלגויות.html#cb16-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> (<span class="dv">3</span><span class="sc">/</span><span class="dv">5</span>)</span>
-<span id="cb16-2"><a href="משתנים-מקריים-והתפלגויות.html#cb16-2" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">7</span></span>
+<p>דוגמא: ההסתברות למאורע של בדיוק 3 הצלחות מתוך 5 ניסויי ברנולי עם הסתברות 2/5 להצלחה</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="משתנים-מקריים-והתפלגויות.html#cb16-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">5</span></span>
+<span id="cb16-2"><a href="משתנים-מקריים-והתפלגויות.html#cb16-2" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">5</span></span>
 <span id="cb16-3"><a href="משתנים-מקריים-והתפלגויות.html#cb16-3" aria-hidden="true" tabindex="-1"></a>successes <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb16-4"><a href="משתנים-מקריים-והתפלגויות.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> successes, <span class="at">size =</span> size, <span class="at">prob =</span> p) <span class="co"># 0.193536</span></span></code></pre></div>
+<span id="cb16-4"><a href="משתנים-מקריים-והתפלגויות.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> successes, <span class="at">size =</span> size, <span class="at">prob =</span> p) <span class="co"># 0.2304</span></span></code></pre></div>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <h3>
 הסתברות מצטברת עד לנקודה p
 </h3>
 <pre><code>pbinom(q, size, prob, lower.tail = TRUE, log.p = FALSE)</code></pre>
-<p>דוגמא: ההסתברות המצטברת של עד 3 הצלחות. (כלומר, הסיכוי לקבל שלוש הצלחות לכל היותר. סכום ההסתברויות) מתוך התפלגות בינומית הכוללת 6 ניסויי ברנולי עם הסתברות 2/3 להצלחה.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="משתנים-מקריים-והתפלגויות.html#cb18-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">3</span></span>
+<p>דוגמא: ההסתברות המצטברת של עד 3 הצלחות. (כלומר, הסיכוי לקבל שלוש הצלחות לכל היותר. סכום ההסתברויות) מתוך התפלגות בינומית הכוללת 5 ניסויי ברנולי עם הסתברות 1/2 להצלחה.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="משתנים-מקריים-והתפלגויות.html#cb18-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span></span>
 <span id="cb18-2"><a href="משתנים-מקריים-והתפלגויות.html#cb18-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb18-3"><a href="משתנים-מקריים-והתפלגויות.html#cb18-3" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">6</span></span>
-<span id="cb18-4"><a href="משתנים-מקריים-והתפלגויות.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> n, <span class="at">size =</span> size, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>) <span class="co"># 0.3196159</span></span></code></pre></div>
+<span id="cb18-3"><a href="משתנים-מקריים-והתפלגויות.html#cb18-3" aria-hidden="true" tabindex="-1"></a>size <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb18-4"><a href="משתנים-מקריים-והתפלגויות.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> n, <span class="at">size =</span> size, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>) <span class="co"># 0.8125</span></span></code></pre></div>
 <p><img src="R-Tutorials_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <h3>
 הסתברות מצטברת מנקודה p (כל הערכים שגדולים מ-p)
@@ -363,9 +363,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-4"><a href="משתנים-מקריים-והתפלגויות.html#cb24-4" aria-hidden="true" tabindex="-1"></a>norm_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n=</span>n, <span class="at">mean=</span>mean, <span class="at">sd=</span>sd)</span>
 <span id="cb24-5"><a href="משתנים-מקריים-והתפלגויות.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 20 items</span></span>
 <span id="cb24-6"><a href="משתנים-מקריים-והתפלגויות.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(norm_sample[<span class="dv">0</span><span class="sc">:</span><span class="dv">20</span>])</span></code></pre></div>
-<pre><code>##  [1] 51.67233 53.32431 69.04341 65.12751 64.12149 57.37924 62.22402 62.54497
-##  [9] 60.80654 67.32395 62.28088 51.80256 54.13205 57.30581 53.55748 58.90666
-## [17] 55.29403 54.83831 61.73867 54.25352</code></pre>
+<pre><code>##  [1] 59.25664 61.04838 56.55537 65.07384 50.65500 61.45350 66.09099 70.10266
+##  [9] 57.99677 67.83765 55.85247 64.87317 58.62496 62.81638 56.23248 61.32613
+## [17] 59.57106 58.23682 62.05545 56.32074</code></pre>
 <p>אלו היו עשרים הערכים הראשונים מתוך 300 הערכים במדגם. <br>
 <em>שימו לב שממוצע המדגם לא יהיה 60, אלא רק קרוב ל60, ההתפלגות הנורמלית התיאורטית מייצגת אין סוף ערכים, בעוד שאנחנו דגמנו מקרית מספר סופי של ערכים.</em> <br>
 <em>גם סטיית התקן של המדגם תהיה קרובה ל-6 ולא זהה ל-6. בדיוק מאותה סיבה.</em> <br>
