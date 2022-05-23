@@ -24,7 +24,7 @@ pre code {
 }
 */
 
-title, h1, h2, h3, h4 {
+title, h1, h2, h3, h4, h5, h6 {
 	color: #48cbd1 !important;
 }
 
@@ -36,6 +36,24 @@ h3 {
 h4 {
   font-weight: bold !important;
   font-size: 1em !important;
+}
+
+h5 {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.1em !important;
+}
+
+h6 {
+  font-weight: bold !important;
+  font-size: 1em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
 }
 /*
 html {
@@ -90,4 +108,23 @@ ul.summary li.active>a {
 
 ul.summary li>a:hover {
   color:#48cbd1 !important;
+}
+
+ul {
+  margin-right:1.2em !important;
+}
+
+.assumptions tr {
+    border:none !important;
+}
+
+.assumptions td {
+  border:none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.assumptions {
+  border:none !important;
 }
