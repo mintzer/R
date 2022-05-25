@@ -247,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <link href="style.css" rel="stylesheet">
 <div class="hero-image-container"> 
-  <img class= "hero-image" src="books.jpg">
+  <img class= "hero-image" src="books.webp">
 </div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY8V237R28"></script>
@@ -305,15 +305,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>לדוגמא: עבור השערה חד זנבית ימנית עם <span class="math inline">\(\alpha = 0.05\)</span>
 נרצה לקבל את ציון התקן אשר ההסתברות המצטברת <em>עד אליו</em> היא <span class="math inline">\(0.95\)</span>. <br>
 זהו ציון ה<span class="math inline">\(Z\)</span> הקריטי.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="הסקה-סטטיסטית.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="הסקה-סטטיסטית.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>## [1] 1.644854</code></pre>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-80-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<pre><code>## [1] 1.644854</code></pre>
 <p>עבור מבחן דו זנבי ואותה רמת ביטחון - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.025\)</span> מכל צד)
 ולכן ציון ה<span class="math inline">\(Z\)</span>
 הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.975\)</span>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="הסקה-סטטיסטית.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="הסקה-סטטיסטית.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
 <pre><code>## [1] 1.959964</code></pre>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-82-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<pre><code>## [1] 1.959964</code></pre>
 <h3>
 חישוב <span class="math inline">\(t\)</span> קריטי
 </h3>
@@ -328,15 +330,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ו- <span class="math inline">\(df = 32\)</span>
 נרצה לקבל את ציון התקן אשר ההסתברות המצטברת <em>עד אליו</em> היא <span class="math inline">\(0.04\)</span>. <br>
 זהו ציון ה<span class="math inline">\(t\)</span> הקריטי.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="הסקה-סטטיסטית.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.04</span>, <span class="dv">32</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="הסקה-סטטיסטית.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.04</span>, <span class="dv">32</span>)</span></code></pre></div>
 <pre><code>## [1] -1.808089</code></pre>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-84-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p>עבור מבחן דו זנבי, באותה רמת ביטחון
 - ערכים קיצוניים ייתכנו משני הצדדים (<span class="math inline">\(0.02\)</span> מכל צד) ולכן ציון ה<span class="math inline">\(t\)</span>
 הקריטי יחושב עבור הסתברות מצטברת של <span class="math inline">\(0.98\)</span>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="הסקה-סטטיסטית.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.98</span>, <span class="dv">32</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="הסקה-סטטיסטית.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.98</span>, <span class="dv">32</span>)</span></code></pre></div>
 <pre><code>## [1] 2.140904</code></pre>
-<img src="R-Tutorials_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
+<img src="R-Tutorials_files/figure-html/unnamed-chunk-86-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
 <hr>
 </div>
 <div id="מבחן-z-לממוצע-יחיד" class="section level2 hasAnchor" number="10.3">
