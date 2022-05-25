@@ -128,3 +128,8 @@ ul {
 .assumptions {
   border:none !important;
 }
+
+
+.book .book-summary ul.summary li ul {
+    padding-right: 2em;
+}
