@@ -265,93 +265,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="print" class="section level2 unnumbered hasAnchor">
 <h2>print<a href="עוד-פונקציות-בסיסיות.html#print" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/print" target="_blank">print</a> “מדפיסה” למסך את הערך שהיא מקבלת</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="עוד-פונקציות-בסיסיות.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Hi!&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="עוד-פונקציות-בסיסיות.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Hi!&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Hi!&quot;</code></pre>
 </div>
 <div id="paste" class="section level2 unnumbered hasAnchor">
 <h2>paste<a href="עוד-פונקציות-בסיסיות.html#paste" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/paste" target="_blank">paste</a> מקבלת כמה ערכים ומשרשרת אותם אחד אחרי השני (concatenation). מחזירה אובייקט מסוג character.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="עוד-פונקציות-בסיסיות.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&#39;how&#39;</span>, <span class="st">&#39;you&#39;</span>, <span class="st">&quot;doin&#39;?&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="עוד-פונקציות-בסיסיות.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&#39;how&#39;</span>, <span class="st">&#39;you&#39;</span>, <span class="st">&quot;doin&#39;?&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;how you doin&#39;?&quot;</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="עוד-פונקציות-בסיסיות.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&#39;how&#39;</span>, <span class="st">&#39;you&#39;</span>, <span class="st">&quot;doin&#39;?&quot;</span>, <span class="at">sep=</span><span class="st">&#39;-&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="עוד-פונקציות-בסיסיות.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&#39;how&#39;</span>, <span class="st">&#39;you&#39;</span>, <span class="st">&quot;doin&#39;?&quot;</span>, <span class="at">sep=</span><span class="st">&#39;-&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;how-you-doin&#39;?&quot;</code></pre>
 <p>הפונקציה paste0 היא מקרה פרטי שבו הערכים משורשרים בלי רווח ביניהם.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="עוד-פונקציות-בסיסיות.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="עוד-פונקציות-בסיסיות.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;123&quot;</code></pre>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="עוד-פונקציות-בסיסיות.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the same as:</span></span>
-<span id="cb61-2"><a href="עוד-פונקציות-בסיסיות.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="st">&quot;3&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="עוד-פונקציות-בסיסיות.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the same as:</span></span>
+<span id="cb66-2"><a href="עוד-פונקציות-בסיסיות.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="st">&quot;3&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;123&quot;</code></pre>
 </div>
 <div id="rep" class="section level2 unnumbered hasAnchor">
 <h2>rep<a href="עוד-פונקציות-בסיסיות.html#rep" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/rep" target="_blank">rep</a> משכפלת (replicate) איברים של וקטור או רשימה. <br>
 דוגמא: וקטור שמכיל את הערך 0 כפול 30 פעמים <br></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="עוד-פונקציות-בסיסיות.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">30</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="עוד-פונקציות-בסיסיות.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">30</span>)</span></code></pre></div>
 <pre><code>##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</code></pre>
 <p><b>הערה:</b> ניתן להתייחס ל-0 כאל וקטור עם איבר אחד. למעשה, הכתיבה הבאה שקולה.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="עוד-פונקציות-בסיסיות.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">0</span>),<span class="dv">30</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="עוד-פונקציות-בסיסיות.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">0</span>),<span class="dv">30</span>)</span></code></pre></div>
 <pre><code>##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</code></pre>
 <p>דוגמא נוספת: וקטור שמכיל את הערך hey כפול 20 פעמים</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="עוד-פונקציות-בסיסיות.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="st">&quot;hey&quot;</span>,<span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="עוד-פונקציות-בסיסיות.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="st">&quot;hey&quot;</span>,<span class="dv">20</span>)</span></code></pre></div>
 <pre><code>##  [1] &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot;
 ## [13] &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot; &quot;hey&quot;</code></pre>
 </div>
 <div id="seq" class="section level2 unnumbered hasAnchor">
 <h2>seq<a href="עוד-פונקציות-בסיסיות.html#seq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/seq" target="_blank">seq</a> מחזירה וקטור של ערכים החל ממספר מסוים ועד מספר אחר, בקפיצות קבועות.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="עוד-פונקציות-בסיסיות.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">11</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="עוד-פונקציות-בסיסיות.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">11</span>)</span></code></pre></div>
 <pre><code>##  [1]   1  12  23  34  45  56  67  78  89 100</code></pre>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="עוד-פונקציות-בסיסיות.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">4</span>, <span class="at">to =</span> <span class="dv">6</span>, <span class="at">by =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="עוד-פונקציות-בסיסיות.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">4</span>, <span class="at">to =</span> <span class="dv">6</span>, <span class="at">by =</span> <span class="fl">0.2</span>)</span></code></pre></div>
 <pre><code>##  [1] 4.0 4.2 4.4 4.6 4.8 5.0 5.2 5.4 5.6 5.8 6.0</code></pre>
 </div>
 <div id="class" class="section level2 unnumbered hasAnchor">
 <h2>class<a href="עוד-פונקציות-בסיסיות.html#class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/class" target="_blank">class</a> מחזירה את המחלקה של המשתנה שהיא מקבלת. במילים אחרות - מאיזה <b>סוג</b> הוא.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="עוד-פונקציות-בסיסיות.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">14</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="עוד-פונקציות-בסיסיות.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">14</span>) </span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="עוד-פונקציות-בסיסיות.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fl">7.2</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="עוד-פונקציות-בסיסיות.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fl">7.2</span>) </span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="עוד-פונקציות-בסיסיות.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&#39;Ten&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="עוד-פונקציות-בסיסיות.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&#39;Ten&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="עוד-פונקציות-בסיסיות.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="עוד-פונקציות-בסיסיות.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="עוד-פונקציות-בסיסיות.html#cb81-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
-<span id="cb81-2"><a href="עוד-פונקציות-בסיסיות.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df) </span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="עוד-פונקציות-בסיסיות.html#cb86-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb86-2"><a href="עוד-פונקציות-בסיסיות.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df) </span></code></pre></div>
 <pre><code>## [1] &quot;data.frame&quot;</code></pre>
 </div>
 <div id="ifelse" class="section level2 unnumbered hasAnchor">
 <h2>ifelse<a href="עוד-פונקציות-בסיסיות.html#ifelse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/ifelse" target="_blank">ifelse</a> היא דרך נוחה ומקוצרת להגדיר תנאי. הפונקציה מקבלת שלושה פרמטרים: תנאי, מה להחזיר אם התנאי מתקיים, מה להחזיר אם התנאי לא מתקיים.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="עוד-פונקציות-בסיסיות.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">1</span><span class="sc">==</span><span class="dv">1</span>, <span class="st">&quot;it&#39;s true!&quot;</span>,<span class="st">&quot;it&#39;s false!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="עוד-פונקציות-בסיסיות.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">1</span><span class="sc">==</span><span class="dv">1</span>, <span class="st">&quot;it&#39;s true!&quot;</span>,<span class="st">&quot;it&#39;s false!&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;it&#39;s true!&quot;</code></pre>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="עוד-פונקציות-בסיסיות.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">5</span>, <span class="st">&quot;it&#39;s true!&quot;</span>,<span class="st">&quot;it&#39;s false!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="עוד-פונקציות-בסיסיות.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">5</span>, <span class="st">&quot;it&#39;s true!&quot;</span>,<span class="st">&quot;it&#39;s false!&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;it&#39;s false!&quot;</code></pre>
 </div>
 <div id="iqr" class="section level2 unnumbered hasAnchor">
 <h2>IQR<a href="עוד-פונקציות-בסיסיות.html#iqr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>הפונקציה <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/IQR" target="_blank">IQR</a> מקבלת התפלגות (בתור וקטור) ומחזירה את הטווח הבין רבעוני שלה. <br>
 במילים אחרות - הטווח שבו נמצאים מחצית מהערכים בהתפלגות <br>או: ההפרש בין הערך במאון ה-75 ובין הערך במאון ה-25.</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="עוד-פונקציות-בסיסיות.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>) <span class="co"># to make sure the results </span></span>
-<span id="cb87-2"><a href="עוד-פונקציות-בסיסיות.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
-<span id="cb87-3"><a href="עוד-פונקציות-בסיסיות.html#cb87-3" aria-hidden="true" tabindex="-1"></a>salary <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">5600</span>, <span class="dv">500</span>)</span>
-<span id="cb87-4"><a href="עוד-פונקציות-בסיסיות.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(salary)</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="עוד-פונקציות-בסיסיות.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>) <span class="co"># to make sure the results </span></span>
+<span id="cb92-2"><a href="עוד-פונקציות-בסיסיות.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
+<span id="cb92-3"><a href="עוד-פונקציות-בסיסיות.html#cb92-3" aria-hidden="true" tabindex="-1"></a>salary <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">5600</span>, <span class="dv">500</span>)</span>
+<span id="cb92-4"><a href="עוד-פונקציות-בסיסיות.html#cb92-4" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(salary)</span></code></pre></div>
 <pre><code>## [1] 673.7134</code></pre>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="עוד-פונקציות-בסיסיות.html#cb89-1" aria-hidden="true" tabindex="-1"></a>iqr <span class="ot">&lt;-</span> <span class="fu">quantile</span>(salary, <span class="fu">c</span>(<span class="fl">0.25</span>,<span class="fl">0.75</span>))</span>
-<span id="cb89-2"><a href="עוד-פונקציות-בסיסיות.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the same as the diff between the 75th quantile and 25th quantile</span></span>
-<span id="cb89-3"><a href="עוד-פונקציות-בסיסיות.html#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(iqr)</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="עוד-פונקציות-בסיסיות.html#cb94-1" aria-hidden="true" tabindex="-1"></a>iqr <span class="ot">&lt;-</span> <span class="fu">quantile</span>(salary, <span class="fu">c</span>(<span class="fl">0.25</span>,<span class="fl">0.75</span>))</span>
+<span id="cb94-2"><a href="עוד-פונקציות-בסיסיות.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the same as the diff between the 75th quantile and 25th quantile</span></span>
+<span id="cb94-3"><a href="עוד-פונקציות-בסיסיות.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(iqr)</span></code></pre></div>
 <pre><code>##      25%      75% 
 ## 5272.225 5945.938</code></pre>
 <p>הדגמה:</p>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-30-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-31-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 <p>בדוגמא הבאה נדגום מתוך התפלגות נורמלית עם סטיית תקן 200 במקום 500.
 התפלגות תהיה צרה יותר, ולפיכך הטווח הבין רבעוני ייקטן.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="עוד-פונקציות-בסיסיות.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>) <span class="co"># to make sure the results </span></span>
-<span id="cb91-2"><a href="עוד-פונקציות-בסיסיות.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
-<span id="cb91-3"><a href="עוד-פונקציות-בסיסיות.html#cb91-3" aria-hidden="true" tabindex="-1"></a>salary <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">5600</span>, <span class="dv">200</span>)</span>
-<span id="cb91-4"><a href="עוד-פונקציות-בסיסיות.html#cb91-4" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(salary)</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="עוד-פונקציות-בסיסיות.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>) <span class="co"># to make sure the results </span></span>
+<span id="cb96-2"><a href="עוד-פונקציות-בסיסיות.html#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="co"># will be the same every time the code run.</span></span>
+<span id="cb96-3"><a href="עוד-פונקציות-בסיסיות.html#cb96-3" aria-hidden="true" tabindex="-1"></a>salary <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">5600</span>, <span class="dv">200</span>)</span>
+<span id="cb96-4"><a href="עוד-פונקציות-בסיסיות.html#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(salary)</span></code></pre></div>
 <pre><code>## [1] 269.4854</code></pre>
 <p>הדגמה:</p>
-<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="R-Tutorials_files/figure-html/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
 
 </div>
 </div>

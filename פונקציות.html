@@ -277,20 +277,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="דוגמא" class="section level2 unnumbered hasAnchor">
 <h2>דוגמא<a href="פונקציות.html#דוגמא" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>נגדיר פונקציה פשוטה בשם “bigger” אשר מקבלת שני מספרים ומחזירה את הגדול מביניהם. נריץ את הפונקציה על ידי קריאה לשם שלה, יחד עם המשתנים בתוך סוגריים עגולים.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="פונקציות.html#cb43-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, num2) {</span>
-<span id="cb43-2"><a href="פונקציות.html#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
-<span id="cb43-3"><a href="פונקציות.html#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
-<span id="cb43-4"><a href="פונקציות.html#cb43-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb43-5"><a href="פונקציות.html#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
-<span id="cb43-6"><a href="פונקציות.html#cb43-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
-<span id="cb43-7"><a href="פונקציות.html#cb43-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb43-8"><a href="פונקציות.html#cb43-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb43-9"><a href="פונקציות.html#cb43-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>,<span class="dv">29</span>)</span>
-<span id="cb43-10"><a href="פונקציות.html#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<p>נגדיר פונקציה פשוטה בשם “bigger” אשר מקבלת שני מספרים ומחזירה את הגדול מביניהם. אם המספרים שווים בגודלם, הפונקציה ,תחזיר את המספר השני. <br>
+נריץ את הפונקציה על ידי קריאה לשם שלה, יחד עם המשתנים בתוך סוגריים עגולים.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="פונקציות.html#cb48-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, num2) {</span>
+<span id="cb48-2"><a href="פונקציות.html#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
+<span id="cb48-3"><a href="פונקציות.html#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
+<span id="cb48-4"><a href="פונקציות.html#cb48-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb48-5"><a href="פונקציות.html#cb48-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb48-6"><a href="פונקציות.html#cb48-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
+<span id="cb48-7"><a href="פונקציות.html#cb48-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb48-8"><a href="פונקציות.html#cb48-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb48-9"><a href="פונקציות.html#cb48-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>,<span class="dv">29</span>)</span>
+<span id="cb48-10"><a href="פונקציות.html#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
 <pre><code>## [1] &quot;The bigger number is: 29&quot;</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="פונקציות.html#cb45-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">57</span>,<span class="dv">36</span>)</span>
-<span id="cb45-2"><a href="פונקציות.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="פונקציות.html#cb50-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">57</span>,<span class="dv">36</span>)</span>
+<span id="cb50-2"><a href="פונקציות.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
 <pre><code>## [1] &quot;The bigger number is: 57&quot;</code></pre>
 </div>
 <div id="ערכי-ברירת-מחדל" class="section level2 unnumbered hasAnchor">
@@ -298,23 +299,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>פונקציה יכולה לקבל פרמטרים בתור ברירת מחדל (default).
 המשמעות היא שכל משתנה שמוגדרת לו ברירת מחדל הופך להיות אופציונלי. כלומר, אם המשתמש לא הכניס אותו כקלט לפונקציה, הפונקציה פשוט תקבל אותו עם הערך הדיפולטי.</p>
 <p>נגדיר שוב את הפונקציה מהדוגמא הקודמת, אך הפעם num2 יקבל את הערך 6 כברירת מחדל.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="פונקציות.html#cb47-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, <span class="at">num2=</span><span class="dv">6</span>) {</span>
-<span id="cb47-2"><a href="פונקציות.html#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
-<span id="cb47-3"><a href="פונקציות.html#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
-<span id="cb47-4"><a href="פונקציות.html#cb47-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb47-5"><a href="פונקציות.html#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
-<span id="cb47-6"><a href="פונקציות.html#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
-<span id="cb47-7"><a href="פונקציות.html#cb47-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb47-8"><a href="פונקציות.html#cb47-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb47-9"><a href="פונקציות.html#cb47-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>)</span>
-<span id="cb47-10"><a href="פונקציות.html#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="פונקציות.html#cb52-1" aria-hidden="true" tabindex="-1"></a>bigger <span class="ot">&lt;-</span> <span class="cf">function</span>(num1, <span class="at">num2=</span><span class="dv">6</span>) {</span>
+<span id="cb52-2"><a href="פונקציות.html#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (num1 <span class="sc">&gt;</span> num2) {</span>
+<span id="cb52-3"><a href="פונקציות.html#cb52-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num1)</span>
+<span id="cb52-4"><a href="פונקציות.html#cb52-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb52-5"><a href="פונקציות.html#cb52-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb52-6"><a href="פונקציות.html#cb52-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(num2)</span>
+<span id="cb52-7"><a href="פונקציות.html#cb52-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb52-8"><a href="פונקציות.html#cb52-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb52-9"><a href="פונקציות.html#cb52-9" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">24</span>)</span>
+<span id="cb52-10"><a href="פונקציות.html#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
 <pre><code>## [1] &quot;The bigger number is: 24&quot;</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="פונקציות.html#cb49-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">3</span>)</span>
-<span id="cb49-2"><a href="פונקציות.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="פונקציות.html#cb54-1" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="dv">3</span>)</span>
+<span id="cb54-2"><a href="פונקציות.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
 <pre><code>## [1] &quot;The bigger number is: 6&quot;</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="פונקציות.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we can still change those two values!</span></span>
-<span id="cb51-2"><a href="פונקציות.html#cb51-2" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="at">num1 =</span> <span class="dv">7</span>, <span class="at">num2 =</span> <span class="dv">8</span>)</span>
-<span id="cb51-3"><a href="פונקציות.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="פונקציות.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we can still change those two values!</span></span>
+<span id="cb56-2"><a href="פונקציות.html#cb56-2" aria-hidden="true" tabindex="-1"></a>bigger_num <span class="ot">&lt;-</span> <span class="fu">bigger</span>(<span class="at">num1 =</span> <span class="dv">7</span>, <span class="at">num2 =</span> <span class="dv">8</span>)</span>
+<span id="cb56-3"><a href="פונקציות.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&#39;The bigger number is:&#39;</span>, bigger_num))</span></code></pre></div>
 <pre><code>## [1] &quot;The bigger number is: 8&quot;</code></pre>
 
 </div>

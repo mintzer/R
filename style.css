@@ -133,3 +133,10 @@ ul {
 .book .book-summary ul.summary li ul {
     padding-right: 2em !important;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1 !important;
+  border-radius: 20px !important;
+  border: 6px solid transparent !important;
+  background-clip: content-box !important;
+}

@@ -264,14 +264,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>data.frame היא טבלה בה כל עמודה מיוצגת על ידי וקטור של ערכים.
 לכל עמודה יש שם ייחודי והוקטורים צריכים להיות באותו אורך (להכיל את אותה כמות ערכים)<br>
 לצורך הדוגמא: נגדיר משתנה בשם emp_data המכיל אובייקט מסוג data.frame</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="data.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
-<span id="cb93-2"><a href="data.html#cb93-2" aria-hidden="true" tabindex="-1"></a>emp_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb93-3"><a href="data.html#cb93-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
-<span id="cb93-4"><a href="data.html#cb93-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Moshe&quot;</span>,<span class="st">&quot;Adi&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Avi&quot;</span>,<span class="st">&quot;Rotem&quot;</span>),</span>
-<span id="cb93-5"><a href="data.html#cb93-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="dv">6300</span>,<span class="dv">9000</span>,<span class="dv">11000</span>,<span class="dv">8400</span>,<span class="dv">7500</span>)</span>
-<span id="cb93-6"><a href="data.html#cb93-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb93-7"><a href="data.html#cb93-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
-<span id="cb93-8"><a href="data.html#cb93-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp_data) </span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="data.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the data frame.</span></span>
+<span id="cb98-2"><a href="data.html#cb98-2" aria-hidden="true" tabindex="-1"></a>emp_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb98-3"><a href="data.html#cb98-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_id =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), </span>
+<span id="cb98-4"><a href="data.html#cb98-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">emp_name =</span> <span class="fu">c</span>(<span class="st">&quot;Moshe&quot;</span>,<span class="st">&quot;Adi&quot;</span>,<span class="st">&quot;Michelle&quot;</span>,<span class="st">&quot;Avi&quot;</span>,<span class="st">&quot;Rotem&quot;</span>),</span>
+<span id="cb98-5"><a href="data.html#cb98-5" aria-hidden="true" tabindex="-1"></a>   <span class="at">salary =</span> <span class="fu">c</span>(<span class="dv">6300</span>,<span class="dv">9000</span>,<span class="dv">11000</span>,<span class="dv">8400</span>,<span class="dv">7500</span>)</span>
+<span id="cb98-6"><a href="data.html#cb98-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb98-7"><a href="data.html#cb98-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame.         </span></span>
+<span id="cb98-8"><a href="data.html#cb98-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(emp_data) </span></code></pre></div>
 <pre><code>##   emp_id emp_name salary
 ## 1      1    Moshe   6300
 ## 2      2      Adi   9000
@@ -279,15 +279,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4      4      Avi   8400
 ## 5      5    Rotem   7500</code></pre>
 <p>נוציא קצת נתונים על המידע שיצרנו.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="data.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(emp_data) <span class="co"># type of emp_data</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="data.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(emp_data) <span class="co"># type of emp_data</span></span></code></pre></div>
 <pre><code>## [1] &quot;data.frame&quot;</code></pre>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="data.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(emp_data) <span class="co"># number of columns</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="data.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(emp_data) <span class="co"># number of columns</span></span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="data.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(emp_data) <span class="co"># number of rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="data.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(emp_data) <span class="co"># number of rows</span></span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="data.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(emp_data) <span class="co"># dimensions: c(nrow, ncol)</span></span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="data.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(emp_data) <span class="co"># dimensions: c(nrow, ncol)</span></span></code></pre></div>
 <pre><code>## [1] 5 3</code></pre>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="data.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(emp_data) <span class="co"># columns names</span></span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="data.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(emp_data) <span class="co"># columns names</span></span></code></pre></div>
 <pre><code>## [1] &quot;emp_id&quot;   &quot;emp_name&quot; &quot;salary&quot;</code></pre>
 <div id="גישה-לעמודה" class="section level2 unnumbered hasAnchor">
 <h2>גישה לעמודה<a href="data.html#גישה-לעמודה" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -295,13 +295,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 מבנה כללי:</p>
 <pre><code>some_data_frame$column_name</code></pre>
 <p>הקוד הבא יחזיר את וקטור הערכים של העמודה <em>emp_id</em> מתוך <em>emp_data</em></p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="data.html#cb106-1" aria-hidden="true" tabindex="-1"></a>emp_data<span class="sc">$</span>emp_id</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="data.html#cb111-1" aria-hidden="true" tabindex="-1"></a>emp_data<span class="sc">$</span>emp_id</span></code></pre></div>
 <pre><code>## [1] 1 2 3 4 5</code></pre>
 <p>הקוד הבא יחזיר את וקטור הערכים של העמודה <em>emp_name</em> מתוך <em>emp_data</em></p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="data.html#cb108-1" aria-hidden="true" tabindex="-1"></a>emp_data<span class="sc">$</span>emp_name</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="data.html#cb113-1" aria-hidden="true" tabindex="-1"></a>emp_data<span class="sc">$</span>emp_name</span></code></pre></div>
 <pre><code>## [1] &quot;Moshe&quot;    &quot;Adi&quot;      &quot;Michelle&quot; &quot;Avi&quot;      &quot;Rotem&quot;</code></pre>
 <p>הקוד הבא יחזיר את וקטור הערכים של העמודה <em>salary</em> מתוך <em>emp_data</em></p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="data.html#cb110-1" aria-hidden="true" tabindex="-1"></a>emp_data<span class="sc">$</span>salary</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="data.html#cb115-1" aria-hidden="true" tabindex="-1"></a>emp_data<span class="sc">$</span>salary</span></code></pre></div>
 <pre><code>## [1]  6300  9000 11000  8400  7500</code></pre>
 
 </div>
