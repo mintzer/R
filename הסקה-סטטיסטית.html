@@ -224,6 +224,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-t-לממוצע-יחיד"><i class="fa fa-check"></i>מבחן t לממוצע יחיד</a></li>
 <li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-t-להפרש-תוחלות-במדגמים-בלתי-תלויים"><i class="fa fa-check"></i>מבחן t להפרש תוחלות במדגמים בלתי תלויים</a></li>
 <li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-t-לתוחלת-ההפרשים-במדגמים-תלויים-מזווגים"><i class="fa fa-check"></i>מבחן t לתוחלת ההפרשים במדגמים תלויים / מזווגים</a></li>
+<li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-t-למובהקות-מתאם-פירסון"><i class="fa fa-check"></i>מבחן t למובהקות מתאם פירסון</a></li>
+<li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#ניתוח-שונות-חד-גורמי-one-way-anova"><i class="fa fa-check"></i>ניתוח שונות חד גורמי (One-Way ANOVA)</a></li>
+<li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#ניתוחי-המשך-קונטרסט"><i class="fa fa-check"></i>ניתוחי המשך (קונטרסט)</a></li>
+<li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-f-למובהקות-שוויון-שונויות"><i class="fa fa-check"></i>מבחן F למובהקות שוויון שונויות</a></li>
 <li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-חי-בריבוע-לטיב-התאמה"><i class="fa fa-check"></i>מבחן חי-בריבוע לטיב התאמה</a></li>
 <li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#מבחן-חי-בריבוע-לאי-תלות"><i class="fa fa-check"></i>מבחן חי-בריבוע לאי תלות</a></li>
 <li class="chapter" data-level="" data-path="הסקה-סטטיסטית.html"><a href="הסקה-סטטיסטית.html#עוד-מבחני-מובהקות"><i class="fa fa-check"></i>עוד מבחני מובהקות</a></li>
@@ -786,6 +790,221 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 סטטיסטי המבחן:
 </b></p>
 <p><span class="math display">\[t_{\bar d}=\frac{\bar d  - d_0}{\hat{S}_{\bar d}}\]</span></p>
+<h5>
+החלטה
+</h5>
+<hr>
+</div>
+<div id="מבחן-t-למובהקות-מתאם-פירסון" class="section level2 unnumbered hasAnchor">
+<h2>מבחן t למובהקות מתאם פירסון<a href="הסקה-סטטיסטית.html#מבחן-t-למובהקות-מתאם-פירסון" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h5>
+נתונים אשר נדרשים לביצוע המבחן
+</h5>
+<p><span class="math inline">\(r\)</span> - המתאם במדגם <br>
+<span class="math inline">\(N\)</span> - גודל המדגם <br></p>
+<h5>
+סוגי השערות
+</h5>
+<p><span class="math inline">\(H_0:\space{\rho } = 0\)</span> <br>
+<span class="math inline">\(H_1:\space{\rho} \ne 0\)</span></p>
+<h5>
+הנחות
+</h5>
+<ul>
+<li>
+דגימה מקרית ובלתי תלויה של התצפיות
+</li>
+<li>
+התפלגות האוכלוסיה היא נורמלית דו-משתנית
+</li>
+</ul>
+<h5>
+קביעת רמת מובהקות ואזורי דחייה וקבלה
+</h5>
+<ul>
+<li>
+<span class="math inline">\(\alpha\)</span> (רמת מובהקות)
+</li>
+<li>
+מבחן דו זנבי
+</li>
+<li>
+<span class="math inline">\(df = N - 2\)</span>
+</li>
+<li>
+<span class="math inline">\(t_c(\alpha, \space df)\)</span>
+</li>
+<li>
+איזור דחייה
+</li>
+<li>
+איזור קבלה
+</li>
+</ul>
+<h5>
+מבחן סטטיסטי
+</h5>
+<p><span class="math display">\[t=r \cdot \sqrt {\frac{N  - 2}{1-r^2}}\]</span></p>
+<h5>
+החלטה
+</h5>
+<hr>
+</div>
+<div id="ניתוח-שונות-חד-גורמי-one-way-anova" class="section level2 unnumbered hasAnchor">
+<h2>ניתוח שונות חד גורמי (One-Way ANOVA)<a href="הסקה-סטטיסטית.html#ניתוח-שונות-חד-גורמי-one-way-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h5>
+סוגי השערות
+</h5>
+<p><span class="math inline">\(H_0:\space{\mu_1} = \mu_2 =\space...\space= \mu_n\)</span> <br>
+<span class="math inline">\(H_1:\space else\)</span></p>
+<h5>
+הנחות
+</h5>
+<ul>
+<li>
+דגימה מקרית ובלתי תלויה של התצפיות
+</li>
+<li>
+המשתנה מתפלג נורמלית באוכלוסיות
+</li>
+<li>
+שוויון / הומוגניות שונויות
+</li>
+<li>
+המדגמים בלתי תלויים
+</li>
+</ul>
+<h5>
+קביעת רמת מובהקות ואזורי דחייה וקבלה
+</h5>
+<ul>
+<li>
+<span class="math inline">\(\alpha\)</span> (רמת מובהקות)
+</li>
+<li>
+מבחן חד זנבי ימני
+</li>
+<li>
+<span class="math inline">\(df_B = J - 1\)</span>
+</li>
+<li>
+<span class="math inline">\(df_W = N - J\)</span>
+</li>
+<li>
+<span class="math inline">\(t_c(\alpha, \space df_B, \space df_W)\)</span>
+</li>
+<li>
+איזור דחייה
+</li>
+<li>
+איזור קבלה
+</li>
+</ul>
+<h5>
+מבחן סטטיסטי
+</h5>
+<p><b> שונות מוסברת (בין הקבוצות): </b>
+<span class="math display">\[ MSB = \frac{\sum_j n_j \cdot (\bar x_j - \bar {\bar x})^2} {J - 1} \]</span></p>
+<p><b> שונות לא מוסברת (בתוך הקבוצות): </b>
+<span class="math display">\[ MSW = \frac{\sum_i \sum_j (x_{ij} - \bar x_j)^2} {N - J} \]</span></p>
+<p><b>
+סטטיסטי המבחן:
+</b></p>
+<p><span class="math display">\[F = \frac {MSB}{MSW}\]</span></p>
+<h5>
+החלטה
+</h5>
+<hr>
+</div>
+<div id="ניתוחי-המשך-קונטרסט" class="section level2 unnumbered hasAnchor">
+<h2>ניתוחי המשך (קונטרסט)<a href="הסקה-סטטיסטית.html#ניתוחי-המשך-קונטרסט" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h5>
+<span class="math inline">\(J-1\)</span> השוואות אורתוגונליות - סידורים אפשריים
+</h5>
+<p><b>
+עבור שלוש קבוצות:
+</b></p>
+<p><span class="math display">\[c_1 = (-1,\space1,\space0)\]</span>
+<span class="math display">\[c_2 = (-1,\space-1,\space2)\]</span></p>
+<p><b>
+עבור ארבע קבוצות:
+</b></p>
+<p><span class="math display">\[c_1 = (-1,\space1,\space0,\space0)\]</span>
+<span class="math display">\[c_2 = (-1,\space-1,\space2,\space0)\]</span>
+<span class="math display">\[c_3 = (-1,\space-1,\space-1,\space3)\]</span>
+<b>
+עבור חמש קבוצות:
+</b></p>
+<p><span class="math display">\[c_1 = (-1,\space1,\space0,\space0,\space0)\]</span>
+<span class="math display">\[c_2 = (-1,\space-1,\space2,\space0,\space0)\]</span>
+<span class="math display">\[c_3 = (-1,\space-1,\space-1,\space3,\space0)\]</span>
+<span class="math display">\[c_4 = (-1,\space-1,\space-1,\space-1,\space4)\]</span></p>
+<h5>
+מבחן סטטיסטי - עבור כל סט משקולות
+</h5>
+<span class="math display">\[df_{comp} = 1\]</span>
+<span class="math display">\[MS_{comp} = n\cdot\frac {\sum_i  c_i \cdot \bar x_i}{\sum_i {c_i}^2}\]</span>
+<span class="math display">\[F_c(\alpha, \space df_{comp}, \space df_{W})\]</span>
+<span class="math display">\[F = \frac {MS_{comp}}{MS_W}\]</span>
+<h5>
+החלטה
+</h5>
+<hr>
+</div>
+<div id="מבחן-f-למובהקות-שוויון-שונויות" class="section level2 unnumbered hasAnchor">
+<h2>מבחן F למובהקות שוויון שונויות<a href="הסקה-סטטיסטית.html#מבחן-f-למובהקות-שוויון-שונויות" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h5>
+סוגי השערות
+</h5>
+<p><span class="math inline">\(H_0:\space{{\sigma_1}^2} = {\sigma_1}^2\)</span> <br>
+<span class="math inline">\(H_1:\space{{\sigma_1}^2} \ne {\sigma_1}^2\)</span> <br></p>
+<h5>
+הנחות
+</h5>
+<ul>
+<li>
+דגימה מקרית ובלתי תלויה של התצפיות
+</li>
+<li>
+המשתנה מתפלג נורמלית באוכלוסיות
+</li>
+</ul>
+<h5>
+קביעת רמת מובהקות ואזורי דחייה וקבלה
+</h5>
+<ul>
+<li>
+<span class="math inline">\(\alpha\)</span> (רמת מובהקות)
+</li>
+<li>
+מבחן חד זנבי ימני
+</li>
+<li>
+<span class="math inline">\(df_1 = n_1 - 1\)</span>
+</li>
+<li>
+<span class="math inline">\(df_2 = n_2 - 1\)</span>
+</li>
+<li>
+<span class="math inline">\(t_c(\alpha, \space df_1, \space df_2)\)</span>
+</li>
+<li>
+איזור דחייה
+</li>
+<li>
+איזור קבלה
+</li>
+</ul>
+<h5>
+מבחן סטטיסטי
+</h5>
+<p><b> האומד חסר ההטיה לשונות האוכלוסייה: </b>
+<span class="math display">\[ {\hat S_1}^2 = \sqrt{\frac {\sum{(x-\bar x_1)^2}}{n_1 - 1 }} = \sqrt{\frac {{S_1}^2 \cdot n_1}{n_1 - 1 }}\]</span>
+<span class="math display">\[ {\hat S_2}^2 = \sqrt{\frac {\sum{(x-\bar x_2)^2}}{n_2 - 1 }} = \sqrt{\frac {{S_2}^2 \cdot n_2}{n_2 - 1 }}\]</span>
+<b>
+סטטיסטי המבחן:
+</b></p>
+<p><span class="math display">\[F = \frac {{\hat S_1}^2}{{\hat S_2}^2}\]</span></p>
 <h5>
 החלטה
 </h5>
