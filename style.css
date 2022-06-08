@@ -139,8 +139,12 @@ ul {
         overflow-x: auto !important;
         display: block !important;
     }
-    .book .book-body.fixed {
+    .book-body.fixed {
       overflow-y: revert !important;
     }
-
+	html {
+		font-size: 0.75em;
+	}
+	
+	
 }
