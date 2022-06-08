@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 12 - מבחני t | מדריך לשפת R</title>
+  <title>פרק 14 - מבחנים א-פרמטריים | מדריך לשפת R</title>
   <meta name="description" content="שי מינצר" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 12 - מבחני t | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 14 - מבחנים א-פרמטריים | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
   <meta property="og:description" content="שי מינצר" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 12 - מבחני t | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 14 - מבחנים א-פרמטריים | מדריך לשפת R" />
   
   <meta name="twitter:description" content="שי מינצר" />
   <meta name="twitter:image" content="https://glitterlycdn.com/Open%20Graph%20Image_1644748884645.jpeg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="מבחני-z.html"/>
-<link rel="next" href="מבחני-f.html"/>
+<link rel="prev" href="מבחני-f.html"/>
+<link rel="next" href="עוד-מבחני-מובהקות.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -277,49 +277,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
   gtag('config', 'G-RY8V237R28');
 </script>
-<div id="מבחני-t" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">פרק 12 - </span> מבחני t<a href="מבחני-t.html#מבחני-t" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="מבחן-t-לממוצע-יחיד" class="section level2 unnumbered hasAnchor">
-<h2>מבחן t לממוצע יחיד<a href="מבחני-t.html#מבחן-t-לממוצע-יחיד" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>כאשר השונות באוכלוסייה לא ידועה וסטטיסטי המבחן מתפלג t עם N-1 דרגות חופש</em></p>
+<div id="מבחנים-א-פרמטריים" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">פרק 14 - </span> מבחנים א-פרמטריים<a href="מבחנים-א-פרמטריים.html#מבחנים-א-פרמטריים" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="מבחן-חי-בריבוע-לטיב-התאמה" class="section level2 unnumbered hasAnchor">
+<h2>מבחן חי-בריבוע לטיב התאמה<a href="מבחנים-א-פרמטריים.html#מבחן-חי-בריבוע-לטיב-התאמה" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <h5>
 נתונים אשר נדרשים לביצוע המבחן
 </h5>
-<p><span class="math inline">\(\mu\)</span> - תוחלת האוכלוסייה <br>
-<span class="math inline">\(\bar x\)</span> - ממוצע המדגם <br>
-<span class="math inline">\({S_x}^2\)</span> - שונות המדגם <br>
+<p><span class="math inline">\(P_1, P_2, P_3... P_n\)</span> - השכיחות היחסית באוכלוסייה של כל קטגוריה <br>
+<span class="math inline">\(O_1, O_2, O_3... O_n\)</span> - השכיחות של כל קטגוריה כפי שהתקבלה במדגם <br>
 <span class="math inline">\(N\)</span> - גודל המדגם <br></p>
 <h5>
 סוגי השערות
 </h5>
-<table class="assumptions">
-<tr>
-<td>
-<h6>
-השערה דו זנבית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space\mu = \mu_0\)</span> <br>
-<span class="math inline">\(H_1:\space\mu \ne \mu_0\)</span>
-</td>
-<td>
-<h6>
-השערה חד זנבית ימנית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space\mu = \mu_0\)</span> <br>
-<span class="math inline">\(H_1:\space\mu &gt; \mu_0\)</span>
-</td>
-<td>
-<h6>
-השערה חד זנבית שמאלית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space\mu = \mu_0\)</span> <br>
-<span class="math inline">\(H_1:\space\mu &lt; \mu_0\)</span>
-</td>
-</tr>
-</table>
+<p><span class="math inline">\(:H_0\)</span> התפלגות כמו באוכלוסייה <br>
+<span class="math inline">\(:H_1\)</span> התפלגות לא כמו באוכלוסייה</p>
 <h5>
 הנחות
 </h5>
@@ -328,7 +300,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 דגימה מקרית ובלתי תלויה של התצפיות
 </li>
 <li>
-המשתנה מתפלג נורמלי באוכלוסייה
+הקטגוריות מוציאות וממצות - כל תצפית נופלת בקטגוריה אחת בלבד
+</li>
+<li>
+המדגם מספיק גדול
+<ul>
+<li>
+אם <span class="math inline">\(df = 1\)</span>: בכל קטגוריה <span class="math inline">\(Ex \ge 10\)</span>
+</li>
+<li>
+אם <span class="math inline">\(df &gt; 1\)</span>: בכל קטגוריה <span class="math inline">\(Ex \ge 5\)</span>
+</li>
+</ul>
 </li>
 </ul>
 <h5>
@@ -339,13 +322,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span class="math inline">\(\alpha\)</span> (רמת מובהקות)
 </li>
 <li>
-סוג מבחן (דו זנבי / חד זנבי ימני / חד זנבי שמאלי)
+מבחן חד זנבי ימני
 </li>
 <li>
-<span class="math inline">\(df = N-1\)</span>
+<span class="math inline">\(df = J-1\)</span>
 </li>
 <li>
-<span class="math inline">\(t_c(\alpha, \space df)\)</span>
+<span class="math inline">\({\chi^2}_c(\alpha, \space df)\)</span>
 </li>
 <li>
 איזור דחייה
@@ -357,59 +340,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h5>
 מבחן סטטיסטי
 </h5>
-<p><b> האומד חסר ההטיה לסטיית התקן של האוכלוסייה: </b>
-<span class="math display">\[\hat{S}_{x} = \sqrt{\frac {\sum{(x-\bar x)^2}}{N - 1 }}= \sqrt{\frac {{S_x}^2 \cdot N}{N - 1 }}\]</span></p>
-<p><b> טעות התקן (סטיית התקן של התפלגות הדגימה של הממוצע): </b>
-<span class="math display">\[\hat{S}_{\bar x} = \frac {\hat{S}_x}{\sqrt{N} }\]</span></p>
 <p><b>
+שכיחות צפויה לכל קטגוריה:
+</b></p>
+<p><span class="math display">\[E_i = P_i \cdot N\]</span>
+<b>
 סטטיסטי המבחן:
 </b></p>
-<p><span class="math display">\[t_{\bar x}=\frac{\bar x  - μ_ \bar x}{\hat{S}_{\bar x}}\]</span></p>
-<h5>
-החלטה
-</h5>
+<span class="math display">\[\chi ^ 2=\sum_{i} \frac{(O_i - E_i)^2}{E_i}\]</span>
 <hr>
 </div>
-<div id="מבחן-t-להפרש-תוחלות-במדגמים-בלתי-תלויים" class="section level2 unnumbered hasAnchor">
-<h2>מבחן t להפרש תוחלות במדגמים בלתי תלויים<a href="מבחני-t.html#מבחן-t-להפרש-תוחלות-במדגמים-בלתי-תלויים" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<em>כאשר השונויות באוכלוסיות לא ידועות</em>
-<h5>
-נתונים אשר נדרשים לביצוע המבחן
-</h5>
-<p><span class="math inline">\(\bar x_1, \space \bar x_2\)</span> - ממוצעי המדגמים <br>
-<span class="math inline">\({S_{1}}^2, \space {S_{2}}^2\)</span> - שונויות המדגמים <br>
-<span class="math inline">\(N_1, \space N_2\)</span> - גדלי המדגמים <br></p>
+<div id="מבחן-חי-בריבוע-לאי-תלות" class="section level2 unnumbered hasAnchor">
+<h2>מבחן חי-בריבוע לאי תלות<a href="מבחנים-א-פרמטריים.html#מבחן-חי-בריבוע-לאי-תלות" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <h5>
 סוגי השערות
 </h5>
-<table class="assumptions">
-<tr>
-<td>
-<h6>
-השערה דו זנבית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space{\mu_1 - \mu_2} = d_0\)</span> <br>
-<span class="math inline">\(H_1:\space{\mu_1 - \mu_2} \ne d_0\)</span>
-</td>
-<td>
-<h6>
-השערה חד זנבית ימנית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space{\mu_1 - \mu_2} = d_0\)</span> <br>
-<span class="math inline">\(H_1:\space{\mu_1 - \mu_2} &gt; d_0\)</span>
-</td>
-<td>
-<h6>
-השערה חד זנבית שמאלית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space{\mu_1 - \mu_2} = d_0\)</span> <br>
-<span class="math inline">\(H_1:\space{\mu_1 - \mu_2} &lt; d_0\)</span>
-</td>
-</tr>
-</table>
+<p><span class="math inline">\(:H_0\)</span> אין תלות בין <em>משתנה 1</em> לבין <em>משתנה 2</em> <br>
+<span class="math inline">\(:H_1\)</span> יש תלות בין <em>משתנה 1</em> לבין <em>משתנה 2</em> <br></p>
 <h5>
 הנחות
 </h5>
@@ -418,10 +365,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 דגימה מקרית ובלתי תלויה של התצפיות
 </li>
 <li>
-המשתנה מתפלג נורמלי בשתי האוכלוסיות
+הקטגוריות מוציאות וממצות - כל תצפית נופלת בקטגוריה אחת בלבד
 </li>
 <li>
-שוויון שונויות בשתי האוכלוסיות
+המדגם מספיק גדול
+<ul>
+<li>
+אם <span class="math inline">\(df = 1\)</span>: בכל קטגוריה <span class="math inline">\(Ex \ge 10\)</span>
+</li>
+<li>
+אם <span class="math inline">\(df &gt; 1\)</span>: בכל קטגוריה <span class="math inline">\(Ex \ge 5\)</span>
+</li>
+</ul>
 </li>
 </ul>
 <h5>
@@ -432,13 +387,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span class="math inline">\(\alpha\)</span> (רמת מובהקות)
 </li>
 <li>
-סוג מבחן (דו זנבי / חד זנבי ימני / חד זנבי שמאלי)
+מבחן חד זנבי ימני
 </li>
 <li>
-<span class="math inline">\(df = N_1 + N_2 - 2\)</span>
+<span class="math inline">\(df = (Rows - 1) \cdot (Cols -1)\)</span>
 </li>
 <li>
-<span class="math inline">\(t_c(\alpha, \space df)\)</span>
+<span class="math inline">\({\chi^2}_c(\alpha, \space df)\)</span>
 </li>
 <li>
 איזור דחייה
@@ -450,163 +405,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h5>
 מבחן סטטיסטי
 </h5>
-<p><b> האומד חסר ההטיה לסטיית התקן של האוכלוסייה: </b>
-<span class="math display">\[\hat{S}_{x} = \sqrt{\frac {\sum{(x_1-\bar x_1)^2}+ \sum{(x_2-\bar x_2)^2}}{N_1 + N_2 - 2}}\]</span> <span class="math display">\[= \sqrt{\frac {{S_1}^2 \cdot N_1 + {S_2}^2 \cdot N_2}{N_1 + N_2 - 2}}\]</span></p>
-<p><b> טעות התקן (סטיית התקן של התפלגות הדגימה): </b>
-<span class="math display">\[\hat{S}_{(\bar x_1 - \bar x_2)} = {\hat{S}_x} \cdot \sqrt{{\frac {1}{N_1} + \frac {1}{N_2} }}\]</span></p>
 <p><b>
+שכיחות צפויה לכל קטגוריה:
+</b></p>
+<p><span class="math display">\[E_{ij} = \frac{n_{i} \cdot n_{j}}{N}\]</span>
+<b>
 סטטיסטי המבחן:
 </b></p>
-<p><span class="math display">\[t_{(\bar x_1 - \bar x_2)}=\frac{(\bar x_1 - \bar x_2)  - d_0}{\hat{S}_{(\bar x_1 - \bar x_2)}}\]</span></p>
-<h5>
-החלטה
-</h5>
-<hr>
-</div>
-<div id="מבחן-t-לתוחלת-ההפרשים-במדגמים-תלויים-מזווגים" class="section level2 unnumbered hasAnchor">
-<h2>מבחן t לתוחלת ההפרשים במדגמים תלויים / מזווגים<a href="מבחני-t.html#מבחן-t-לתוחלת-ההפרשים-במדגמים-תלויים-מזווגים" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<em>כאשר השונויות באוכלוסיות לא ידועות</em>
-<h5>
-נתונים אשר נדרשים לביצוע המבחן
-</h5>
-<p><span class="math inline">\(\bar d\)</span> - ממוצע ההפרשים בין המדגמים (הפרש עבור כל זוג תצפיות תלויות) <br>
-<span class="math inline">\({S_d}^2\)</span> - שונות ההפרשים בין המדגמים <br>
-<span class="math inline">\(N\)</span> - גודל המדגמים (או - גודל מדגם ההפרשים) <br></p>
-<h5>
-סוגי השערות
-</h5>
-<table class="assumptions">
-<tr>
-<td>
-<h6>
-השערה דו זנבית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space{\mu_d} = d_0\)</span> <br>
-<span class="math inline">\(H_1:\space{\mu_d} \ne d_0\)</span>
-</td>
-<td>
-<h6>
-השערה חד זנבית ימנית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space{\mu_d} = d_0\)</span> <br>
-<span class="math inline">\(H_1:\space{\mu_d} &gt; d_0\)</span>
-</td>
-<td>
-<h6>
-השערה חד זנבית שמאלית
-</h6>
-<wbr>
-<span class="math inline">\(H_0:\space{\mu_d} = d_0\)</span> <br>
-<span class="math inline">\(H_1:\space{\mu_d} &lt; d_0\)</span>
-</td>
-</tr>
-</table>
-<h5>
-הנחות
-</h5>
-<ul>
-<li>
-דגימה מקרית ובלתי תלויה של התצפיות
-</li>
-<li>
-המשתנה (d)
-מתפלג נורמלית באוכלוסייה
-</li>
-</ul>
-<h5>
-קביעת רמת מובהקות ואזורי דחייה וקבלה
-</h5>
-<ul>
-<li>
-<span class="math inline">\(\alpha\)</span> (רמת מובהקות)
-</li>
-<li>
-סוג מבחן (דו זנבי / חד זנבי ימני / חד זנבי שמאלי)
-</li>
-<li>
-<span class="math inline">\(df = N - 1\)</span>
-</li>
-<li>
-<span class="math inline">\(t_c(\alpha, \space df)\)</span>
-</li>
-<li>
-איזור דחייה
-</li>
-<li>
-איזור קבלה
-</li>
-</ul>
-<h5>
-מבחן סטטיסטי
-</h5>
-<p><b> האומד חסר ההטיה לסטיית התקן של האוכלוסייה (אוכלוסיית ההפרשים): </b>
-<span class="math display">\[\hat{S}_{d} = \sqrt{\frac {\sum{(d-\bar d)^2}}{N - 1}}= \sqrt{\frac {{S_d}^2 \cdot N}{N - 1}}\]</span></p>
-<p><b> טעות התקן (סטיית התקן של התפלגות הדגימה של ממוצע ההפרשים): </b>
-<span class="math display">\[\hat{S}_{\bar d} = \frac{\hat{S}_{d}} {\sqrt{N}}\]</span></p>
-<p><b>
-סטטיסטי המבחן:
-</b></p>
-<p><span class="math display">\[t_{\bar d}=\frac{\bar d  - d_0}{\hat{S}_{\bar d}}\]</span></p>
-<h5>
-החלטה
-</h5>
-<hr>
-</div>
-<div id="מבחן-t-למובהקות-מתאם-פירסון" class="section level2 unnumbered hasAnchor">
-<h2>מבחן t למובהקות מתאם פירסון<a href="מבחני-t.html#מבחן-t-למובהקות-מתאם-פירסון" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<h5>
-נתונים אשר נדרשים לביצוע המבחן
-</h5>
-<p><span class="math inline">\(r\)</span> - המתאם במדגם <br>
-<span class="math inline">\(N\)</span> - גודל המדגם <br></p>
-<h5>
-סוגי השערות
-</h5>
-<p><span class="math inline">\(H_0:\space{\rho } = 0\)</span> <br>
-<span class="math inline">\(H_1:\space{\rho} \ne 0\)</span></p>
-<h5>
-הנחות
-</h5>
-<ul>
-<li>
-דגימה מקרית ובלתי תלויה של התצפיות
-</li>
-<li>
-התפלגות האוכלוסיה היא נורמלית דו-משתנית
-</li>
-</ul>
-<h5>
-קביעת רמת מובהקות ואזורי דחייה וקבלה
-</h5>
-<ul>
-<li>
-<span class="math inline">\(\alpha\)</span> (רמת מובהקות)
-</li>
-<li>
-מבחן דו זנבי
-</li>
-<li>
-<span class="math inline">\(df = N - 2\)</span>
-</li>
-<li>
-<span class="math inline">\(t_c(\alpha, \space df)\)</span>
-</li>
-<li>
-איזור דחייה
-</li>
-<li>
-איזור קבלה
-</li>
-</ul>
-<h5>
-מבחן סטטיסטי
-</h5>
-<p><span class="math display">\[t=r \cdot \sqrt {\frac{N  - 2}{1-r^2}}\]</span></p>
-<h5>
-החלטה
-</h5>
+<span class="math display">\[\chi ^ 2=\sum_{i} \sum_{j}\frac{(O_{ij} - E_{ij})^2}{E_{ij}}\]</span>
 <hr>
 </div>
 </div>
@@ -615,8 +421,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="מבחני-z.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="מבחני-f.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="מבחני-f.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="עוד-מבחני-מובהקות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
