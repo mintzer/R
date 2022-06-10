@@ -139,11 +139,26 @@ ul {
         overflow-x: auto !important;
         display: block !important;
     }
+	/*
     .book-body.fixed {
-      overflow-y: revert !important;
-    }
-	html {
-		font-size: 64.5%;
-	}
+      overflow-y: scroll !important;
+    }*/
 	
+	html, body {
+      overflow-y: hidden !important;
+    }
+	
+  	html {
+		font-size: 64.5%;
+    }
+	a.btn.pull-left.js-toolbar-action {
+		display: none;
+	}
+	.book .book-header.fixed {
+		position: absolute;
+	}
+	.book .book-summary {
+		width: calc(100% - 40px);
+	}
 }
+
