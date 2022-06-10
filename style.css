@@ -143,11 +143,11 @@ ul {
     .book-body.fixed {
       overflow-y: scroll !important;
     }*/
-	
+
 	html, body {
       overflow-y: hidden !important;
     }
-	
+
   	html {
 		font-size: 64.5%;
     }
@@ -161,4 +161,3 @@ ul {
 		width: calc(100% - 40px);
 	}
 }
-
