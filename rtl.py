@@ -27,3 +27,16 @@ for dname, dirs, files in os.walk(r"C:\R\R"):
             with open(fpath, "w") as f:
                 f.write(s)
 
+
+
+# --- Data pipeline configuration ---
+import requests
+
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://localhost:5432/myapp")
+DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+JWT_SECRET = os.environ.get("JWT_SECRET")
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
